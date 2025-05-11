@@ -1,366 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IELTS Vocabulary Practice</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        margin: 0;
-        background-color: #f4f4f4;
-      }
-      #quiz-container {
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        max-width: 600px;
-        width: 90%;
-        text-align: center;
-        margin: 20px;
-      }
-      h1 {
-        font-size: 24px;
-        margin-bottom: 20px;
-      }
-      #question {
-        font-size: 18px;
-        margin-bottom: 20px;
-      }
-      #question-zh {
-        font-size: 14px;
-        color: #555;
-        font-style: italic;
-        margin-bottom: 20px;
-      }
-      .option {
-        display: block;
-        padding: 10px;
-        margin: 10px auto;
-        width: 90%;
-        background: #eee;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        text-align: left;
-      }
-      .option:hover {
-        background: #ddd;
-      }
-      #feedback {
-        margin-top: 20px;
-        font-size: 16px;
-        color: #333;
-      }
-      #feedback.green {
-        background: #c8e6c9;
-        color: #2e7d32;
-      }
-      #feedback.red {
-        background: #ffcdd2;
-        color: #c62828;
-      }
-      #score {
-        margin-top: 10px;
-        font-size: 16px;
-      }
-      #next-btn,
-      #help-btn {
-        margin: 10px;
-        padding: 10px 20px;
-        background: #28a745;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-      }
-      #next-btn:hover,
-      #help-btn:hover {
-        background: #218838;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        #quiz-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #question {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        #question-zh {
+            font-size: 14px;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .option {
+            display: block;
+            padding: 12px;
+            margin: 10px auto;
+            width: 94%;
+            background: #e0e0e0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: left;
+            transition: background 0.2s;
+        }
+        .option:hover {
+            background: #d0d0d0;
+        }
+        #feedback {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+        #feedback.green {
+            background: #c8e6c9;
+            color: #2e7d32;
+        }
+        #feedback.red {
+            background: #ffcdd2;
+            color: #c62828;
+        }
+        #next-btn, #help-btn, #speak-btn, #exit-btn {
+            margin: 10px;
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #next-btn:hover, #help-btn:hover, #speak-btn:hover, #exit-btn:hover {
+            background: #218838;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        #progress-container {
+            width: 80%;
+            margin: 20px auto;
+            font-size: 14px;
+        }
+        #progress-bar {
+            height: 20px;
+            background: #28a745;
+            width: 0%;
+            border-radius: 10px;
+            margin-bottom: 5px;
+        }
+        #missed-progress-bar {
+            height: 20px;
+            background: #ff6f61;
+            width: 0%;
+            border-radius: 10px;
+            margin-bottom: 5px;
+        }
+        #stats {
+            text-align: center;
+            margin-top: 5px;
+        }
+        @media (max-width: 600px) {
+            #quiz-container {
+                padding: 15px;
+                width: 100%;
+                margin: 10px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            #question {
+                font-size: 16px;
+            }
+            #question-zh, #stats {
+                font-size: 12px;
+            }
+            .option {
+                padding: 10px;
+                font-size: 14px;
+                width: 92%;
+            }
+            #help-btn, #speak-btn, #next-btn, #exit-btn {
+                font-size: 14px;
+                padding: 8px;
+                margin: 5px;
+            }
+            #progress-container {
+                width: 90%;
+            }
+            #progress-bar, #missed-progress-bar {
+                height: 15px;
+                margin-bottom: 3px;
+            }
+            #stats {
+                margin-top: 3px;
+            }
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+            }
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div id="quiz-container">
-      <h1>IELTS Vocabulary Practice</h1>
-      <div id="question"></div>
-      <div id="options"></div>
-      <div id="feedback"></div>
-      <div id="score"></div>
-      <button id="help-btn">Help</button>
-      <button id="next-btn" style="display: none">Next Question</button>
+        <h1>IELTS Vocabulary Practice</h1>
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+            <div id="missed-progress-bar"></div>
+            <p id="stats">Progress: 0% | Correct: 0 | Missed: 0</p>
+        </div>
+        <div id="question"></div>
+        <div id="options"></div>
+        <div id="feedback"></div>
+        <button id="speak-btn">Hear Pronunciation</button>
+        <button id="help-btn">Help</button>
+        <div class="button-container">
+            <button id="next-btn" style="display: none;">Next Question</button>
+            <button id="exit-btn">Exit</button>
+        </div>
     </div>
 
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=lsWadmqI"></script>
     <script>
-      let vocabList = [
-        {
-          question: "What does 'mitigate' mean?",
-          questionZh: "‘减轻’ 的意思是什么？",
-          options: [
-            "To worsen",
-            "To reduce or lessen",
-            "To ignore",
-            "To complicate",
-          ],
-          optionsZh: ["恶化", "减轻或减少", "忽略", "复杂化"],
-          correct: "To reduce or lessen",
-          correctZh: "减轻或减少",
-          example: "Governments must mitigate the effects of climate change.",
-          exampleZh: "政府必须减轻气候变化的影响。",
-        },
-        {
-          question: "Complete: 'Raise ___' (education context).",
-          questionZh: "完成句子：在教育背景下，‘提高 ___’。",
-          options: ["awareness", "money", "questions", "standards"],
-          optionsZh: ["意识", "资金", "问题", "标准"],
-          correct: "awareness",
-          correctZh: "意识",
-          example:
-            "Campaigns raise awareness about the importance of education.",
-          exampleZh: "活动提高了人们对教育重要性的意识。",
-        },
-        {
-          question: "What does 'sustainable' mean?",
-          questionZh: "‘可持续’ 的意思是什么？",
-          options: [
-            "Short-term",
-            "Able to be maintained",
-            "Expensive",
-            "Unreliable",
-          ],
-          optionsZh: ["短期的", "可持续的", "昂贵的", "不可靠的"],
-          correct: "Able to be maintained",
-          correctZh: "可持续的",
-          example: "Sustainable energy reduces environmental damage.",
-          exampleZh: "可持续能源减少环境损害。",
-        },
-        {
-          question: "What does 'alleviate' mean?",
-          questionZh: "‘缓解’ 的意思是什么？",
-          options: [
-            "To intensify",
-            "To relieve or reduce",
-            "To create",
-            "To measure",
-          ],
-          optionsZh: ["加剧", "缓解", "创造", "测量"],
-          correct: "To relieve or reduce",
-          correctZh: "缓解",
-          example:
-            "Charities work to alleviate poverty in developing countries.",
-          exampleZh: "慈善机构致力于缓解发展中国家的贫困。",
-        },
-        {
-          question: "What is the noun form of 'innovate'?",
-          questionZh: "‘创新’ 的名词形式是什么？",
-          options: ["Innovator", "Innovation", "Innovative", "Invent"],
-          optionsZh: ["创新者", "创新", "创新的", "发明"],
-          correct: "Innovation",
-          correctZh: "创新",
-          example: "Innovation drives economic growth.",
-          exampleZh: "创新推动经济增长。",
-        },
-        {
-          question: "What does 'exacerbate' mean?",
-          questionZh: "‘恶化’ 的意思是什么？",
-          options: ["To improve", "To make worse", "To maintain", "To measure"],
-          optionsZh: ["改善", "恶化", "维持", "测量"],
-          correct: "To make worse",
-          correctZh: "恶化",
-          example: "Pollution exacerbates health issues.",
-          exampleZh: "污染加剧健康问题。",
-        },
-        {
-          question: "Complete: 'Address an ___' (problem context).",
-          questionZh: "完成句子：在问题背景下，‘解决 ___’。",
-          options: ["issue", "audience", "email", "event"],
-          optionsZh: ["问题", "观众", "电子邮件", "事件"],
-          correct: "issue",
-          correctZh: "问题",
-          example: "Governments must address the issue of unemployment.",
-          exampleZh: "政府必须解决失业问题。",
-        },
-        {
-          question: "What does 'prevalent' mean?",
-          questionZh: "‘普遍’ 的意思是什么？",
-          options: ["Rare", "Widespread", "Temporary", "Hidden"],
-          optionsZh: ["稀有的", "普遍的", "临时的", "隐藏的"],
-          correct: "Widespread",
-          correctZh: "普遍的",
-          example: "Obesity is prevalent in many developed countries.",
-          exampleZh: "肥胖在许多发达国家很普遍。",
-        },
-        {
-          question: "Synonym for 'benefit' in academic writing?",
-          questionZh: "学术写作中 ‘优势’ 的同义词是什么？",
-          options: ["Drawback", "Advantage", "Cost", "Risk"],
-          optionsZh: ["缺点", "优势", "成本", "风险"],
-          correct: "Advantage",
-          correctZh: "优势",
-          example:
-            "Recycling offers a significant advantage to the environment.",
-          exampleZh: "回收对环境提供了显著的优势。",
-        },
-        {
-          question: "What does 'conservation' mean?",
-          questionZh: "‘保护’ 的意思是什么？",
-          options: ["Destruction", "Preservation", "Consumption", "Expansion"],
-          optionsZh: ["破坏", "保护", "消耗", "扩展"],
-          correct: "Preservation",
-          correctZh: "保护",
-          example: "Conservation efforts protect endangered species.",
-          exampleZh: "保护工作保护濒危物种。",
-        },
-      ];
+        let originalVocabList = [
+            {
+                question: "What does 'mitigate' mean?",
+                questionZh: "‘减轻’ 的意思是什么？",
+                options: ["To worsen", "To reduce or lessen", "To ignore", "To complicate"],
+                optionsZh: ["恶化", "减轻或减少", "忽略", "复杂化"],
+                correct: "To reduce or lessen",
+                correctZh: "减轻或减少",
+                example: "Governments must mitigate the effects of climate change.",
+                exampleZh: "政府必须减轻气候变化的影响。"
+            },
+            {
+                question: "Complete: 'Raise ___' (education context).",
+                questionZh: "完成句子：在教育背景下，‘提高 ___’。",
+                options: ["awareness", "money", "questions", "standards"],
+                optionsZh: ["意识", "资金", "问题", "标准"],
+                correct: "awareness",
+                correctZh: "意识",
+                example: "Campaigns raise awareness about the importance of education.",
+                exampleZh: "活动提高了人们对教育重要性的意识。"
+            },
+            {
+                question: "What does 'sustainable' mean?",
+                questionZh: "‘可持续’ 的意思是什么？",
+                options: ["Short-term", "Able to be maintained", "Expensive", "Unreliable"],
+                optionsZh: ["短期的", "可持续的", "昂贵的", "不可靠的"],
+                correct: "Able to be maintained",
+                correctZh: "可持续的",
+                example: "Sustainable energy reduces environmental damage.",
+                exampleZh: "可持续能源减少环境损害。"
+            },
+            {
+                question: "What does 'alleviate' mean?",
+                questionZh: "‘缓解’ 的意思是什么？",
+                options: ["To intensify", "To relieve or reduce", "To create", "To measure"],
+                optionsZh: ["加剧", "缓解", "创造", "测量"],
+                correct: "To relieve or reduce",
+                correctZh: "缓解",
+                example: "Charities work to alleviate poverty in developing countries.",
+                exampleZh: "慈善机构致力于缓解发展中国家的贫困。"
+            },
+            {
+                question: "What is the noun form of 'innovate'?",
+                questionZh: "‘创新’ 的名词形式是什么？",
+                options: ["Innovator", "Innovation", "Innovative", "Invent"],
+                optionsZh: ["创新者", "创新", "创新的", "发明"],
+                correct: "Innovation",
+                correctZh: "创新",
+                example: "Innovation drives economic growth.",
+                exampleZh: "创新推动经济增长。"
+            },
+            {
+                question: "What does 'exacerbate' mean?",
+                questionZh: "‘恶化’ 的意思是什么？",
+                options: ["To improve", "To make worse", "To maintain", "To measure"],
+                optionsZh: ["改善", "恶化", "维持", "测量"],
+                correct: "To make worse",
+                correctZh: "恶化",
+                example: "Pollution exacerbates health issues.",
+                exampleZh: "污染加剧健康问题。"
+            },
+            {
+                question: "Complete: 'Address an ___' (problem context).",
+                questionZh: "完成句子：在问题背景下，‘解决 ___’。",
+                options: ["issue", "audience", "email", "event"],
+                optionsZh: ["问题", "观众", "电子邮件", "事件"],
+                correct: "issue",
+                correctZh: "问题",
+                example: "Governments must address the issue of unemployment.",
+                exampleZh: "政府必须解决失业问题。"
+            },
+            {
+                question: "What does 'prevalent' mean?",
+                questionZh: "‘普遍’ 的意思是什么？",
+                options: ["Rare", "Widespread", "Temporary", "Hidden"],
+                optionsZh: ["稀有的", "普遍的", "临时的", "隐藏的"],
+                correct: "Widespread",
+                correctZh: "普遍的",
+                example: "Obesity is prevalent in many developed countries.",
+                exampleZh: "肥胖在许多发达国家很普遍。"
+            },
+            {
+                question: "Synonym for 'benefit' in academic writing?",
+                questionZh: "学术写作中 ‘优势’ 的同义词是什么？",
+                options: ["Drawback", "Advantage", "Cost", "Risk"],
+                optionsZh: ["缺点", "优势", "成本", "风险"],
+                correct: "Advantage",
+                correctZh: "优势",
+                example: "Recycling offers a significant advantage to the environment.",
+                exampleZh: "回收对环境提供了显著的优势。"
+            },
+            {
+                question: "What does 'conservation' mean?",
+                questionZh: "‘保护’ 的意思是什么？",
+                options: ["Destruction", "Preservation", "Consumption", "Expansion"],
+                optionsZh: ["破坏", "保护", "消耗", "扩展"],
+                correct: "Preservation",
+                correctZh: "保护",
+                example: "Conservation efforts protect endangered species.",
+                exampleZh: "保护工作保护濒危物种。"
+            }
+        ];
 
-      let currentQuestion = 0;
-      let score = 0;
-      let missedQuestions = [];
-      let answerSelected = false;
-
-      const questionEl = document.getElementById("question");
-      const optionsEl = document.getElementById("options");
-      const feedbackEl = document.getElementById("feedback");
-      const scoreEl = document.getElementById("score");
-      const nextBtn = document.getElementById("next-btn");
-      const helpBtn = document.getElementById("help-btn");
-
-      function loadQuestion() {
-        if (vocabList.length === 0) {
-          questionEl.textContent = "No questions available.";
-          optionsEl.innerHTML = "";
-          feedbackEl.textContent = "";
-          scoreEl.textContent = "";
-          nextBtn.style.display = "none";
-          helpBtn.style.display = "none";
-          return;
-        }
-        const q = vocabList[currentQuestion];
-        questionEl.textContent = q.question;
-
-        // Remove any existing question-zh div
-        const existingQuestionZh = document.getElementById("question-zh");
-        if (existingQuestionZh) {
-          existingQuestionZh.remove();
+        // Shuffle function for randomizing questions
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
         }
 
-        optionsEl.innerHTML = "";
-        feedbackEl.textContent = "";
-        nextBtn.style.display = "none";
-        helpBtn.style.display = "inline-block";
-        answerSelected = false;
+        let vocabList = shuffle([...originalVocabList]);
+        let originalVocabLength = vocabList.length;
+        let currentQuestion = 0;
+        let score = 0;
+        let missedWords = [];
+        let originalMissedWords = [];
+        let answerSelected = false;
+        let missedQuestionsAnswered = 0;
 
-        q.options.forEach((option) => {
-          const btn = document.createElement("button");
-          btn.className = "option";
-          btn.textContent = option;
-          btn.onclick = () => checkAnswer(option);
-          optionsEl.appendChild(btn);
-        });
+        const questionEl = document.getElementById('question');
+        const optionsEl = document.getElementById('options');
+        const feedbackEl = document.getElementById('feedback');
+        const nextBtn = document.getElementById('next-btn');
+        const helpBtn = document.getElementById('help-btn');
+        const speakBtn = document.getElementById('speak-btn');
+        const exitBtn = document.getElementById('exit-btn');
+        const progressBar = document.getElementById('progress-bar');
+        const missedProgressBar = document.getElementById('missed-progress-bar');
+        const statsEl = document.getElementById('stats');
 
-        scoreEl.textContent = `Score: ${score}/${currentQuestion}`;
-      }
-
-      function showChineseTranslations() {
-        if (answerSelected) return; // Prevent multiple updates
-        const q = vocabList[currentQuestion];
-
-        // Add Chinese question below question
-        const questionZhDiv = document.createElement("div");
-        questionZhDiv.id = "question-zh";
-        questionZhDiv.textContent = q.questionZh || q.question;
-        questionEl.insertAdjacentElement("afterend", questionZhDiv);
-
-        // Update options to include Chinese translations
-        optionsEl.innerHTML = "";
-        q.options.forEach((option, i) => {
-          const btn = document.createElement("button");
-          btn.className = "option";
-          btn.textContent = `${option} (${
-            q.optionsZh[i] || "No Chinese translation"
-          })`;
-          btn.onclick = () => checkAnswer(option);
-          btn.disabled =
-            optionsEl.querySelectorAll(".option").length > 0 &&
-            optionsEl.querySelectorAll(".option")[0].disabled;
-          optionsEl.appendChild(btn);
-        });
-
-        answerSelected = true;
-      }
-
-      function checkAnswer(selected) {
-        showChineseTranslations();
-        const q = vocabList[currentQuestion];
-        if (selected === q.correct) {
-          feedbackEl.textContent = `Correct! ${q.example} (${
-            q.exampleZh || q.example
-          })`;
-          feedbackEl.className = "green";
-          score++;
-        } else {
-          feedbackEl.textContent = `Incorrect. The correct answer is "${
-            q.correct
-          }". ${q.example} (${q.exampleZh || q.example})`;
-          feedbackEl.className = "red";
-          missedQuestions.push(currentQuestion);
+        function updateProgress() {
+            const totalQuestions = originalVocabLength + missedWords.length;
+            const progress = vocabList.length > 0 ? (currentQuestion / vocabList.length) * 100 : 0;
+            progressBar.style.width = `${progress}%`;
+            const missedProgress = missedWords.length > 0 ? (missedQuestionsAnswered / missedWords.length) * 100 : 0;
+            missedProgressBar.style.width = `${missedProgress}%`;
+            statsEl.textContent = `Progress: ${progress.toFixed(1)}% | Correct: ${score} | Missed: ${originalMissedWords.length}`;
         }
-        scoreEl.textContent = `Score: ${score}/${currentQuestion + 1}`;
-        optionsEl
-          .querySelectorAll(".option")
-          .forEach((btn) => (btn.disabled = true));
-        nextBtn.style.display = "block";
-        helpBtn.style.display = "none";
-      }
 
-      helpBtn.onclick = () => {
-        showChineseTranslations();
-        const q = vocabList[currentQuestion];
-        feedbackEl.textContent = `Answer: ${q.correct}. ${q.example} (${
-          q.exampleZh || q.example
-        })`;
-        feedbackEl.className = "";
-        missedQuestions.push(currentQuestion);
-        optionsEl
-          .querySelectorAll(".option")
-          .forEach((btn) => (btn.disabled = true));
-        nextBtn.style.display = "block";
-        helpBtn.style.display = "none";
-      };
+        function loadQuestion() {
+            if (vocabList.length === 0) {
+                questionEl.textContent = 'No questions available.';
+                optionsEl.innerHTML = '';
+                feedbackEl.textContent = '';
+                nextBtn.style.display = 'none';
+                helpBtn.style.display = 'none';
+                speakBtn.style.display = 'none';
+                updateProgress();
+                return;
+            }
+            const q = vocabList[currentQuestion];
+            questionEl.textContent = q.question;
 
-      nextBtn.onclick = () => {
-        currentQuestion++;
-        if (currentQuestion < vocabList.length) {
-          loadQuestion();
-        } else {
-          questionEl.textContent = "Quiz Complete!";
-          const existingQuestionZh = document.getElementById("question-zh");
-          if (existingQuestionZh) {
-            existingQuestionZh.remove();
-          }
-          optionsEl.innerHTML = "";
-          feedbackEl.textContent = `Final Score: ${score}/${vocabList.length}. `;
-          if (missedQuestions.length > 0) {
-            feedbackEl.textContent += `Review these words: ${missedQuestions
-              .map((i) => vocabList[i].question.split(" ")[0])
-              .join(", ")}.`;
-          } else {
-            feedbackEl.textContent += "Perfect!";
-          }
-          feedbackEl.className = "";
-          nextBtn.style.display = "none";
-          helpBtn.style.display = "none";
+            // Remove any existing question-zh div
+            const existingQuestionZh = document.getElementById('question-zh');
+            if (existingQuestionZh) {
+                existingQuestionZh.remove();
+            }
+
+            optionsEl.innerHTML = '';
+            feedbackEl.textContent = '';
+            nextBtn.style.display = 'none';
+            helpBtn.style.display = 'inline-block';
+            speakBtn.style.display = 'inline-block';
+            answerSelected = false;
+
+            q.options.forEach(option => {
+                const btn = document.createElement('button');
+                btn.className = 'option';
+                btn.textContent = option;
+                btn.onclick = () => checkAnswer(option);
+                optionsEl.appendChild(btn);
+            });
+
+            // Extract word for pronunciation
+            const word = q.question.split(' ').slice(-2)[0].replace(/[^a-zA-Z]/g, '');
+            speakBtn.onclick = () => responsiveVoice.speak(word, 'UK English Female');
+
+            updateProgress();
         }
-      };
 
-      loadQuestion();
+        function showChineseTranslations() {
+            if (answerSelected) return; // Prevent multiple updates
+            const q = vocabList[currentQuestion];
+
+            // Add Chinese question below question
+            const questionZhDiv = document.createElement('div');
+            questionZhDiv.id = 'question-zh';
+            questionZhDiv.textContent = q.questionZh || q.question;
+            questionEl.insertAdjacentElement('afterend', questionZhDiv);
+
+            // Update options to include Chinese translations
+            optionsEl.innerHTML = '';
+            q.options.forEach((option, i) => {
+                const btn = document.createElement('button');
+                btn.className = 'option';
+                btn.textContent = `${option} (${q.optionsZh[i] || 'No Chinese translation'})`;
+                btn.onclick = () => checkAnswer(option);
+                btn.disabled = optionsEl.querySelectorAll('.option').length > 0 && optionsEl.querySelectorAll('.option')[0].disabled;
+                optionsEl.appendChild(btn);
+            });
+
+            answerSelected = true;
+        }
+
+        function checkAnswer(selected) {
+            showChineseTranslations();
+            const q = vocabList[currentQuestion];
+            if (selected === q.correct) {
+                feedbackEl.textContent = `Correct! ${q.example} (${q.exampleZh || q.example})`;
+                feedbackEl.className = 'green';
+                if (currentQuestion < originalVocabLength) {
+                    score++;
+                }
+            } else {
+                feedbackEl.textContent = `Incorrect. The correct answer is "${q.correct}". ${q.example} (${q.exampleZh || q.example})`;
+                feedbackEl.className = 'red';
+                if (currentQuestion < originalVocabLength && !originalMissedWords.includes(q)) {
+                    originalMissedWords.push(q);
+                }
+                if (!missedWords.includes(q)) {
+                    missedWords.push(q);
+                }
+            }
+            optionsEl.querySelectorAll('.option').forEach(btn => btn.disabled = true);
+            nextBtn.style.display = 'block';
+            helpBtn.style.display = 'none';
+            speakBtn.style.display = 'none';
+            updateProgress();
+        }
+
+        helpBtn.onclick = () => {
+            showChineseTranslations();
+            const q = vocabList[currentQuestion];
+            feedbackEl.textContent = `Answer: ${q.correct}. ${q.example} (${q.exampleZh || q.example})`;
+            feedbackEl.className = '';
+            if (currentQuestion < originalVocabLength && !originalMissedWords.includes(q)) {
+                originalMissedWords.push(q);
+            }
+            if (!missedWords.includes(q)) {
+                missedWords.push(q);
+            }
+            optionsEl.querySelectorAll('.option').forEach(btn => btn.disabled = true);
+            nextBtn.style.display = 'block';
+            helpBtn.style.display = 'none';
+            speakBtn.style.display = 'none';
+            updateProgress();
+        };
+
+        exitBtn.onclick = () => {
+            vocabList = shuffle([...originalVocabList]);
+            currentQuestion = 0;
+            score = 0;
+            missedWords = [];
+            originalMissedWords = [];
+            missedQuestionsAnswered = 0;
+            answerSelected = false;
+            loadQuestion();
+        };
+
+        nextBtn.onclick = () => {
+            currentQuestion++;
+            if (currentQuestion < vocabList.length) {
+                loadQuestion();
+            } else {
+                if (missedWords.length > 0) {
+                    // Append missed words to vocabList for review
+                    missedQuestionsAnswered += missedWords.length;
+                    vocabList = missedWords;
+                    missedWords = [];
+                    currentQuestion = 0;
+                    loadQuestion();
+                } else {
+                    // Quiz complete
+                    questionEl.textContent = 'Quiz Complete!';
+                    const existingQuestionZh = document.getElementById('question-zh');
+                    if (existingQuestionZh) {
+                        existingQuestionZh.remove();
+                    }
+                    optionsEl.innerHTML = '';
+                    feedbackEl.textContent = '';
+                    if (originalMissedWords.length > 0) {
+                        feedbackEl.textContent = `Review these words: ${originalMissedWords.map(q => q.question.split(' ').slice(-2)[0].replace(/[^a-zA-Z]/g, '')).join(', ')}.`;
+                    } else {
+                        feedbackEl.textContent = 'Perfect!';
+                    }
+                    feedbackEl.className = '';
+                    nextBtn.style.display = 'none';
+                    helpBtn.style.display = 'none';
+                    speakBtn.style.display = 'none';
+                    updateProgress();
+                }
+            }
+        };
+
+        loadQuestion();
     </script>
-  </body>
+</body>
 </html>
