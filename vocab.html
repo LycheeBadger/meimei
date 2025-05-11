@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IELTS Vocabulary Practice</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+      #quiz-container {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 90%;
+        text-align: center;
+      }
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      #question {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      .option {
+        display: block;
+        padding: 10px;
+        margin: 10px auto;
+        width: 80%;
+        background: #eee;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .option:hover {
+        background: #ddd;
+      }
+      #feedback {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #333;
+      }
+      #score {
+        margin-top: 10px;
+        font-size: 16px;
+      }
+      #next-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      #next-btn:hover {
+        background: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="quiz-container">
+      <h1>IELTS Vocabulary Practice</h1>
+      <div id="question"></div>
+      <div id="options"></div>
+      <div id="feedback"></div>
+      <div id="score"></div>
+      <button id="next-btn" style="display: none">Next Question</button>
+    </div>
+
+    <script>
+      const vocabList = [
+        {
+          question: "What does 'mitigate' mean?",
+          options: [
+            "To worsen",
+            "To reduce or lessen",
+            "To ignore",
+            "To complicate",
+          ],
+          correct: "To reduce or lessen",
+          example: "Governments must mitigate the effects of climate change.",
+        },
+        {
+          question: "Complete: 'Raise ___' (education context).",
+          options: ["awareness", "money", "questions", "standards"],
+          correct: "awareness",
+          example:
+            "Campaigns raise awareness about the importance of education.",
+        },
+        {
+          question: "Synonym for 'significant' in academic writing?",
+          options: ["Minor", "Crucial", "Temporary", "Uncertain"],
+          correct: "Crucial",
+          example: "Technology has a crucial impact on modern education.",
+        },
+        {
+          question: "What does 'sustainable' mean?",
+          options: [
+            "Short-term",
+            "Able to be maintained",
+            "Expensive",
+            "Unreliable",
+          ],
+          correct: "Able to be maintained",
+          example: "Sustainable energy reduces environmental damage.",
+        },
+        {
+          question: "What is the noun form of 'innovate'?",
+          options: ["Innovator", "Innovation", "Innovative", "Invent"],
+          correct: "Innovation",
+          example: "Innovation drives economic growth.",
+        },
+        {
+          question: "What does 'alleviate' mean?",
+          options: [
+            "To intensify",
+            "To relieve or reduce",
+            "To create",
+            "To measure",
+          ],
+          correct: "To relieve or reduce",
+          example:
+            "Charities work to alleviate poverty in developing countries.",
+        },
+        {
+          question: "Complete: 'Address an ___' (problem context).",
+          options: ["issue", "audience", "email", "event"],
+          correct: "issue",
+          example: "Governments must address the issue of unemployment.",
+        },
+        {
+          question: "What does 'prevalent' mean?",
+          options: ["Rare", "Widespread", "Temporary", "Hidden"],
+          correct: "Widespread",
+          example: "Obesity is prevalent in many developed countries.",
+        },
+        {
+          question: "Synonym for 'benefit' in academic writing?",
+          options: ["Drawback", "Advantage", "Cost", "Risk"],
+          correct: "Advantage",
+          example:
+            "Recycling offers a significant advantage to the environment.",
+        },
+        {
+          question: "What does 'conservation' mean?",
+          options: ["Destruction", "Preservation", "Consumption", "Expansion"],
+          correct: "Preservation",
+          example: "Conservation efforts protect endangered species.",
+        },
+      ];
+
+      let currentQuestion = 0;
+      let score = 0;
+      let missedQuestions = [];
+
+      const questionEl = document.getElementById("question");
+      const optionsEl = document.getElementById("options");
+      const feedbackEl = document.getElementById("feedback");
+      const scoreEl = document.getElementById("score");
+      const nextBtn = document.getElementById("next-btn");
+
+      function loadQuestion() {
+        const q = vocabList[currentQuestion];
+        questionEl.textContent = q.question;
+        optionsEl.innerHTML = "";
+        feedbackEl.textContent = "";
+        nextBtn.style.display = "none";
+
+        q.options.forEach((option) => {
+          const btn = document.createElement("button");
+          btn.className = "option";
+          btn.textContent = option;
+          btn.onclick = () => checkAnswer(option);
+          optionsEl.appendChild(btn);
+        });
+
+        scoreEl.textContent = `Score: ${score}/${currentQuestion}`;
+      }
+
+      function checkAnswer(selected) {
+        const q = vocabList[currentQuestion];
+        if (selected === q.correct) {
+          feedbackEl.textContent = `Correct! ${q.example}`;
+          feedbackEl.style.color = "green";
+          score++;
+        } else {
+          feedbackEl.textContent = `Incorrect. The correct answer is "${q.correct}". ${q.example}`;
+          feedbackEl.style.color = "red";
+          missedQuestions.push(currentQuestion);
+        }
+        scoreEl.textContent = `Score: ${score}/${currentQuestion + 1}`;
+        optionsEl
+          .querySelectorAll(".option")
+          .forEach((btn) => (btn.disabled = true));
+        nextBtn.style.display = "block";
+      }
+
+      nextBtn.onclick = () => {
+        currentQuestion++;
+        if (currentQuestion < vocabList.length) {
+          loadQuestion();
+        } else {
+          questionEl.textContent = "Quiz Complete!";
+          optionsEl.innerHTML = "";
+          feedbackEl.textContent = `Final Score: ${score}/${vocabList.length}. `;
+          if (missedQuestions.length > 0) {
+            feedbackEl.textContent += `Review these words: ${missedQuestions
+              .map((i) => vocabList[i].question.split(" ")[0])
+              .join(", ")}.`;
+          } else {
+            feedbackEl.textContent += "Perfect! Try adding more words.";
+          }
+          nextBtn.style.display = "none";
+        }
+      };
+
+      loadQuestion();
+    </script>
+  </body>
+</html>
