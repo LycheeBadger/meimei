@@ -1,0 +1,396 @@
+{
+  "thematic": [
+    {
+      "word": "environment",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'environment' mean?",
+          "questionZh": "‘环境’ 的意思是什么？",
+          "options": ["A city", "The natural world around us", "A school", "A car"],
+          "optionsZh": ["城市", "我们周围的自然世界", "学校", "汽车"],
+          "correct": "The natural world around us",
+          "correctZh": "我们周围的自然世界",
+          "example": "Protecting the environment helps our health.",
+          "exampleZh": "保护环境有助于我们的健康。"
+        },
+        {
+          "type": "select-all",
+          "question": "What is part of the 'environment'?",
+          "questionZh": "‘环境’ 包括什么？",
+          "options": ["Buildings", "Trees", "Rivers", "Cars", "Air"],
+          "optionsZh": ["建筑物", "树木", "河流", "汽车", "空气"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["树木", "河流", "空气"],
+          "example": "Trees are part of the environment.",
+          "exampleZh": "树木是环境的一部分。"
+        }
+      ]
+    },
+    {
+      "word": "pollution",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'pollution' mean?",
+          "questionZh": "‘污染’ 的意思是什么？",
+          "options": ["Clean water", "Dirty air or water", "Healthy food", "Bright light"],
+          "optionsZh": ["干净的水", "脏空气或水", "健康食品", "明亮的光"],
+          "correct": "Dirty air or water",
+          "correctZh": "脏空气或水",
+          "example": "Pollution harms our health.",
+          "exampleZh": "污染危害我们的健康。"
+        },
+        {
+          "type": "true-false",
+          "question": "Pollution can cause health problems.",
+          "questionZh": "污染可能导致健康问题。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "Pollution affects clean air.",
+          "exampleZh": "污染影响干净空气。"
+        }
+      ]
+    },
+    {
+      "word": "recycling",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'recycling' mean?",
+          "questionZh": "‘回收’ 的意思是什么？",
+          "options": ["Throwing away trash", "Using materials again", "Buying new things", "Wasting resources"],
+          "optionsZh": ["扔垃圾", "再次使用材料", "买新东西", "浪费资源"],
+          "correct": "Using materials again",
+          "correctZh": "再次使用材料",
+          "example": "Recycling reduces waste.",
+          "exampleZh": "回收减少废物。"
+        },
+        {
+          "type": "select-all",
+          "question": "What can be used for 'recycling'?",
+          "questionZh": "什么可以用于 ‘回收’？",
+          "options": ["Food", "Paper", "Plastic", "Dirt", "Glass"],
+          "optionsZh": ["食物", "纸张", "塑料", "泥土", "玻璃"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["纸张", "塑料", "玻璃"],
+          "example": "I recycle plastic bottles.",
+          "exampleZh": "我回收塑料瓶。"
+        }
+      ]
+    },
+    {
+      "word": "sustainability",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'sustainability' mean?",
+          "questionZh": "‘可持续性’ 的意思是什么？",
+          "options": ["Wasting resources", "Using resources carefully", "Polluting water", "Cutting trees"],
+          "optionsZh": ["浪费资源", "小心使用资源", "污染水", "砍树"],
+          "correct": "Using resources carefully",
+          "correctZh": "小心使用资源",
+          "example": "Sustainability protects the environment.",
+          "exampleZh": "可持续性保护环境。"
+        },
+        {
+          "type": "true-false",
+          "question": "Sustainability helps keep the environment healthy.",
+          "questionZh": "可持续性有助于保持环境健康。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "Sustainability saves resources.",
+          "exampleZh": "可持续性节省资源。"
+        }
+      ]
+    },
+    {
+      "word": "nature",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'nature' mean?",
+          "questionZh": "‘自然’ 的意思是什么？",
+          "options": ["Cities", "Plants, animals, and landscapes", "Buildings", "Cars"],
+          "optionsZh": ["城市", "植物、动物和景观", "建筑物", "汽车"],
+          "correct": "Plants, animals, and landscapes",
+          "correctZh": "植物、动物和景观",
+          "example": "Nature provides clean air.",
+          "exampleZh": "自然提供干净空气。"
+        },
+        {
+          "type": "select-all",
+          "question": "What is part of 'nature'?",
+          "questionZh": "什么是 ‘自然’ 的一部分？",
+          "options": ["Factories", "Forests", "Birds", "Computers", "Rivers"],
+          "optionsZh": ["工厂", "森林", "鸟类", "电脑", "河流"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["森林", "鸟类", "河流"],
+          "example": "Forests are part of nature.",
+          "exampleZh": "森林是自然的一部分。"
+        }
+      ]
+    },
+    {
+      "word": "conservation",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'conservation' mean?",
+          "questionZh": "‘保护’ 的意思是什么？",
+          "options": ["Destroying nature", "Protecting the environment", "Wasting water", "Building cities"],
+          "optionsZh": ["破坏自然", "保护环境", "浪费水", "建设城市"],
+          "correct": "Protecting the environment",
+          "correctZh": "保护环境",
+          "example": "Conservation saves animals.",
+          "exampleZh": "保护拯救动物。"
+        },
+        {
+          "type": "true-false",
+          "question": "Conservation helps maintain clean water.",
+          "questionZh": "保护有助于维持干净水源。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "Conservation protects rivers.",
+          "exampleZh": "保护河流。"
+        }
+      ]
+    },
+    {
+      "word": "waste",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'waste' mean?",
+          "questionZh": "‘废物’ 的意思是什么？",
+          "options": ["Clean air", "Unwanted materials", "Fresh water", "Healthy food"],
+          "optionsZh": ["干净空气", "不需要的材料", "淡水", "健康食品"],
+          "correct": "Unwanted materials",
+          "correctZh": "不需要的材料",
+          "example": "Waste harms the environment.",
+          "exampleZh": "废物危害环境。"
+        },
+        {
+          "type": "select-all",
+          "question": "What can reduce 'waste'?",
+          "questionZh": "什么可以减少 ‘废物’？",
+          "options": ["Throwing trash", "Recycling", "Reusing items", "Burning garbage", "Using less plastic"],
+          "optionsZh": ["扔垃圾", "回收", "重复使用物品", "烧垃圾", "少用塑料"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["回收", "重复使用物品", "少用塑料"],
+          "example": "Recycling reduces waste.",
+          "exampleZh": "回收减少废物。"
+        }
+      ]
+    },
+    {
+      "word": "energy",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'energy' mean?",
+          "questionZh": "‘能源’ 的意思是什么？",
+          "options": ["Food", "Power for machines or electricity", "Sleep", "Clothes"],
+          "optionsZh": ["食物", "机器或电力的能源", "睡眠", "衣服"],
+          "correct": "Power for machines or electricity",
+          "correctZh": "机器或电力的能源",
+          "example": "Clean energy helps the environment.",
+          "exampleZh": "清洁能源帮助环境。"
+        },
+        {
+          "type": "true-false",
+          "question": "Using clean energy reduces pollution.",
+          "questionZh": "使用清洁能源减少污染。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "Solar energy is clean.",
+          "exampleZh": "太阳能是清洁的。"
+        }
+      ]
+    },
+    {
+      "word": "water",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'water' mean?",
+          "questionZh": "‘水’ 的意思是什么？",
+          "options": ["Food", "Liquid we drink", "Air", "Fire"],
+          "optionsZh": ["食物", "我们喝的液体", "空气", "火"],
+          "correct": "Liquid we drink",
+          "correctZh": "我们喝的液体",
+          "example": "Clean water is important for health.",
+          "exampleZh": "干净水对健康很重要。"
+        },
+        {
+          "type": "select-all",
+          "question": "What helps protect 'water'?",
+          "questionZh": "什么有助于保护 ‘水’？",
+          "options": ["Polluting rivers", "Saving water", "Cleaning lakes", "Wasting water", "Recycling"],
+          "optionsZh": ["污染河流", "节约水", "清洁湖泊", "浪费水", "回收"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["节约水", "清洁湖泊", "回收"],
+          "example": "Saving water protects resources.",
+          "exampleZh": "节约水保护资源。"
+        }
+      ]
+    },
+    {
+      "word": "air",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'air' mean?",
+          "questionZh": "‘空气’ 的意思是什么？",
+          "options": ["Food", "What we breathe", "Water", "Clothes"],
+          "optionsZh": ["食物", "我们呼吸的东西", "水", "衣服"],
+          "correct": "What we breathe",
+          "correctZh": "我们呼吸的东西",
+          "example": "Clean air improves health.",
+          "exampleZh": "干净空气改善健康。"
+        },
+        {
+          "type": "true-false",
+          "question": "Polluted air can harm our health.",
+          "questionZh": "污染的空气可能危害我们的健康。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I need clean air to stay healthy.",
+          "exampleZh": "我需要干净空气来保持健康。"
+        }
+      ]
+    },
+    {
+      "word": "forest",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'forest' mean?",
+          "questionZh": "‘森林’ 的意思是什么？",
+          "options": ["A city", "A large area with trees", "A school", "A car"],
+          "optionsZh": ["城市", "有树木的大片区域", "学校", "汽车"],
+          "correct": "A large area with trees",
+          "correctZh": "有树木的大片区域",
+          "example": "Forests clean the air we breathe.",
+          "exampleZh": "森林净化我们呼吸的空气。"
+        },
+        {
+          "type": "select-all",
+          "question": "What do 'forests' provide?",
+          "questionZh": "‘森林’ 提供什么？",
+          "options": ["Pollution", "Clean air", "Wildlife homes", "Cars", "Oxygen"],
+          "optionsZh": ["污染", "干净空气", "野生动物家园", "汽车", "氧气"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["干净空气", "野生动物家园", "氧气"],
+          "example": "Forests provide oxygen.",
+          "exampleZh": "森林提供氧气。"
+        }
+      ]
+    },
+    {
+      "word": "climate",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'climate' mean?",
+          "questionZh": "‘气候’ 的意思是什么？",
+          "options": ["Food", "Weather patterns in an area", "Work", "Clothes"],
+          "optionsZh": ["食物", "一个地区的天气模式", "工作", "衣服"],
+          "correct": "Weather patterns in an area",
+          "correctZh": "一个地区的天气模式",
+          "example": "Climate affects the environment.",
+          "exampleZh": "气候影响环境。"
+        },
+        {
+          "type": "true-false",
+          "question": "Changes in climate can affect health.",
+          "questionZh": "气候变化可能影响健康。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "Climate change causes health issues.",
+          "exampleZh": "气候变化导致健康问题。"
+        }
+      ]
+    }
+  ],
+  "functional": [
+    {
+      "type": "multiple-choice",
+      "question": "Which phrase expresses your view on environmental health?",
+      "questionZh": "哪个短语表达你对环境健康的看法？",
+      "options": ["As a result", "I believe", "Whereas", "Tackle"],
+      "optionsZh": ["因此", "我相信", "然而", "解决"],
+      "correct": "I believe",
+      "correctZh": "我相信",
+      "example": "I believe clean air improves health.",
+      "exampleZh": "我相信干净空气改善健康。"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Which phrase suggests solving environmental issues?",
+      "questionZh": "哪个短语建议解决环境问题？",
+      "options": ["On the contrary", "Tackle", "I concur", "It seems to me"],
+      "optionsZh": ["相反", "解决", "我同意", "在我看来"],
+      "correct": "Tackle",
+      "correctZh": "解决",
+      "example": "We should tackle pollution with recycling.",
+      "exampleZh": "我们应该通过回收解决污染。"
+    },
+    {
+      "type": "true-false",
+      "question": "‘I believe’ is used to express a personal opinion on sustainability.",
+      "questionZh": "‘我相信’ 用于表达对可持续性的个人意见。",
+      "options": ["True", "False"],
+      "optionsZh": ["正确", "错误"],
+      "correct": "True",
+      "correctZh": "正确",
+      "example": "I believe recycling helps sustainability.",
+      "exampleZh": "我相信回收有助于可持续性。"
+    },
+    {
+      "type": "true-false",
+      "question": "‘As a result’ shows the cause of an environmental issue.",
+      "questionZh": "‘因此’ 显示环境问题的原因。",
+      "options": ["True", "False"],
+      "optionsZh": ["正确", "错误"],
+      "correct": "False",
+      "correctZh": "错误",
+      "example": "As a result of conservation, nature is protected.",
+      "exampleZh": "由于保护，自然得到保护。"
+    },
+    {
+      "type": "select-all",
+      "question": "Which phrases express opinions on environmental health?",
+      "questionZh": "哪些短语表达环境健康的意见？",
+      "options": ["I believe", "As a result", "In my view", "Tackle", "Owing to"],
+      "optionsZh": ["我相信", "因此", "在我看来", "解决", "由于"],
+      "correct": ["1", "3"],
+      "correctZh": ["我相信", "在我看来"],
+      "example": "In my view, forests improve health.",
+      "exampleZh": "在我看来，森林改善健康。"
+    },
+    {
+      "type": "select-all",
+      "question": "Which phrases suggest solutions for environmental issues?",
+      "questionZh": "哪些短语建议解决环境问题的方案？",
+      "options": ["I believe", "Tackle", "As a result", "Propose", "Whereas"],
+      "optionsZh": ["我相信", "解决", "因此", "提出", "然而"],
+      "correct": ["2", "4"],
+      "correctZh": ["解决", "提出"],
+      "example": "We propose more conservation to protect water.",
+      "exampleZh": "我们提出更多保护措施来保护水资源。"
+    }
+  ]
+}

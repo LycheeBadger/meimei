@@ -1,0 +1,396 @@
+{
+  "thematic": [
+    {
+      "word": "healthy",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'healthy' mean?",
+          "questionZh": "‘健康’ 的意思是什么？",
+          "options": ["Sad", "In good health", "Tired", "Angry"],
+          "optionsZh": ["难过", "身体健康", "累", "生气"],
+          "correct": "In good health",
+          "correctZh": "身体健康",
+          "example": "Healthy people eat good food.",
+          "exampleZh": "健康的人吃好食物。"
+        },
+        {
+          "type": "select-all",
+          "question": "What is 'healthy' for your lifestyle?",
+          "questionZh": "对你的生活方式什么是 ‘健康’ 的？",
+          "options": ["Candy", "Vegetables", "Exercise", "TV", "Fruit"],
+          "optionsZh": ["糖果", "蔬菜", "运动", "电视", "水果"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["蔬菜", "运动", "水果"],
+          "example": "Vegetables are healthy.",
+          "exampleZh": "蔬菜是健康的。"
+        }
+      ]
+    },
+    {
+      "word": "illness",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'illness' mean?",
+          "questionZh": "‘疾病’ 的意思是什么？",
+          "options": ["Happiness", "Being sick", "Strength", "Work"],
+          "optionsZh": ["快乐", "生病", "力量", "工作"],
+          "correct": "Being sick",
+          "correctZh": "生病",
+          "example": "An illness needs a doctor.",
+          "exampleZh": "疾病需要医生。"
+        },
+        {
+          "type": "true-false",
+          "question": "Illness can make you feel bad.",
+          "questionZh": "疾病会让你感觉不好。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I rest during an illness.",
+          "exampleZh": "我生病时休息。"
+        }
+      ]
+    },
+    {
+      "word": "nutrition",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'nutrition' mean?",
+          "questionZh": "‘营养’ 的意思是什么？",
+          "options": ["Clothes", "Healthy food for the body", "Games", "Cars"],
+          "optionsZh": ["衣服", "对身体健康的食物", "游戏", "汽车"],
+          "correct": "Healthy food for the body",
+          "correctZh": "对身体健康的食物",
+          "example": "Nutrition helps you grow strong.",
+          "exampleZh": "营养帮助你长得强壮。"
+        },
+        {
+          "type": "select-all",
+          "question": "What provides good 'nutrition'?",
+          "questionZh": "什么提供好的 ‘营养’？",
+          "options": ["Candy", "Vegetables", "Fruit", "Chips", "Rice"],
+          "optionsZh": ["糖果", "蔬菜", "水果", "薯片", "米饭"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["蔬菜", "水果", "米饭"],
+          "example": "Rice gives good nutrition.",
+          "exampleZh": "米饭提供好的营养。"
+        }
+      ]
+    },
+    {
+      "word": "exercise",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'exercise' mean?",
+          "questionZh": "‘锻炼’ 的意思是什么？",
+          "options": ["Sleeping", "Physical activity", "Eating", "Reading"],
+          "optionsZh": ["睡觉", "体育活动", "吃饭", "阅读"],
+          "correct": "Physical activity",
+          "correctZh": "体育活动",
+          "example": "Exercise makes you strong.",
+          "exampleZh": "锻炼让你强壮。"
+        },
+        {
+          "type": "true-false",
+          "question": "Exercise helps your health.",
+          "questionZh": "锻炼对健康有益。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I exercise every morning.",
+          "exampleZh": "我每天早上锻炼。"
+        }
+      ]
+    },
+    {
+      "word": "doctor",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'doctor' mean?",
+          "questionZh": "‘医生’ 的意思是什么？",
+          "options": ["Teacher", "Person who treats sick people", "Driver", "Chef"],
+          "optionsZh": ["老师", "治疗病人的人", "司机", "厨师"],
+          "correct": "Person who treats sick people",
+          "correctZh": "治疗病人的人",
+          "example": "The doctor gives me medicine.",
+          "exampleZh": "医生给我药。"
+        },
+        {
+          "type": "select-all",
+          "question": "What does a 'doctor' do?",
+          "questionZh": "‘医生’ 做什么？",
+          "options": ["Cook food", "Give medicine", "Check health", "Drive cars", "Help people"],
+          "optionsZh": ["做饭", "给药", "检查健康", "开车", "帮助人"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["给药", "检查健康", "帮助人"],
+          "example": "Doctors check my health.",
+          "exampleZh": "医生检查我的健康。"
+        }
+      ]
+    },
+    {
+      "word": "sleep",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'sleep' mean?",
+          "questionZh": "‘睡觉’ 的意思是什么？",
+          "options": ["Eat", "Rest with eyes closed", "Run", "Work"],
+          "optionsZh": ["吃", "闭眼休息", "跑", "工作"],
+          "correct": "Rest with eyes closed",
+          "correctZh": "闭眼休息",
+          "example": "Sleep helps my body.",
+          "exampleZh": "睡眠帮助我的身体。"
+        },
+        {
+          "type": "true-false",
+          "question": "Good sleep improves health.",
+          "questionZh": "良好睡眠改善健康。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I sleep eight hours a night.",
+          "exampleZh": "我每晚睡八小时。"
+        }
+      ]
+    },
+    {
+      "word": "medicine",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'medicine' mean?",
+          "questionZh": "‘药’ 的意思是什么？",
+          "options": ["Food", "Something to make you better", "Clothes", "Toys"],
+          "optionsZh": ["食物", "让你好起来的东西", "衣服", "玩具"],
+          "correct": "Something to make you better",
+          "correctZh": "让你好起来的东西",
+          "example": "Medicine helps when I’m sick.",
+          "exampleZh": "我生病时药有帮助。"
+        },
+        {
+          "type": "select-all",
+          "question": "What is true about 'medicine'?",
+          "questionZh": "关于 ‘药’ 什么是真的？",
+          "options": ["You eat it", "You wear it", "It helps illness", "You play with it", "Doctors give it"],
+          "optionsZh": ["你吃它", "你穿它", "它帮助治病", "你玩它", "医生给它"],
+          "correct": ["1", "3", "5"],
+          "correctZh": ["你吃它", "它帮助治病", "医生给它"],
+          "example": "Doctors give medicine.",
+          "exampleZh": "医生给药。"
+        }
+      ]
+    },
+    {
+      "word": "hospital",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'hospital' mean?",
+          "questionZh": "‘医院’ 的意思是什么？",
+          "options": ["School", "Place for sick people", "Shop", "Park"],
+          "optionsZh": ["学校", "生病人的地方", "商店", "公园"],
+          "correct": "Place for sick people",
+          "correctZh": "生病人的地方",
+          "example": "I go to the hospital when sick.",
+          "exampleZh": "我生病时去医院。"
+        },
+        {
+          "type": "true-false",
+          "question": "Hospitals have doctors and nurses.",
+          "questionZh": "医院有医生和护士。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "Hospitals help sick people.",
+          "exampleZh": "医院帮助生病的人。"
+        }
+      ]
+    },
+    {
+      "word": "diet",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'diet' mean?",
+          "questionZh": "‘饮食’ 的意思是什么？",
+          "options": ["Clothes", "Food you eat regularly", "Games", "Cars"],
+          "optionsZh": ["衣服", "你定期吃的食物", "游戏", "汽车"],
+          "correct": "Food you eat regularly",
+          "correctZh": "你定期吃的食物",
+          "example": "A good diet helps health.",
+          "exampleZh": "良好的饮食有助于健康。"
+        },
+        {
+          "type": "select-all",
+          "question": "What is part of a healthy 'diet'?",
+          "questionZh": "健康 ‘饮食’ 包括什么？",
+          "options": ["Candy", "Fruit", "Vegetables", "Chips", "Rice"],
+          "optionsZh": ["糖果", "水果", "蔬菜", "薯片", "米饭"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["水果", "蔬菜", "米饭"],
+          "example": "Vegetables are in my diet.",
+          "exampleZh": "蔬菜在我的饮食中。"
+        }
+      ]
+    },
+    {
+      "word": "rest",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'rest' mean?",
+          "questionZh": "‘休息’ 的意思是什么？",
+          "options": ["Run", "Stop and relax", "Eat", "Work"],
+          "optionsZh": ["跑", "停下来放松", "吃", "工作"],
+          "correct": "Stop and relax",
+          "correctZh": "停下来放松",
+          "example": "Rest helps my health.",
+          "exampleZh": "休息有助于我的健康。"
+        },
+        {
+          "type": "true-false",
+          "question": "Rest is important when you are sick.",
+          "questionZh": "生病时休息很重要。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I rest when I’m tired.",
+          "exampleZh": "我累时休息。"
+        }
+      ]
+    },
+    {
+      "word": "fitness",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'fitness' mean?",
+          "questionZh": "‘健身’ 的意思是什么？",
+          "options": ["Weakness", "Being strong and healthy", "Illness", "Work"],
+          "optionsZh": ["虚弱", "强壮和健康", "疾病", "工作"],
+          "correct": "Being strong and healthy",
+          "correctZh": "强壮和健康",
+          "example": "Fitness comes from exercise.",
+          "exampleZh": "健身来自锻炼。"
+        },
+        {
+          "type": "select-all",
+          "question": "What helps 'fitness'?",
+          "questionZh": "什么帮助 ‘健身’？",
+          "options": ["Sitting", "Running", "Healthy diet", "Watching TV", "Swimming"],
+          "optionsZh": ["坐着", "跑步", "健康饮食", "看电视", "游泳"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["跑步", "健康饮食", "游泳"],
+          "example": "Swimming improves fitness.",
+          "exampleZh": "游泳改善健身。"
+        }
+      ]
+    },
+    {
+      "word": "energy",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'energy' mean?",
+          "questionZh": "‘能量’ 的意思是什么？",
+          "options": ["Sleep", "Power to move or work", "Pain", "Clothes"],
+          "optionsZh": ["睡觉", "移动或工作的力量", "疼痛", "衣服"],
+          "correct": "Power to move or work",
+          "correctZh": "移动或工作的力量",
+          "example": "Energy comes from good food.",
+          "exampleZh": "能量来自好食物。"
+        },
+        {
+          "type": "true-false",
+          "question": "Energy helps you exercise.",
+          "questionZh": "能量帮助你锻炼。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I have energy after sleep.",
+          "exampleZh": "我睡后有能量。"
+        }
+      ]
+    }
+  ],
+  "functional": [
+    {
+      "type": "multiple-choice",
+      "question": "Which phrase expresses your view on healthy living?",
+      "questionZh": "哪个短语表达你对健康生活的看法？",
+      "options": ["As a result", "I believe", "Whereas", "Tackle"],
+      "optionsZh": ["因此", "我相信", "然而", "解决"],
+      "correct": "I believe",
+      "correctZh": "我相信",
+      "example": "I believe exercise is important.",
+      "exampleZh": "我相信运动很重要。"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Which phrase suggests solving a health issue?",
+      "questionZh": "哪个短语建议解决健康问题？",
+      "options": ["On the contrary", "Tackle", "I concur", "It seems to me"],
+      "optionsZh": ["相反", "解决", "我同意", "在我看来"],
+      "correct": "Tackle",
+      "correctZh": "解决",
+      "example": "We should tackle illness with medicine.",
+      "exampleZh": "我们应该用药解决疾病。"
+    },
+    {
+      "type": "true-false",
+      "question": "‘I believe’ is used to express a personal health opinion.",
+      "questionZh": "‘我相信’ 用于表达个人健康意见。",
+      "options": ["True", "False"],
+      "optionsZh": ["正确", "错误"],
+      "correct": "True",
+      "correctZh": "正确",
+      "example": "I believe nutrition is key.",
+      "exampleZh": "我相信营养是关键。"
+    },
+    {
+      "type": "true-false",
+      "question": "‘As a result’ shows the effect of a health action.",
+      "questionZh": "‘因此’ 显示健康行动的效果。",
+      "options": ["True", "False"],
+      "optionsZh": ["正确", "错误"],
+      "correct": "True",
+      "correctZh": "正确",
+      "example": "As a result of sleep, I feel good.",
+      "exampleZh": "由于睡眠，我感觉很好。"
+    },
+    {
+      "type": "select-all",
+      "question": "Which phrases express a health opinion?",
+      "questionZh": "哪些短语表达健康意见？",
+      "options": ["I believe", "As a result", "In my view", "Tackle", "Owing to"],
+      "optionsZh": ["我相信", "因此", "在我看来", "解决", "由于"],
+      "correct": ["1", "3"],
+      "correctZh": ["我相信", "在我看来"],
+      "example": "I believe fitness is important.",
+      "exampleZh": "我相信健身很重要。"
+    },
+    {
+      "type": "select-all",
+      "question": "Which phrases suggest health solutions?",
+      "questionZh": "哪些短语建议健康解决方案？",
+      "options": ["I believe", "Tackle", "As a result", "Propose", "Whereas"],
+      "optionsZh": ["我相信", "解决", "因此", "提出", "然而"],
+      "correct": ["2", "4"],
+      "correctZh": ["解决", "提出"],
+      "example": "We propose better diets.",
+      "exampleZh": "我们提出更好的饮食。"
+    }
+  ]
+}
