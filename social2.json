@@ -1,0 +1,396 @@
+{
+  "thematic": [
+    {
+      "word": "cohesion",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'cohesion' mean?",
+          "questionZh": "‘凝聚力’ 的意思是什么？",
+          "options": ["Conflict", "Unity and togetherness", "Isolation", "Competition"],
+          "optionsZh": ["冲突", "团结和凝聚", "孤立", "竞争"],
+          "correct": "Unity and togetherness",
+          "correctZh": "团结和凝聚",
+          "example": "Cohesion strengthens communities.",
+          "exampleZh": "凝聚力加强社区。"
+        },
+        {
+          "type": "select-all",
+          "question": "What promotes 'cohesion' in a community?",
+          "questionZh": "什么促进社区的 ‘凝聚力’？",
+          "options": ["Conflict", "Shared events", "Teamwork", "Isolation", "Mutual support"],
+          "optionsZh": ["冲突", "共享活动", "团队合作", "孤立", "相互支持"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["共享活动", "团队合作", "相互支持"],
+          "example": "Teamwork promotes cohesion.",
+          "exampleZh": "团队合作促进凝聚力。"
+        }
+      ]
+    },
+    {
+      "word": "diversity",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'diversity' mean?",
+          "questionZh": "‘多样性’ 的意思是什么？",
+          "options": ["Similarity", "Variety of people or things", "Uniformity", "Repetition"],
+          "optionsZh": ["相似性", "人或事物的多样性", "一致性", "重复"],
+          "correct": "Variety of people or things",
+          "correctZh": "人或事物的多样性",
+          "example": "Diversity enriches culture.",
+          "exampleZh": "多样性丰富文化。"
+        },
+        {
+          "type": "true-false",
+          "question": "Diversity can improve mental well-being.",
+          "questionZh": "多样性可以改善心理健康。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "Diversity fosters understanding.",
+          "exampleZh": "多样性促进理解。"
+        }
+      ]
+    },
+    {
+      "word": "integration",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'integration' mean?",
+          "questionZh": "‘整合’ 的意思是什么？",
+          "options": ["Separation", "Combining people or systems", "Exclusion", "Conflict"],
+          "optionsZh": ["分离", "结合人或系统", "排斥", "冲突"],
+          "correct": "Combining people or systems",
+          "correctZh": "结合人或系统",
+          "example": "Integration builds strong societies.",
+          "exampleZh": "整合建立强大的社会。"
+        },
+        {
+          "type": "select-all",
+          "question": "What supports 'integration' in society?",
+          "questionZh": "什么支持社会的 ‘整合’？",
+          "options": ["Exclusion", "Cultural events", "Education", "Segregation", "Dialogue"],
+          "optionsZh": ["排斥", "文化活动", "教育", "隔离", "对话"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["文化活动", "教育", "对话"],
+          "example": "Education supports integration.",
+          "exampleZh": "教育支持整合。"
+        }
+      ]
+    },
+    {
+      "word": "heritage",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'heritage' mean?",
+          "questionZh": "‘遗产’ 的意思是什么？",
+          "options": ["Future plans", "Cultural traditions", "Modern trends", "Technology"],
+          "optionsZh": ["未来计划", "文化传统", "现代趋势", "技术"],
+          "correct": "Cultural traditions",
+          "correctZh": "文化传统",
+          "example": "Heritage includes old customs.",
+          "exampleZh": "遗产包括古老习俗。"
+        },
+        {
+          "type": "true-false",
+          "question": "Heritage can influence lifestyle choices.",
+          "questionZh": "遗产可以影响生活方式选择。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "Heritage shapes our diet.",
+          "exampleZh": "遗产塑造我们的饮食。"
+        }
+      ]
+    },
+    {
+      "word": "solidarity",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'solidarity' mean?",
+          "questionZh": "‘团结’ 的意思是什么？",
+          "options": ["Division", "Mutual support", "Competition", "Isolation"],
+          "optionsZh": ["分裂", "相互支持", "竞争", "孤立"],
+          "correct": "Mutual support",
+          "correctZh": "相互支持",
+          "example": "Solidarity helps communities.",
+          "exampleZh": "团结帮助社区。"
+        },
+        {
+          "type": "select-all",
+          "question": "What fosters 'solidarity'?",
+          "questionZh": "什么促进 ‘团结’？",
+          "options": ["Conflict", "Helping others", "Shared goals", "Selfishness", "Teamwork"],
+          "optionsZh": ["冲突", "帮助他人", "共同目标", "自私", "团队合作"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["帮助他人", "共同目标", "团队合作"],
+          "example": "Teamwork fosters solidarity.",
+          "exampleZh": "团队合作促进团结。"
+        }
+      ]
+    },
+    {
+      "word": "custom",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'custom' mean?",
+          "questionZh": "‘习俗’ 的意思是什么？",
+          "options": ["New idea", "Traditional practice", "Machine", "Law"],
+          "optionsZh": ["新想法", "传统实践", "机器", "法律"],
+          "correct": "Traditional practice",
+          "correctZh": "传统实践",
+          "example": "Customs shape our culture.",
+          "exampleZh": "习俗塑造我们的文化。"
+        },
+        {
+          "type": "true-false",
+          "question": "Customs can influence social behavior.",
+          "questionZh": "习俗可以影响社会行为。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "Customs guide our celebrations.",
+          "exampleZh": "习俗指导我们的庆祝活动。"
+        }
+      ]
+    },
+    {
+      "word": "collaboration",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'collaboration' mean?",
+          "questionZh": "‘合作’ 的意思是什么？",
+          "options": ["Competition", "Working together", "Isolation", "Conflict"],
+          "optionsZh": ["竞争", "一起工作", "孤立", "冲突"],
+          "correct": "Working together",
+          "correctZh": "一起工作",
+          "example": "Collaboration solves problems.",
+          "exampleZh": "合作解决问题。"
+        },
+        {
+          "type": "select-all",
+          "question": "What involves 'collaboration' in society?",
+          "questionZh": "社会中什么涉及 ‘合作’？",
+          "options": ["Fighting", "Team projects", "Community events", "Working alone", "Sharing ideas"],
+          "optionsZh": ["打架", "团队项目", "社区活动", "独自工作", "分享想法"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["团队项目", "社区活动", "分享想法"],
+          "example": "Community events involve collaboration.",
+          "exampleZh": "社区活动涉及合作。"
+        }
+      ]
+    },
+    {
+      "word": "celebration",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'celebration' mean?",
+          "questionZh": "‘庆祝’ 的意思是什么？",
+          "options": ["Work", "Joyful event", "Test", "Sleep"],
+          "optionsZh": ["工作", "欢乐的事件", "考试", "睡觉"],
+          "correct": "Joyful event",
+          "correctZh": "欢乐的事件",
+          "example": "Celebrations unite people.",
+          "exampleZh": "庆祝活动团结人们。"
+        },
+        {
+          "type": "true-false",
+          "question": "Celebrations can improve community bonds.",
+          "questionZh": "庆祝活动可以改善社区联系。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "We have cultural celebrations.",
+          "exampleZh": "我们有文化庆祝活动。"
+        }
+      ]
+    },
+    {
+      "word": "perspective",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'perspective' mean?",
+          "questionZh": "‘观点’ 的意思是什么？",
+          "options": ["Fact", "Point of view", "Law", "Story"],
+          "optionsZh": ["事实", "观点", "法律", "故事"],
+          "correct": "Point of view",
+          "correctZh": "观点",
+          "example": "Perspectives vary in society.",
+          "exampleZh": "社会中的观点各不相同。"
+        },
+        {
+          "type": "select-all",
+          "question": "When do you share a 'perspective'?",
+          "questionZh": "你什么时候分享 ‘观点’？",
+          "options": ["In discussions", "While sleeping", "With friends", "During work", "In debates"],
+          "optionsZh": ["在讨论中", "睡觉时", "和朋友", "工作时", "在辩论中"],
+          "correct": ["1", "3", "5"],
+          "correctZh": ["在讨论中", "和朋友", "在辩论中"],
+          "example": "I share my perspective with friends.",
+          "exampleZh": "我和朋友分享我的观点。"
+        }
+      ]
+    },
+    {
+      "word": "inclusion",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'inclusion' mean?",
+          "questionZh": "‘包容’ 的意思是什么？",
+          "options": ["Exclusion", "Involving everyone", "Competition", "Isolation"],
+          "optionsZh": ["排斥", "让每个人参与", "竞争", "孤立"],
+          "correct": "Involving everyone",
+          "correctZh": "让每个人参与",
+          "example": "Inclusion promotes fairness.",
+          "exampleZh": "包容促进公平。"
+        },
+        {
+          "type": "true-false",
+          "question": "Inclusion supports mental health.",
+          "questionZh": "包容支持心理健康。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "Inclusion makes people feel valued.",
+          "exampleZh": "包容让人们感到被重视。"
+        }
+      ]
+    },
+    {
+      "word": "interaction",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'interaction' mean?",
+          "questionZh": "‘互动’ 的意思是什么？",
+          "options": ["Isolation", "Communication with others", "Work", "Silence"],
+          "optionsZh": ["孤立", "与他人的交流", "工作", "沉默"],
+          "correct": "Communication with others",
+          "correctZh": "与他人的交流",
+          "example": "Interaction builds relationships.",
+          "exampleZh": "互动建立关系。"
+        },
+        {
+          "type": "select-all",
+          "question": "What involves 'interaction' in society?",
+          "questionZh": "社会中什么涉及 ‘互动’？",
+          "options": ["Working alone", "Talking", "Community events", "Sleeping", "Helping others"],
+          "optionsZh": ["独自工作", "谈话", "社区活动", "睡觉", "帮助他人"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["谈话", "社区活动", "帮助他人"],
+          "example": "Talking involves interaction.",
+          "exampleZh": "谈话涉及互动。"
+        }
+      ]
+    },
+    {
+      "word": "empathy",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'empathy' mean?",
+          "questionZh": "‘同理心’ 的意思是什么？",
+          "options": ["Anger", "Understanding others’ feelings", "Competition", "Ignorance"],
+          "optionsZh": ["愤怒", "理解他人的感受", "竞争", "无知"],
+          "correct": "Understanding others’ feelings",
+          "correctZh": "理解他人的感受",
+          "example": "Empathy improves relationships.",
+          "exampleZh": "同理心改善关系。"
+        },
+        {
+          "type": "true-false",
+          "question": "Empathy enhances social well-being.",
+          "questionZh": "同理心增强社会福祉。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "Empathy helps community health.",
+          "exampleZh": "同理心有助于社区健康。"
+        }
+      ]
+    }
+  ],
+  "functional": [
+    {
+      "type": "multiple-choice",
+      "question": "Which phrase expresses your view on social cohesion and health?",
+      "questionZh": "哪个短语表达你对社会凝聚力和健康的看法？",
+          "options": ["As a result", "I believe", "Whereas", "Tackle"],
+          "optionsZh": ["因此", "我相信", "然而", "解决"],
+          "correct": "I believe",
+          "correctZh": "我相信",
+          "example": "I believe cohesion improves mental health.",
+          "exampleZh": "我相信凝聚力改善心理健康。"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Which phrase suggests solving social health issues?",
+      "questionZh": "哪个短语建议解决社会健康问题？",
+          "options": ["On the contrary", "Tackle", "I concur", "It seems to me"],
+          "optionsZh": ["相反", "解决", "我同意", "在我看来"],
+          "correct": "Tackle",
+          "correctZh": "解决",
+          "example": "We should tackle exclusion with inclusion.",
+          "exampleZh": "我们应该通过包容解决排斥问题。"
+    },
+    {
+      "type": "true-false",
+      "question": "‘I believe’ is used to express a personal opinion on social well-being.",
+      "questionZh": "‘我相信’ 用于表达对社会福祉的个人意见。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I believe empathy supports health.",
+          "exampleZh": "我相信同理心支持健康。"
+    },
+    {
+      "type": "true-false",
+      "question": "‘I concur’ means you disagree with a social health idea.",
+      "questionZh": "‘我同意’ 意味着你不同意社会健康想法。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "False",
+          "correctZh": "错误",
+          "example": "I concur that inclusion promotes health.",
+          "exampleZh": "我同意包容促进健康。"
+    },
+    {
+      "type": "select-all",
+      "question": "Which phrases express opinions on social health?",
+      "questionZh": "哪些短语表达社会健康的意见？",
+          "options": ["I believe", "As a result", "In my view", "Tackle", "Owing to"],
+          "optionsZh": ["我相信", "因此", "在我看来", "解决", "由于"],
+          "correct": ["1", "3"],
+          "correctZh": ["我相信", "在我看来"],
+          "example": "I believe collaboration improves health.",
+          "exampleZh": "我相信合作改善健康。"
+    },
+    {
+      "type": "select-all",
+      "question": "Which phrases suggest solutions for social health issues?",
+      "questionZh": "哪些短语建议解决社会健康问题的方案？",
+          "options": ["I believe", "Tackle", "As a result", "Propose", "Whereas"],
+          "optionsZh": ["我相信", "解决", "因此", "提出", "然而"],
+          "correct": ["2", "4"],
+          "correctZh": ["解决", "提出"],
+          "example": "We propose more community events.",
+          "exampleZh": "我们提出更多社区活动。"
+    }
+  ]
+}
