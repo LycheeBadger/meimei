@@ -240,260 +240,24 @@
     "question": "What does 'air' mean?",
     "questionZh": "‘空气’ 的意思是什么？",
     "options": ["Food", "What we breathe", "Water", "Clothes"],
-    "optionsZh": ["食物 oyuncu
-System: Based on the provided JSON files (`environment1.json`, `environment2.json`, `environment3.json`) and your requirements, I have updated the JSON files to:
-1. Remove the top-level `"thematic"` and `"functional"` keys, merging their contents into a single flat array of question objects.
-2. Add a `word` field to each question object:
-   - For `"thematic"` questions, use the `word` from the parent object (e.g., `"pollution"`, `"clean"`).
-   - For `"functional"` questions, assign `"opinion"` for opinion-related questions (e.g., involving `"I believe"`, `"In my view"`) and `"solution"` for solution-related questions (e.g., involving `"Tackle"`, `"Propose"`).
-3. Add a `wordZh` field with the Chinese translation of the `word`:
-   - For `"thematic"`, use translations from `questionZh` or standard translations (e.g., `"污染"` for `"pollution"`).
-   - For `"functional"`, use `"观点"` for `"opinion"` and `"解决方案"` for `"solution"`.
-4. Ensure compatibility with your `quiz.html`, which expects a flat array of question objects and fetches from the `data/` folder on GitHub Pages.
-5. Apply the changes to all provided files (`environment1.json`, `environment2.json`, `environment3.json`), assuming these are the "lower levels" you mentioned.
-
-Below are the updated JSON files. Since `quiz.html` was previously updated to handle a nested JSON structure (with `"thematic"`), you can use these flat JSON files with either the updated `quiz.html` from my previous response (which flattens nested JSON) or revert to a simpler fetch logic if preferred. I’ll also provide instructions to apply these changes and test them on GitHub Pages.
-
----
-
-### Updated JSON Files
-
-#### Updated `environment1.json`
-```json
-[
-  {
-    "word": "pollution",
-    "wordZh": "污染",
-    "type": "multiple-choice",
-    "question": "What does 'pollution' mean?",
-    "questionZh": "‘污染’ 的意思是什么？",
-    "options": ["Clean water", "Dirty air or water", "Good food", "Bright light"],
-    "optionsZh": ["干净的水", "脏空气或水", "好食物", "明亮的光"],
-    "correct": "Dirty air or water",
-    "correctZh": "脏空气或水",
-    "example": "Pollution harms the environment.",
-    "exampleZh": "污染损害环境。"
-  },
-  {
-    "word": "pollution",
-    "wordZh": "污染",
-    "type": "select-all",
-    "question": "What causes 'pollution'?",
-    "questionZh": "什么引起 ‘污染’？",
-    "options": ["Trees", "Factories", "Smoke", "Books", "Trash"],
-    "optionsZh": ["树", "工厂", "烟雾", "书", "垃圾"],
-    "correct": ["2", "3", "5"],
-    "correctZh": ["工厂", "烟雾", "垃圾"],
-    "example": "Factories cause pollution.",
-    "exampleZh": "工厂造成污染。"
-  },
-  {
-    "word": "clean",
-    "wordZh": "干净",
-    "type": "multiple-choice",
-    "question": "What does 'clean' mean?",
-    "questionZh": "‘干净’ 的意思是什么？",
-    "options": ["Dirty", "Not dirty", "Broken", "Old"],
-    "optionsZh": ["脏", "不脏", "坏了", "旧"],
-    "correct": "Not dirty",
-    "correctZh": "不脏",
-    "example": "Clean water is safe.",
-    "exampleZh": "干净的水是安全的。"
-  },
-  {
-    "word": "clean",
-    "wordZh": "干净",
-    "type": "true-false",
-    "question": "Clean air is good for health.",
-    "questionZh": "干净的空气对健康有益。",
-    "options": ["True", "False"],
-    "optionsZh": ["正确", "错误"],
-    "correct": "True",
-    "correctZh": "正确",
-    "example": "I breathe clean air.",
-    "exampleZh": "我呼吸干净的空气。"
-  },
-  {
-    "word": "nature",
-    "wordZh": "自然",
-    "type": "multiple-choice",
-    "question": "What does 'nature' mean?",
-    "questionZh": "‘自然’ 的意思是什么？",
-    "options": ["City", "Plants and animals", "School", "Car"],
-    "optionsZh": ["城市", "植物和动物", "学校", "汽车"],
-    "correct": "Plants and animals",
-    "correctZh": "植物和动物",
-    "example": "Nature includes trees.",
-    "exampleZh": "自然包括树。"
-  },
-  {
-    "word": "nature",
-    "wordZh": "自然",
-    "type": "select-all",
-    "question": "What is part of 'nature'?",
-    "questionZh": "什么是 ‘自然’ 的一部分？",
-    "options": ["Cars", "Trees", "Rivers", "Books", "Birds"],
-    "optionsZh": ["汽车", "树", "河", "书", "鸟"],
-    "correct": ["2", "3", "5"],
-    "correctZh": ["树", "河", "鸟"],
-    "example": "Birds are part of nature.",
-    "exampleZh": "鸟是自然的一部分。"
-  },
-  {
-    "word": "water",
-    "wordZh": "水",
-    "type": "multiple-choice",
-    "question": "What does 'water' mean?",
-    "questionZh": "‘水’ 的意思是什么？",
-    "options": ["Food", "Liquid you drink", "Clothes", "Fire"],
-    "optionsZh": ["食物", "你喝的液体", "衣服", "火"],
-    "correct": "Liquid you drink",
-    "correctZh": "你喝的液体",
-    "example": "Water is important for life.",
-    "exampleZh": "水对生命很重要。"
-  },
-  {
-    "word": "water",
-    "wordZh": "水",
-    "type": "true-false",
-    "question": "Clean water is necessary for health.",
-    "questionZh": "干净的水对健康是必要的。",
-    "options": ["True", "False"],
-    "optionsZh": ["正确", "错误"],
-    "correct": "True",
-    "correctZh": "正确",
-    "example": "I drink clean water.",
-    "exampleZh": "我喝干净的水。"
+    "optionsZh": ["食物", "我们呼吸的东西", "水", "衣服"],
+    "correct": "What we breathe",
+    "correctZh": "我们呼吸的东西",
+    "example": "Clean air improves health.",
+    "exampleZh": "干净空气改善健康。"
   },
   {
     "word": "air",
     "wordZh": "空气",
-    "type": "multiple-choice",
-    "question": "What does 'air' mean?",
-    "questionZh": "‘空气’ 的意思是什么？",
-    "options": ["Food", "What you breathe", "Light", "Music"],
-    "optionsZh": ["食物", "你呼吸的东西", "光", "音乐"],
-    "correct": "What you breathe",
-    "correctZh": "你呼吸的东西",
-    "example": "Clean air is vital.",
-    "exampleZh": "干净的空气至关重要。"
-  },
-  {
-    "word": "air",
-    "wordZh": "空气",
-    "type": "select-all",
-    "question": "What is true about 'air'?",
-    "questionZh": "关于 ‘空气’ 什么是真的？",
-    "options": ["You breathe it", "You eat it", "It can be dirty", "You drink it", "It is everywhere"],
-    "optionsZh": ["你呼吸它", "你吃它", "它可能脏", "你喝它", "它无处不在"],
-    "correct": ["1", "3", "5"],
-    "correctZh": ["你呼吸它", "它可能脏", "它无处不在"],
-    "example": "Clean air is healthy.",
-    "exampleZh": "干净的空气是健康的。"
-  },
-  {
-    "word": "tree",
-    "wordZh": "树",
-    "type": "multiple-choice",
-    "question": "What does 'tree' mean?",
-    "questionZh": "‘树’ 的意思是什么？",
-    "options": ["Food", "Plant with leaves", "Car", "House"],
-    "optionsZh": ["食物", "有叶子的植物", "汽车", "房子"],
-    "correct": "Plant with leaves",
-    "correctZh": "有叶子的植物",
-    "example": "Trees clean the air.",
-    "exampleZh": "树净化空气。"
-  },
-  {
-    "word": "tree",
-    "wordZh": "树",
     "type": "true-false",
-    "question": "Trees help the environment.",
-    "questionZh": "树帮助环境。",
+    "question": "Polluted air can harm our health.",
+    "questionZh": "污染的空气可能危害我们的健康。",
     "options": ["True", "False"],
     "optionsZh": ["正确", "错误"],
     "correct": "True",
     "correctZh": "正确",
-    "example": "I plant trees.",
-    "exampleZh": "我种树。"
-  },
-  {
-    "word": "plant",
-    "wordZh": "植物",
-    "type": "multiple-choice",
-    "question": "What does 'plant' mean?",
-    "questionZh": "‘植物’ 的意思是什么？",
-    "options": ["Animal", "Growing thing", "Book", "Chair"],
-    "optionsZh": ["动物", "生长的东西", "书", "椅子"],
-    "correct": "Growing thing",
-    "correctZh": "生长的东西",
-    "example": "Plants need water.",
-    "exampleZh": "植物需要水。"
-  },
-  {
-    "word": "plant",
-    "wordZh": "植物",
-    "type": "select-all",
-    "question": "What does a 'plant' need?",
-    "questionZh": "‘植物’ 需要什么？",
-    "options": ["Food", "Water", "Sun", "Clothes", "Air"],
-    "optionsZh": ["食物", "水", "太阳", "衣服", "空气"],
-    "correct": ["2", "3", "5"],
-    "correctZh": ["水", "太阳", "空气"],
-    "example": "Plants need sun.",
-    "exampleZh": "植物需要太阳。"
-  },
-  {
-    "word": "sun",
-    "wordZh": "太阳",
-    "type": "multiple-choice",
-    "question": "What does 'sun' mean?",
-    "questionZh": "‘太阳’ 的意思是什么？",
-    "options": ["Moon", "Star in the sky", "Rain", "Cloud"],
-    "optionsZh": ["月亮", "天上的星星", "雨", "云"],
-    "correct": "Star in the sky",
-    "correctZh": "天上的星星",
-    "example": "The sun gives light.",
-    "exampleZh": "太阳提供光。"
-  },
-  {
-    "word": "sun",
-    "wordZh": "太阳",
-    "type": "true-false",
-    "question": "The sun helps plants grow.",
-    "questionZh": "太阳帮助植物生长。",
-    "options": ["True", "False"],
-    "optionsZh": ["正确", "错误"],
-    "correct": "True",
-    "correctZh": "正确",
-    "example": "Plants need the sun.",
-    "exampleZh": "植物需要太阳。"
-  },
-  {
-    "word": "rain",
-    "wordZh": "雨",
-    "type": "multiple-choice",
-    "question": "What does 'rain' mean?",
-    "questionZh": "‘雨’ 的意思是什么？",
-    "options": ["Snow", "Water from the sky", "Wind", "Sun"],
-    "optionsZh": ["雪", "天上的水", "风", "太阳"],
-    "correct": "Water from the sky",
-    "correctZh": "天上的水",
-    "example": "Rain waters plants.",
-    "exampleZh": "雨浇灌植物。"
-  },
-  {
-    "word": "rain",
-    "wordZh": "雨",
-    "type": "select-all",
-    "question": "What does 'rain' do?",
-    "questionZh": "‘雨’ 做什么？",
-    "options": ["Burns plants", "Waters plants", "Cleans air", "Makes noise", "Gives water"],
-    "optionsZh": ["烧植物", "浇灌植物", "清洁空气", "制造噪音", "提供水"],
-    "correct": ["2", "3", "5"],
-    "correctZh": ["浇灌植物", "清洁空气", "提供水"],
-    "example": "Rain gives water.",
-    "exampleZh": "雨提供水。"
+    "example": "I need clean air to stay healthy.",
+    "exampleZh": "我需要干净空气来保持健康。"
   },
   {
     "word": "forest",
@@ -501,18 +265,128 @@ Below are the updated JSON files. Since `quiz.html` was previously updated to ha
     "type": "multiple-choice",
     "question": "What does 'forest' mean?",
     "questionZh": "‘森林’ 的意思是什么？",
-    "options": ["City", "Group of trees", "School", "Car"],
-    "optionsZh": ["城市", "一群树", "学校", "汽车"],
-    "correct": "Group of trees",
-    "correctZh": "一群树",
-    "example": "Forests are full of trees.",
-    "exampleZh": "森林里全是树。"
+    "options": ["A city", "A large area with trees", "A school", "A car"],
+    "optionsZh": ["城市", "有树木的大片区域", "学校", "汽车"],
+    "correct": "A large area with trees",
+    "correctZh": "有树木的大片区域",
+    "example": "Forests clean the air we breathe.",
+    "exampleZh": "森林净化我们呼吸的空气。"
   },
   {
     "word": "forest",
     "wordZh": "森林",
+    "type": "select-all",
+    "question": "What do 'forests' provide?",
+    "questionZh": "‘森林’ 提供什么？",
+    "options": ["Pollution", "Clean air", "Wildlife homes", "Cars", "Oxygen"],
+    "optionsZh": ["污染", "干净空气", "野生动物家园", "汽车", "氧气"],
+    "correct": ["2", "3", "5"],
+    "correctZh": ["干净空气", "野生动物家园", "氧气"],
+    "example": "Forests provide oxygen.",
+    "exampleZh": "森林提供氧气。"
+  },
+  {
+    "word": "climate",
+    "wordZh": "气候",
+    "type": "multiple-choice",
+    "question": "What does 'climate' mean?",
+    "questionZh": "‘气候’ 的意思是什么？",
+    "options": ["Food", "Weather patterns in an area", "Work", "Clothes"],
+    "optionsZh": ["食物", "一个地区的天气模式", "工作", "衣服"],
+    "correct": "Weather patterns in an area",
+    "correctZh": "一个地区的天气模式",
+    "example": "Climate affects the environment.",
+    "exampleZh": "气候影响环境。"
+  },
+  {
+    "word": "climate",
+    "wordZh": "气候",
     "type": "true-false",
-    "question": "Forests help clean the air.",
-    "questionZh": "森林帮助净化空气。",
+    "question": "Changes in climate can affect health.",
+    "questionZh": "气候变化可能影响健康。",
     "options": ["True", "False"],
-    "optionsZh": ["正确", "错误
+    "optionsZh": ["正确", "错误"],
+    "correct": "True",
+    "correctZh": "正确",
+    "example": "Climate change causes health issues.",
+    "exampleZh": "气候变化导致健康问题。"
+  },
+  {
+    "word": "opinion",
+    "wordZh": "观点",
+    "type": "multiple-choice",
+    "question": "Which phrase expresses your view on environmental health?",
+    "questionZh": "哪个短语表达你对环境健康的看法？",
+    "options": ["As a result", "I believe", "Whereas", "Tackle"],
+    "optionsZh": ["因此", "我相信", "然而", "解决"],
+    "correct": "I believe",
+    "correctZh": "我相信",
+    "example": "I believe clean air improves health.",
+    "exampleZh": "我相信干净空气改善健康。"
+  },
+  {
+    "word": "solution",
+    "wordZh": "解决方案",
+    "type": "multiple-choice",
+    "question": "Which phrase suggests solving environmental issues?",
+    "questionZh": "哪个短语建议解决环境问题？",
+    "options": ["On the contrary", "Tackle", "I concur", "It seems to me"],
+    "optionsZh": ["相反", "解决", "我同意", "在我看来"],
+    "correct": "Tackle",
+    "correctZh": "解决",
+    "example": "We should tackle pollution with recycling.",
+    "exampleZh": "我们应该通过回收解决污染。"
+  },
+  {
+    "word": "opinion",
+    "wordZh": "观点",
+    "type": "true-false",
+    "question": "‘I believe’ is used to express a personal opinion on sustainability.",
+    "questionZh": "‘我相信’ 用于表达对可持续性的个人意见。",
+    "options": ["True", "False"],
+    "optionsZh": ["正确", "错误"],
+    "correct": "True",
+    "correctZh": "正确",
+    "example": "I believe recycling helps sustainability.",
+    "exampleZh": "我相信回收有助于可持续性。"
+  },
+  {
+    "word": "opinion",
+    "wordZh": "观点",
+    "type": "true-false",
+    "question": "‘As a result’ shows the cause of an environmental issue.",
+    "questionZh": "‘因此’ 显示环境问题的原因。",
+    "options": ["True", "False"],
+    "optionsZh": ["正确", "错误"],
+    "correct": "False",
+    "correctZh": "错误",
+    "example": "As a result of conservation, nature is protected.",
+    "exampleZh": "由于保护，自然得到保护。"
+  },
+  {
+    "word": "opinion",
+    "wordZh": "观点",
+    "type": "select-all",
+    "question": "Which phrases express opinions on environmental health?",
+    "questionZh": "哪些短语表达环境健康的意见？",
+    "options": ["I believe", "As a result", "In my view", "Tackle", "Owing to"],
+    "optionsZh": ["我相信", "因此", "在我看来", "解决", "由于"],
+    "correct": ["1", "3"],
+    "correctZh": ["我相信", "在我看来"],
+    "example": "In my view, forests improve health.",
+    "exampleZh": "在我看来，森林改善健康。"
+  },
+  {
+    "word": "solution",
+    "wordZh": "解决方案",
+    "type": "select-all",
+    "question": "Which phrases suggest solutions for environmental issues?",
+    "questionZh": "哪些短语建议解决环境问题的方案？",
+    "options": ["I believe", "Tackle", "As a result", "Propose", "Whereas"],
+    "optionsZh": ["我相信", "解决", "因此", "提出", "然而"],
+    "correct": ["2", "4"],
+    "correctZh": ["解决", "提出"],
+    "example": "We propose more conservation to protect water.",
+    "exampleZh": "我们提出更多保护措施来保护水资源。"
+  }
+]
