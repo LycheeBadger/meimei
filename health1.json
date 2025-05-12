@@ -1,247 +1,616 @@
-[
-  {
-    "word": "well-being",
-    "questions": [
-      {
-        "type": "multiple-choice",
-        "question": "What does 'well-being' mean?",
-        "questionZh": "‘幸福感’ 的意思是什么？",
-        "options": [
-          "Physical illness",
-          "State of being healthy and happy",
-          "Financial success",
-          "Social isolation",
-        ],
-        "optionsZh": ["身体疾病", "健康和幸福的状态", "财务成功", "社交孤立"],
-        "correct": "State of being healthy and happy",
-        "correctZh": "健康和幸福的状态",
-        "example": "Regular exercise contributes to overall well-being.",
-        "exampleZh": "定期锻炼有助于整体幸福感。"
-      },
-      {
-        "type": "true-false",
-        "question": "'Well-being' includes both physical and mental health.",
-        "questionZh": "‘幸福感’ 包括身体和心理健康。",
-        "options": ["True", "False"],
-        "optionsZh": ["正确", "错误"],
-        "correct": "True",
-        "correctZh": "正确",
-        "example": "Well-being is enhanced by a balanced diet and stress management.",
-        "exampleZh": "均衡饮食和压力管理可以提升幸福感。"
-      },
-      {
-        "type": "select-all",
-        "question": "Which factors contribute to 'well-being'?",
-        "questionZh": "哪些因素有助于 ‘幸福感’？",
-        "options": [
-          "Regular exercise",
-          "Poor sleep habits",
-          "Healthy diet",
-          "Chronic stress",
-          "Social connections",
-        ],
-        "optionsZh": ["定期锻炼", "不良睡眠习惯", "健康饮食", "慢性压力", "社交联系"],
-        "correct": ["1", "3", "5"],
-        "correctZh": ["定期锻炼", "健康饮食", "社交联系"],
-        "example": "Social connections and exercise boost well-being.",
-        "exampleZh": "社交联系和锻炼提升幸福感。"
-      }
-    ]
-  },
-  {
-    "word": "obesity",
-    "questions": [
-      {
-        "type": "multiple-choice",
-        "question": "What does 'obesity' refer to?",
-        "questionZh": "‘肥胖’ 是指什么？",
-        "options": [
-          "Excessive body fat",
-          "Low body weight",
-          "High muscle mass",
-          "Balanced diet",
-        ],
-        "optionsZh": ["过多的体脂", "低体重", "高肌肉量", "均衡饮食"],
-        "correct": "Excessive body fat",
-        "correctZh": "过多的体脂",
-        "example": "Obesity is a major risk factor for heart disease.",
-        "exampleZh": "肥胖是心脏病的主要风险因素。"
-      },
-      {
-        "type": "true-false",
-        "question": "Obesity can lead to health issues like diabetes.",
-        "questionZh": "肥胖可能导致糖尿病等健康问题。",
-        "options": ["True", "False"],
-        "optionsZh": ["正确", "错误"],
-        "correct": "True",
-        "correctZh": "正确",
-        "example": "Obesity increases the likelihood of chronic diseases.",
-        "exampleZh": "肥胖增加慢性疾病的可能性。"
-      },
-      {
-        "type": "select-all",
-        "question": "Which factors can contribute to 'obesity'?",
-        "questionZh": "哪些因素可能导致 ‘肥胖’？",
-        "options": [
-          "Unhealthy diet",
-          "Regular exercise",
-          "Lack of physical activity",
-          "Genetic predisposition",
-          "Adequate sleep",
-        ],
-        "optionsZh": ["不健康饮食", "定期锻炼", "缺乏体力活动", "遗传倾向", "充足睡眠"],
-        "correct": ["1", "3", "4"],
-        "correctZh": ["不健康饮食", "缺乏体力活动", "遗传倾向"],
-        "example": "An unhealthy diet and lack of exercise contribute to obesity.",
-        "exampleZh": "不健康饮食和缺乏锻炼导致肥胖。"
-      }
-    ]
-  },
-  {
-    "word": "sedentary",
-    "questions": [
-      {
-        "type": "multiple-choice",
-        "question": "What does 'sedentary' mean?",
-        "questionZh": "‘久坐的’ 的意思是什么？",
-        "options": [
-          "Highly active",
-          "Involving little physical activity",
-          "Nutritionally balanced",
-          "Mentally stimulating",
-        ],
-        "optionsZh": ["高度活跃", "几乎没有体力活动", "营养均衡", "精神刺激"],
-        "correct": "Involving little physical activity",
-        "correctZh": "几乎没有体力活动",
-        "example": "A sedentary lifestyle can harm your health.",
-        "exampleZh": "久坐的生活方式可能损害健康。"
-      },
-      {
-        "type": "true-false",
-        "question": "A sedentary lifestyle is associated with increased health risks.",
-        "questionZh": "久坐的生活方式与健康风险增加有关。",
-        "options": ["True", "False"],
-        "optionsZh": ["正确", "错误"],
-        "correct": "True",
-        "correctZh": "正确",
-        "example": "Sedentary habits can lead to obesity and heart issues.",
-        "exampleZh": "久坐习惯可能导致肥胖和心脏问题。"
-      },
-      {
-        "type": "select-all",
-        "question": "Which activities are considered 'sedentary'?",
-        "questionZh": "哪些活动被认为是 ‘久坐的’？",
-        "options": [
-          "Watching TV for hours",
-          "Jogging daily",
-          "Sitting at a desk all day",
-          "Playing sports",
-          "Using a computer for long periods",
-        ],
-        "optionsZh": ["长时间看电视", "每天慢跑", "整天坐在办公桌前", "运动", "长时间使用电脑"],
-        "correct": ["1", "3", "5"],
-        "correctZh": ["长时间看电视", "整天坐在办公桌前", "长时间使用电脑"],
-        "example": "Sitting at a desk for hours is a sedentary activity.",
-        "exampleZh": "整天坐在办公桌前是一种久坐活动。"
-      }
-    ]
-  },
-  {
-    "word": "nutrition",
-    "questions": [
-      {
-        "type": "multiple-choice",
-        "question": "What does 'nutrition' refer to?",
-        "questionZh": "‘营养’ 是指什么？",
-        "options": [
-          "Physical exercise",
-          "Process of obtaining food for health",
-          "Mental relaxation",
-          "Social interaction",
-        ],
-        "optionsZh": ["体育锻炼", "为健康获取食物的过程", "精神放松", "社交互动"],
-        "correct": "Process of obtaining food for health",
-        "correctZh": "为健康获取食物的过程",
-        "example": "Good nutrition is essential for growth and development.",
-        "exampleZh": "良好的营养对成长和发展至关重要。"
-      },
-      {
-        "type": "true-false",
-        "question": "Nutrition only involves eating healthy foods.",
-        "questionZh": "营养只涉及吃健康食品。",
-        "options": ["True", "False"],
-        "optionsZh": ["正确", "错误"],
-        "correct": "False",
-        "correctZh": "错误",
-        "example": "Nutrition includes how the body uses food, not just eating healthy.",
-        "exampleZh": "营养包括身体如何使用食物，而不仅仅是吃健康食品。"
-      },
-      {
-        "type": "select-all",
-        "question": "Which elements are important for good 'nutrition'?",
-        "questionZh": "哪些元素对良好的 ‘营养’ 很重要？",
-        "options": [
-          "Balanced diet",
-          "Excessive sugar intake",
-          "Adequate hydration",
-          "Vitamin supplements",
-          "Skipping meals",
-        ],
-        "optionsZh": ["均衡饮食", "过量糖摄入", "充足水分", "维生素补充剂", "不吃饭"],
-        "correct": ["1", "3", "4"],
-        "correctZh": ["均衡饮食", "充足水分", "维生素补充剂"],
-        "example": "A balanced diet and hydration support proper nutrition.",
-        "exampleZh": "均衡饮食和充足水分支持适当的营养。"
-      }
-    ]
-  },
-  {
-    "word": "mental health",
-    "questions": [
-      {
-        "type": "multiple-choice",
-        "question": "What does 'mental health' refer to?",
-        "questionZh": "‘心理健康’ 是指什么？",
-        "options": [
-          "Physical fitness",
-          "Emotional and psychological well-being",
-          "Academic success",
-          "Financial stability",
-        ],
-        "optionsZh": ["身体健康", "情感和心理健康", "学业成功", "财务稳定"],
-        "correct": "Emotional and psychological well-being",
-        "correctZh": "情感和心理健康",
-        "example": "Mental health affects how we think and feel.",
-        "exampleZh": "心理健康影响我们的思维和感受。"
-      },
-      {
-        "type": "true-false",
-        "question": "Mental health issues can affect anyone, regardless of age.",
-        "questionZh": "心理健康问题可能影响任何人，无论年龄。",
-        "options": ["True", "False"],
-        "optionsZh": ["正确", "错误"],
-        "correct": "True",
-        "correctZh": "正确",
-        "example": "Mental health challenges are common across all age groups.",
-        "exampleZh": "心理健康挑战在所有年龄段都很常见。"
-      },
-      {
-        "type": "select-all",
-        "question": "Which practices support good 'mental health'?",
-        "questionZh": "哪些做法支持良好的 ‘心理健康’？",
-        "options": [
-          "Regular meditation",
-          "Social isolation",
-          "Adequate sleep",
-          "Excessive work stress",
-          "Therapy or counseling",
-        ],
-        "optionsZh": ["定期冥想", "社交孤立", "充足睡眠", "过度工作压力", "治疗或咨询"],
-        "correct": ["1", "3", "5"],
-        "correctZh": ["定期冥想", "充足睡眠", "治疗或咨询"],
-        "example": "Meditation and therapy can improve mental health.",
-        "exampleZh": "冥想和治疗可以改善心理健康。"
-      }
-    ]
-  }
-]
+{
+  "thematic": [
+    {
+      "word": "healthy",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'healthy' mean?",
+          "questionZh": "‘健康’ 的意思是什么？",
+          "options": ["Sad", "In good health", "Tired", "Angry"],
+          "optionsZh": ["难过", "身体健康", "累", "生气"],
+          "correct": "In good health",
+          "correctZh": "身体健康",
+          "example": "Healthy people eat good food.",
+          "exampleZh": "健康的人吃好食物。"
+        },
+        {
+          "type": "true-false",
+          "question": "Healthy habits include exercise.",
+          "questionZh": "健康习惯包括运动。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I stay healthy by running.",
+          "exampleZh": "我通过跑步保持健康。"
+        },
+        {
+          "type": "select-all",
+          "question": "What is 'healthy'?",
+          "questionZh": "什么是 ‘健康’ 的？",
+          "options": ["Candy", "Vegetables", "Exercise", "TV", "Fruit"],
+          "optionsZh": ["糖果", "蔬菜", "运动", "电视", "水果"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["蔬菜", "运动", "水果"],
+          "example": "Vegetables are healthy.",
+          "exampleZh": "蔬菜是健康的。"
+        }
+      ]
+    },
+    {
+      "word": "illness",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'illness' mean?",
+          "questionZh": "‘疾病’ 的意思是什么？",
+          "options": ["Happiness", "Being sick", "Strength", "Work"],
+          "optionsZh": ["快乐", "生病", "力量", "工作"],
+          "correct": "Being sick",
+          "correctZh": "生病",
+          "example": "An illness needs a doctor.",
+          "exampleZh": "疾病需要医生。"
+        },
+        {
+          "type": "true-false",
+          "question": "Illness can make you feel bad.",
+          "questionZh": "疾病会让你感觉不好。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I rest during an illness.",
+          "exampleZh": "我生病时休息。"
+        },
+        {
+          "type": "select-all",
+          "question": "What happens with an 'illness'?",
+          "questionZh": "‘疾病’ 会发生什么？",
+          "options": ["Feel strong", "Visit a doctor", "Feel tired", "Play sports", "Take medicine"],
+          "optionsZh": ["感觉强壮", "看医生", "感觉累", "运动", "吃药"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["看医生", "感觉累", "吃药"],
+          "example": "I visit a doctor for an illness.",
+          "exampleZh": "我因疾病去看医生。"
+        }
+      ]
+    },
+    {
+      "word": "nutrition",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'nutrition' mean?",
+          "questionZh": "‘营养’ 的意思是什么？",
+          "options": ["Clothes", "Healthy food for the body", "Games", "Cars"],
+          "optionsZh": ["衣服", "对身体健康的食物", "游戏", "汽车"],
+          "correct": "Healthy food for the body",
+          "correctZh": "对身体健康的食物",
+          "example": "Nutrition helps you grow strong.",
+          "exampleZh": "营养帮助你长得强壮。"
+        },
+        {
+          "type": "true-false",
+          "question": "Good nutrition includes fruit.",
+          "questionZh": "好的营养包括水果。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I eat fruit for nutrition.",
+          "exampleZh": "我吃水果获取营养。"
+        },
+        {
+          "type": "select-all",
+          "question": "What provides good 'nutrition'?",
+          "questionZh": "什么提供好的 ‘营养’？",
+          "options": ["Candy", "Vegetables", "Fruit", "Chips", "Rice"],
+          "optionsZh": ["糖果", "蔬菜", "水果", "薯片", "米饭"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["蔬菜", "水果", "米饭"],
+          "example": "Rice gives good nutrition.",
+          "exampleZh": "米饭提供好的营养。"
+        }
+      ]
+    },
+    {
+      "word": "exercise",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'exercise' mean?",
+          "questionZh": "‘锻炼’ 的意思是什么？",
+          "options": ["Sleeping", "Physical activity", "Eating", "Reading"],
+          "optionsZh": ["睡觉", "体育活动", "吃饭", "阅读"],
+          "correct": "Physical activity",
+          "correctZh": "体育活动",
+          "example": "Exercise makes you strong.",
+          "exampleZh": "锻炼让你强壮。"
+        },
+        {
+          "type": "true-false",
+          "question": "Exercise helps your health.",
+          "questionZh": "锻炼对健康有益。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I exercise every morning.",
+          "exampleZh": "我每天早上锻炼。"
+        },
+        {
+          "type": "select-all",
+          "question": "Which activities are 'exercise'?",
+          "questionZh": "哪些活动是 ‘锻炼’？",
+          "options": ["Watching TV", "Running", "Swimming", "Sitting", "Dancing"],
+          "optionsZh": ["看电视", "跑步", "游泳", "坐着", "跳舞"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["跑步", "游泳", "跳舞"],
+          "example": "Running is good exercise.",
+          "exampleZh": "跑步是很好的锻炼。"
+        }
+      ]
+    },
+    {
+      "word": "doctor",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'doctor' mean?",
+          "questionZh": "‘医生’ 的意思是什么？",
+          "options": ["Teacher", "Person who treats sick people", "Driver", "Chef"],
+          "optionsZh": ["老师", "治疗病人的人", "司机", "厨师"],
+          "correct": "Person who treats sick people",
+          "correctZh": "治疗病人的人",
+          "example": "The doctor gives me medicine.",
+          "exampleZh": "医生给我药。"
+        },
+        {
+          "type": "true-false",
+          "question": "Doctors help sick people.",
+          "questionZh": "医生帮助生病的人。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I visit the doctor when sick.",
+          "exampleZh": "我生病时去看医生。"
+        },
+        {
+          "type": "select-all",
+          "question": "What does a 'doctor' do?",
+          "questionZh": "‘医生’ 做什么？",
+          "options": ["Cook food", "Give medicine", "Check health", "Drive cars", "Help people"],
+          "optionsZh": ["做饭", "给药", "检查健康", "开车", "帮助人"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["给药", "检查健康", "帮助人"],
+          "example": "Doctors check my health.",
+          "exampleZh": "医生检查我的健康。"
+        }
+      ]
+    },
+    {
+      "word": "sleep",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'sleep' mean?",
+          "questionZh": "‘睡觉’ 的意思是什么？",
+          "options": ["Eat", "Rest with eyes closed", "Run", "Work"],
+          "optionsZh": ["吃", "闭眼休息", "跑", "工作"],
+          "correct": "Rest with eyes closed",
+          "correctZh": "闭眼休息",
+          "example": "Sleep helps my body.",
+          "exampleZh": "睡眠帮助我的身体。"
+        },
+        {
+          "type": "true-false",
+          "question": "Good sleep improves health.",
+          "questionZh": "良好睡眠改善健康。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I sleep eight hours a night.",
+          "exampleZh": "我每晚睡八小时。"
+        },
+        {
+          "type": "select-all",
+          "question": "What helps you 'sleep'?",
+          "questionZh": "什么帮助你 ‘睡觉’？",
+          "options": ["Loud music", "Quiet room", "A bed", "Bright light", "Dark room"],
+          "optionsZh": ["大声音乐", "安静的房间", "床", "明亮的灯光", "黑暗的房间"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["安静的房间", "床", "黑暗的房间"],
+          "example": "A dark room helps me sleep.",
+          "exampleZh": "黑暗的房间帮助我睡觉。"
+        }
+      ]
+    },
+    {
+      "word": "medicine",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'medicine' mean?",
+          "questionZh": "‘药’ 的意思是什么？",
+          "options": ["Food", "Something to make you better", "Clothes", "Toys"],
+          "optionsZh": ["食物", "让你好起来的东西", "衣服", "玩具"],
+          "correct": "Something to make you better",
+          "correctZh": "让你好起来的东西",
+          "example": "Medicine helps when I’m sick.",
+          "exampleZh": "我生病时药有帮助。"
+        },
+        {
+          "type": "true-false",
+          "question": "Medicine is given by doctors.",
+          "questionZh": "药由医生给。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I take medicine for illness.",
+          "exampleZh": "我因疾病吃药。"
+        },
+        {
+          "type": "select-all",
+          "question": "What is true about 'medicine'?",
+          "questionZh": "关于 ‘药’ 什么是真的？",
+          "options": ["You eat it", "You wear it", "It helps illness", "You play with it", "Doctors give it"],
+          "optionsZh": ["你吃它", "你穿它", "它帮助治病", "你玩它", "医生给它"],
+          "correct": ["1", "3", "5"],
+          "correctZh": ["你吃它", "它帮助治病", "医生给它"],
+          "example": "Doctors give medicine.",
+          "exampleZh": "医生给药。"
+        }
+      ]
+    },
+    {
+      "word": "hospital",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'hospital' mean?",
+          "questionZh": "‘医院’ 的意思是什么？",
+          "options": ["School", "Place for sick people", "Shop", "Park"],
+          "optionsZh": ["学校", "生病人的地方", "商店", "公园"],
+          "correct": "Place for sick people",
+          "correctZh": "生病人的地方",
+          "example": "I go to the hospital when sick.",
+          "exampleZh": "我生病时去医院。"
+        },
+        {
+          "type": "true-false",
+          "question": "Hospitals have doctors and nurses.",
+          "questionZh": "医院有医生和护士。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "Hospitals help sick people.",
+          "exampleZh": "医院帮助生病的人。"
+        },
+        {
+          "type": "select-all",
+          "question": "What is in a 'hospital'?",
+          "questionZh": "‘医院’ 里有什么？",
+          "options": ["Teachers", "Doctors", "Nurses", "Books", "Beds"],
+          "optionsZh": ["老师", "医生", "护士", "书", "床"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["医生", "护士", "床"],
+          "example": "Hospitals have nurses.",
+          "exampleZh": "医院有护士。"
+        }
+      ]
+    },
+    {
+      "word": "diet",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'diet' mean?",
+          "questionZh": "‘饮食’ 的意思是什么？",
+          "options": ["Clothes", "Food you eat regularly", "Games", "Cars"],
+          "optionsZh": ["衣服", "你定期吃的食物", "游戏", "汽车"],
+          "correct": "Food you eat regularly",
+          "correctZh": "你定期吃的食物",
+          "example": "A good diet helps health.",
+          "exampleZh": "良好的饮食有助于健康。"
+        },
+        {
+          "type": "true-false",
+          "question": "A healthy diet includes vegetables.",
+          "questionZh": "健康饮食包括蔬菜。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "My diet has fruit.",
+          "exampleZh": "我的饮食有水果。"
+        },
+        {
+          "type": "select-all",
+          "question": "What is part of a healthy 'diet'?",
+          "questionZh": "健康 ‘饮食’ 包括什么？",
+          "options": ["Candy", "Fruit", "Vegetables", "Chips", "Rice"],
+          "optionsZh": ["糖果", "水果", "蔬菜", "薯片", "米饭"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["水果", "蔬菜", "米饭"],
+          "example": "Vegetables are in my diet.",
+          "exampleZh": "蔬菜在我的饮食中。"
+        }
+      ]
+    },
+    {
+      "word": "rest",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'rest' mean?",
+          "questionZh": "‘休息’ 的意思是什么？",
+          "options": ["Run", "Stop and relax", "Eat", "Work"],
+          "optionsZh": ["跑", "停下来放松", "吃", "工作"],
+          "correct": "Stop and relax",
+          "correctZh": "停下来放松",
+          "example": "Rest helps my health.",
+          "exampleZh": "休息有助于我的健康。"
+        },
+        {
+          "type": "true-false",
+          "question": "Rest is important when you are sick.",
+          "questionZh": "生病时休息很重要。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I rest when I’m tired.",
+          "exampleZh": "我累时休息。"
+        },
+        {
+          "type": "select-all",
+          "question": "When do you 'rest'?",
+          "questionZh": "你什么时候 ‘休息’？",
+          "options": ["When tired", "While running", "After exercise", "During work", "At night"],
+          "optionsZh": ["累的时候", "跑步时", "运动后", "工作时", "晚上"],
+          "correct": ["1", "3", "5"],
+          "correctZh": ["累的时候", "运动后", "晚上"],
+          "example": "I rest after exercise.",
+          "exampleZh": "我运动后休息。"
+        }
+      ]
+    },
+    {
+      "word": "fitness",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'fitness' mean?",
+          "questionZh": "‘健身’ 的意思是什么？",
+          "options": ["Weakness", "Being strong and healthy", "Illness", "Work"],
+          "optionsZh": ["虚弱", "强壮和健康", "疾病", "工作"],
+          "correct": "Being strong and healthy",
+          "correctZh": "强壮和健康",
+          "example": "Fitness comes from exercise.",
+          "exampleZh": "健身来自锻炼。"
+        },
+        {
+          "type": "true-false",
+          "question": "Fitness improves your health.",
+          "questionZh": "健身改善你的健康。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I work on my fitness.",
+          "exampleZh": "我努力健身。"
+        },
+        {
+          "type": "select-all",
+          "question": "What helps 'fitness'?",
+          "questionZh": "什么帮助 ‘健身’？",
+          "options": ["Sitting", "Running", "Healthy diet", "Watching TV", "Swimming"],
+          "optionsZh": ["坐着", "跑步", "健康饮食", "看电视", "游泳"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["跑步", "健康饮食", "游泳"],
+          "example": "Swimming improves fitness.",
+          "exampleZh": "游泳改善健身。"
+        }
+      ]
+    },
+    {
+      "word": "energy",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'energy' mean?",
+          "questionZh": "‘能量’ 的意思是什么？",
+          "options": ["Sleep", "Power to move or work", "Pain", "Clothes"],
+          "optionsZh": ["睡觉", "移动或工作的力量", "疼痛", "衣服"],
+          "correct": "Power to move or work",
+          "correctZh": "移动或工作的力量",
+          "example": "Energy comes from good food.",
+          "exampleZh": "能量来自好食物。"
+        },
+        {
+          "type": "true-false",
+          "question": "Energy helps you exercise.",
+          "questionZh": "能量帮助你锻炼。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I have energy after sleep.",
+          "exampleZh": "我睡后有能量。"
+        },
+        {
+          "type": "select-all",
+          "question": "What gives you 'energy'?",
+          "questionZh": "什么给你 ‘能量’？",
+          "options": ["Candy", "Sleep", "Exercise", "TV", "Healthy food"],
+          "optionsZh": ["糖果", "睡眠", "运动", "电视", "健康食品"],
+          "correct": ["2", "5"],
+          "correctZh": ["睡眠", "健康食品"],
+          "example": "Healthy food gives energy.",
+          "exampleZh": "健康食品给能量。"
+        }
+      ]
+    }
+  ],
+  "functional": [
+    {
+      "type": "multiple-choice",
+      "question": "Which phrase expresses your view on healthy living?",
+      "questionZh": "哪个短语表达你对健康生活的看法？",
+      "options": ["As a result", "I believe", "Whereas", "Tackle"],
+      "optionsZh": ["因此", "我相信", "然而", "解决"],
+      "correct": "I believe",
+      "correctZh": "我相信",
+      "example": "I believe exercise is important.",
+      "exampleZh": "我相信运动很重要。"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Which phrase suggests solving a health issue?",
+      "questionZh": "哪个短语建议解决健康问题？",
+      "options": ["On the contrary", "Tackle", "I concur", "It seems to me"],
+      "optionsZh": ["相反", "解决", "我同意", "在我看来"],
+      "correct": "Tackle",
+      "correctZh": "解决",
+      "example": "We should tackle illness with medicine.",
+      "exampleZh": "我们应该用药解决疾病。"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Which phrase shows a cause of illness?",
+      "questionZh": "哪个短语显示疾病的原因？",
+      "options": ["I believe", "Owing to", "Propose", "Similarly"],
+      "optionsZh": ["我相信", "由于", "提出", "同样地"],
+      "correct": "Owing to",
+      "correctZh": "由于",
+      "example": "Owing to poor diet, I feel tired.",
+      "exampleZh": "由于饮食差，我感到累。"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Which phrase compares healthy habits?",
+      "questionZh": "哪个短语比较健康习惯？",
+      "options": ["Tackle", "Whereas", "I concur", "As a result"],
+      "optionsZh": ["解决", "然而", "我同意", "因此"],
+      "correct": "Whereas",
+      "correctZh": "然而",
+      "example": "I exercise daily, whereas my friend sleeps.",
+      "exampleZh": "我每天锻炼，然而我的朋友睡觉。"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Which phrase shows a result of exercise?",
+      "questionZh": "哪个短语显示锻炼的结果？",
+      "options": ["I believe", "As a result", "Tackle", "In my view"],
+      "optionsZh": ["我相信", "因此", "解决", "在我看来"],
+      "correct": "As a result",
+      "correctZh": "因此",
+      "example": "As a result of exercise, I feel strong.",
+      "exampleZh": "由于锻炼，我感到强壮。"
+    },
+    {
+      "type": "true-false",
+      "question": "‘I believe’ is used to express a personal health opinion.",
+      "questionZh": "‘我相信’ 用于表达个人健康意见。",
+      "options": ["True", "False"],
+      "optionsZh": ["正确", "错误"],
+      "correct": "True",
+      "correctZh": "正确",
+      "example": "I believe nutrition is key.",
+      "exampleZh": "我相信营养是关键。"
+    },
+    {
+      "type": "true-false",
+      "question": "‘Tackle’ is used to suggest solving health problems.",
+      "questionZh": "‘解决’ 用于建议解决健康问题。",
+      "options": ["True", "False"],
+      "optionsZh": ["正确", "错误"],
+      "correct": "True",
+      "correctZh": "正确",
+      "example": "We tackle illness with rest.",
+      "exampleZh": "我们通过休息解决疾病。"
+    },
+    {
+      "type": "true-false",
+      "question": "‘Owing to’ explains the cause of a health issue.",
+      "questionZh": "‘由于’ 解释健康问题的原因。",
+      "options": ["True", "False"],
+      "optionsZh": ["正确", "错误"],
+      "correct": "True",
+      "correctZh": "正确",
+      "example": "Owing to exercise, I have energy.",
+      "exampleZh": "由于锻炼，我有能量。"
+    },
+    {
+      "type": "true-false",
+      "question": "‘As a result’ shows the effect of a health action.",
+      "questionZh": "‘因此’ 显示健康行动的效果。",
+      "options": ["True", "False"],
+      "optionsZh": ["正确", "错误"],
+      "correct": "True",
+      "correctZh": "正确",
+      "example": "As a result of sleep, I feel good.",
+      "exampleZh": "由于睡眠，我感觉很好。"
+    },
+    {
+      "type": "true-false",
+      "question": "‘Whereas’ agrees with a health opinion.",
+      "questionZh": "‘然而’ 同意健康意见。",
+      "options": ["True", "False"],
+      "optionsZh": ["正确", "错误"],
+      "correct": "False",
+      "correctZh": "错误",
+      "example": "I exercise, whereas others eat candy.",
+      "exampleZh": "我锻炼，然而别人吃糖果。"
+    },
+    {
+      "type": "select-all",
+      "question": "Which phrases express a health opinion?",
+      "questionZh": "哪些短语表达健康意见？",
+      "options": ["I believe", "As a result", "In my view", "Tackle", "Owing to"],
+      "optionsZh": ["我相信", "因此", "在我看来", "解决", "由于"],
+      "correct": ["1", "3"],
+      "correctZh": ["我相信", "在我看来"],
+      "example": "I believe fitness is important.",
+      "exampleZh": "我相信健身很重要。"
+    },
+    {
+      "type": "select-all",
+      "question": "Which phrases suggest health solutions?",
+      "questionZh": "哪些短语建议健康解决方案？",
+      "options": ["I believe", "Tackle", "As a result", "Propose", "Whereas"],
+      "optionsZh": ["我相信", "解决", "因此", "提出", "然而"],
+      "correct": ["2", "4"],
+      "correctZh": ["解决", "提出"],
+      "example": "We propose better diets.",
+      "exampleZh": "我们提出更好的饮食。"
+    },
+    {
+      "type": "select-all",
+      "question": "Which phrases show cause of health issues?",
+      "questionZh": "哪些短语显示健康问题的原因？",
+      "options": ["Owing to", "I concur", "Leads to", "In my view", "Tackle"],
+      "optionsZh": ["由于", "我同意", "导致", "在我看来", "解决"],
+      "correct": ["1", "3"],
+      "correctZh": ["由于", "导致"],
+      "example": "Owing to poor nutrition, I feel weak.",
+      "exampleZh": "由于营养不良，我感到虚弱。"
+    },
+    {
+      "type": "select-all",
+      "question": "Which phrases show results of health actions?",
+      "questionZh": "哪些短语显示健康行动的结果？",
+      "options": ["As a result", "I believe", "Leads to", "Tackle", "Whereas"],
+      "optionsZh": ["因此", "我相信", "导致", "解决", "然而"],
+      "correct": ["1", "3"],
+      "correctZh": ["因此", "导致"],
+      "example": "As a result of diet, I have energy.",
+      "exampleZh": "由于饮食，我有能量。"
+    }
+  ]
+}
