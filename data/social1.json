@@ -1,396 +1,392 @@
-{
-  "thematic": [
-    {
-      "word": "friend",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'friend' mean?",
-          "questionZh": "‘朋友’ 的意思是什么？",
-          "options": ["Enemy", "Person you trust and like", "Stranger", "Boss"],
-          "optionsZh": ["敌人", "你信任和喜欢的人", "陌生人", "老板"],
-          "correct": "Person you trust and like",
-          "correctZh": "你信任和喜欢的人",
-          "example": "Friends help me feel happy.",
-          "exampleZh": "朋友帮助我感到快乐。"
-        },
-        {
-          "type": "select-all",
-          "question": "What do you do with a 'friend' in a community?",
-          "questionZh": "你在社区中和 ‘朋友’ 做什么？",
-          "options": ["Fight", "Talk", "Play sports", "Work alone", "Share ideas"],
-          "optionsZh": ["打架", "聊天", "运动", "独自工作", "分享想法"],
-          "correct": ["2", "3", "5"],
-          "correctZh": ["聊天", "运动", "分享想法"],
-          "example": "I share ideas with my friend.",
-          "exampleZh": "我和朋友分享想法。"
-        }
-      ]
-    },
-    {
-      "word": "family",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'family' mean?",
-          "questionZh": "‘家庭’ 的意思是什么？",
-          "options": ["Colleagues", "People you live with and love", "Neighbors", "Teachers"],
-          "optionsZh": ["同事", "你一起生活和爱的人", "邻居", "老师"],
-          "correct": "People you live with and love",
-          "correctZh": "你一起生活和爱的人",
-          "example": "My family eats together.",
-          "exampleZh": "我的家人一起吃饭。"
-        },
-        {
-          "type": "true-false",
-          "question": "Family members often share traditions.",
-          "questionZh": "家庭成员经常分享传统。",
-          "options": ["True", "False"],
-          "optionsZh": ["正确", "错误"],
-          "correct": "True",
-          "correctZh": "正确",
-          "example": "My family shares cultural traditions.",
-          "exampleZh": "我的家人分享文化传统。"
-        }
-      ]
-    },
-    {
-      "word": "community",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'community' mean?",
-          "questionZh": "‘社区’ 的意思是什么？",
-          "options": ["One person", "Group of people living together", "A car", "A school"],
-          "optionsZh": ["一个人", "一起生活的一群人", "汽车", "学校"],
-          "correct": "Group of people living together",
-          "correctZh": "一起生活的一群人",
-          "example": "My community organizes events.",
-          "exampleZh": "我的社区组织活动。"
-        },
-        {
-          "type": "select-all",
-          "question": "What does a 'community' do?",
-          "questionZh": "‘社区’ 做什么？",
-          "options": ["Work alone", "Hold festivals", "Help neighbors", "Make food", "Build parks"],
-          "optionsZh": ["独自工作", "举办节日", "帮助邻居", "做食物", "建公园"],
-          "correct": ["2", "3", "5"],
-          "correctZh": ["举办节日", "帮助邻居", "建公园"],
-          "example": "My community holds festivals.",
-          "exampleZh": "我的社区举办节日。"
-        }
-      ]
-    },
-    {
-      "word": "culture",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'culture' mean?",
-          "questionZh": "‘文化’ 的意思是什么？",
-          "options": ["Weather", "Traditions and customs", "Jobs", "Machines"],
-          "optionsZh": ["天气", "传统和习俗", "工作", "机器"],
-          "correct": "Traditions and customs",
-          "correctZh": "传统和习俗",
-          "example": "Culture includes food and music.",
-          "exampleZh": "文化包括食物和音乐。"
-        },
-        {
-          "type": "true-false",
-          "question": "Culture can influence how people eat.",
-          "questionZh": "文化可以影响人们的饮食方式。",
-          "options": ["True", "False"],
-          "optionsZh": ["正确", "错误"],
-          "correct": "True",
-          "correctZh": "正确",
-          "example": "My culture values healthy eating.",
-          "exampleZh": "我的文化重视健康饮食。"
-        }
-      ]
-    },
-    {
-      "word": "neighbor",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'neighbor' mean?",
-          "questionZh": "‘邻居’ 的意思是什么？",
-          "options": ["Person far away", "Person living nearby", "Enemy", "Teacher"],
-          "optionsZh": ["远方的人", "住在附近的人", "敌人", "老师"],
-          "correct": "Person living nearby",
-          "correctZh": "住在附近的人",
-          "example": "My neighbor is friendly.",
-          "exampleZh": "我的邻居很友好。"
-        },
-        {
-          "type": "select-all",
-          "question": "What can you do with a 'neighbor'?",
-          "questionZh": "你和 ‘邻居’ 做什么？",
-          "options": ["Argue", "Talk", "Share food", "Sleep", "Help each other"],
-          "optionsZh": ["争吵", "聊天", "分享食物", "睡觉", "互相帮助"],
-          "correct": ["2", "3", "5"],
-          "correctZh": ["聊天", "分享食物", "互相帮助"],
-          "example": "I help my neighbor.",
-          "exampleZh": "我帮助我的邻居。"
-        }
-      ]
-    },
-    {
-      "word": "tradition",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'tradition' mean?",
-          "questionZh": "‘传统’ 的意思是什么？",
-          "options": ["New idea", "Old custom", "Machine", "Game"],
-          "optionsZh": ["新想法", "古老习俗", "机器", "游戏"],
-          "correct": "Old custom",
-          "correctZh": "古老习俗",
-          "example": "We follow family traditions.",
-          "exampleZh": "我们遵循家庭传统。"
-        },
-        {
-          "type": "true-false",
-          "question": "Traditions are shared by communities.",
-          "questionZh": "传统由社区分享。",
-          "options": ["True", "False"],
-          "optionsZh": ["正确", "错误"],
-          "correct": "True",
-          "correctZh": "正确",
-          "example": "Our community shares traditions.",
-          "exampleZh": "我们的社区分享传统。"
-        }
-      ]
-    },
-    {
-      "word": "group",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'group' mean?",
-          "questionZh": "‘团体’ 的意思是什么？",
-          "options": ["One person", "Many people together", "A house", "A car"],
-          "optionsZh": ["一个人", "许多人一起", "房子", "汽车"],
-          "correct": "Many people together",
-          "correctZh": "许多人一起",
-          "example": "A group works together.",
-          "exampleZh": "一个团体一起工作。"
-        },
-        {
-          "type": "select-all",
-          "question": "What does a 'group' do in a community?",
-          "questionZh": "‘团体’ 在社区做什么？",
-          "options": ["Work alone", "Play together", "Share ideas", "Sleep", "Organize events"],
-          "optionsZh": ["独自工作", "一起玩", "分享想法", "睡觉", "组织活动"],
-          "correct": ["2", "3", "5"],
-          "correctZh": ["一起玩", "分享想法", "组织活动"],
-          "example": "The group organizes events.",
-          "exampleZh": "团体组织活动。"
-        }
-      ]
-    },
-    {
-      "word": "festival",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'festival' mean?",
-          "questionZh": "‘节日’ 的意思是什么？",
-          "options": ["Work day", "Special celebration", "School test", "Rainy day"],
-          "optionsZh": ["工作日", "特别庆祝", "学校考试", "雨天"],
-          "correct": "Special celebration",
-          "correctZh": "特别庆祝",
-          "example": "Festivals bring people together.",
-          "exampleZh": "节日让人们聚在一起。"
-        },
-        {
-          "type": "true-false",
-          "question": "Festivals include music and food.",
-          "questionZh": "节日包括音乐和食物。",
-          "options": ["True", "False"],
-          "optionsZh": ["正确", "错误"],
-          "correct": "True",
-          "correctZh": "正确",
-          "example": "We enjoy food at festivals.",
-          "exampleZh": "我们在节日享受食物。"
-        }
-      ]
-    },
-    {
-      "word": "opinion",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'opinion' mean?",
-          "questionZh": "‘意见’ 的意思是什么？",
-          "options": ["Fact", "What you think", "Law", "Story"],
-          "optionsZh": ["事实", "你的想法", "法律", "故事"],
-          "correct": "What you think",
-          "correctZh": "你的想法",
-          "example": "My opinion is festivals are fun.",
-          "exampleZh": "我的意见是节日很有趣。"
-        },
-        {
-          "type": "select-all",
-          "question": "When do you share an 'opinion' in a community?",
-          "questionZh": "你在社区中什么时候分享 ‘意见’？",
-          "options": ["In class", "While sleeping", "With friends", "During a game", "In a discussion"],
-          "optionsZh": ["在课堂上", "睡觉时", "和朋友", "玩游戏时", "在讨论中"],
-          "correct": ["1", "3", "5"],
-          "correctZh": ["在课堂上", "和朋友", "在讨论中"],
-          "example": "I share opinions with friends.",
-          "exampleZh": "我和朋友分享意见。"
-        }
-      ]
-    },
-    {
-      "word": "support",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'support' mean?",
-          "questionZh": "‘支持’ 的意思是什么？",
-          "options": ["Ignore", "Help or encourage", "Fight", "Hide"],
-          "optionsZh": ["忽略", "帮助或鼓励", "打架", "隐藏"],
-          "correct": "Help or encourage",
-          "correctZh": "帮助或鼓励",
-          "example": "Friends support each other.",
-          "exampleZh": "朋友互相支持。"
-        },
-        {
-          "type": "true-false",
-          "question": "Support builds strong communities.",
-          "questionZh": "支持建立强大的社区。",
-          "options": ["True", "False"],
-          "optionsZh": ["正确", "错误"],
-          "correct": "True",
-          "correctZh": "正确",
-          "example": "My community supports me.",
-          "exampleZh": "我的社区支持我。"
-        }
-      ]
-    },
-    {
-      "word": "relationship",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'relationship' mean?",
-          "questionZh": "‘关系’ 的意思是什么？",
-          "options": ["Job", "Connection with others", "Car", "Food"],
-          "optionsZh": ["工作", "与他人的联系", "汽车", "食物"],
-          "correct": "Connection with others",
-          "correctZh": "与他人的联系",
-          "example": "Relationships make life better.",
-          "exampleZh": "关系让生活更美好。"
-        },
-        {
-          "type": "select-all",
-          "question": "What is part of a 'relationship'?",
-          "questionZh": "‘关系’ 包括什么？",
-          "options": ["Fighting", "Talking", "Helping", "Working alone", "Caring"],
-          "optionsZh": ["打架", "谈话", "帮助", "独自工作", "关心"],
-          "correct": ["2", "3", "5"],
-          "correctZh": ["谈话", "帮助", "关心"],
-          "example": "Talking builds relationships.",
-          "exampleZh": "谈话建立关系。"
-        }
-      ]
-    },
-    {
-      "word": "trust",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'trust' mean?",
-          "questionZh": "‘信任’ 的意思是什么？",
-          "options": ["Doubt", "Believe in someone", "Hide", "Run"],
-          "optionsZh": ["怀疑", "相信某人", "隐藏", "跑"],
-          "correct": "Believe in someone",
-          "correctZh": "相信某人",
-          "example": "Trust strengthens friendships.",
-          "exampleZh": "信任加强友谊。"
-        },
-        {
-          "type": "true-false",
-          "question": "Trust is important for relationships.",
-          "questionZh": "信任对关系很重要。",
-          "options": ["True", "False"],
-          "optionsZh": ["正确", "错误"],
-          "correct": "True",
-          "correctZh": "正确",
-          "example": "I trust my family.",
-          "exampleZh": "我信任我的家人。"
-        }
-      ]
-    }
-  ],
-  "functional": [
-    {
-      "type": "multiple-choice",
-      "question": "Which phrase expresses your view on community health?",
-      "questionZh": "哪个短语表达你对社区健康的看法？",
-      "options": ["As a result", "I believe", "Whereas", "Tackle"],
-      "optionsZh": ["因此", "我相信", "然而", "解决"],
-      "correct": "I believe",
-      "correctZh": "我相信",
-      "example": "I believe community support improves health.",
-      "exampleZh": "我相信社区支持改善健康。"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Which phrase suggests solving social health issues?",
-      "questionZh": "哪个短语建议解决社交健康问题？",
-      "options": ["On the contrary", "Tackle", "I concur", "It seems to me"],
-      "optionsZh": ["相反", "解决", "我同意", "在我看来"],
-      "correct": "Tackle",
-      "correctZh": "解决",
-      "example": "We should tackle stress with community events.",
-      "exampleZh": "我们应该通过社区活动解决压力。"
-    },
-    {
-      "type": "true-false",
-      "question": "‘I believe’ is used to express a personal opinion on social connections.",
-      "questionZh": "‘我相信’ 用于表达对社交联系的个人意见。",
-      "options": ["True", "False"],
-      "optionsZh": ["正确", "错误"],
-      "correct": "True",
-      "correctZh": "正确",
-      "example": "I believe trust builds community health.",
-      "exampleZh": "我相信信任建立社区健康。"
-    },
-    {
-      "type": "true-false",
-      "question": "‘I concur’ means you disagree with a community health idea.",
-      "questionZh": "‘我同意’ 意味着你不同意社区健康想法。",
-      "options": ["True", "False"],
-      "optionsZh": ["正确", "错误"],
-      "correct": "False",
-      "correctZh": "错误",
-      "example": "I concur that festivals promote health.",
-      "exampleZh": "我同意节日促进健康。"
-    },
-    {
-      "type": "select-all",
-      "question": "Which phrases express opinions on social health?",
-      "questionZh": "哪些短语表达社交健康的意见？",
-      "options": ["I believe", "As a result", "In my view", "Tackle", "Owing to"],
-      "optionsZh": ["我相信", "因此", "在我看来", "解决", "由于"],
-      "correct": ["1", "3"],
-      "correctZh": ["我相信", "在我看来"],
-      "example": "I believe support improves health.",
-      "exampleZh": "我相信支持改善健康。"
-    },
-    {
-      "type": "select-all",
-      "question": "Which phrases suggest solutions for community health?",
-      "questionZh": "哪些短语建议社区健康的解决方案？",
-      "options": ["I believe", "Tackle", "As a result", "Propose", "Whereas"],
-      "optionsZh": ["我相信", "解决", "因此", "提出", "然而"],
-      "correct": ["2", "4"],
-      "correctZh": ["解决", "提出"],
-      "example": "We propose community health programs.",
-      "exampleZh": "我们提出社区健康项目。"
-    }
-  ]
-}
+[
+  {
+    "word": "friend",
+    "wordZh": "朋友",
+    "type": "multiple-choice",
+    "question": "What does 'friend' mean?",
+    "questionZh": "‘朋友’ 的意思是什么？",
+    "options": ["Enemy", "Person you trust and like", "Stranger", "Boss"],
+    "optionsZh": ["敌人", "你信任和喜欢的人", "陌生人", "老板"],
+    "correct": "Person you trust and like",
+    "correctZh": "你信任和喜欢的人",
+    "example": "Friends help me feel happy.",
+    "exampleZh": "朋友帮助我感到快乐。"
+  },
+  {
+    "word": "friend",
+    "wordZh": "朋友",
+    "type": "select-all",
+    "question": "What do you do with a 'friend' in a community?",
+    "questionZh": "你在社区中和 ‘朋友’ 做什么？",
+    "options": ["Fight", "Talk", "Play sports", "Work alone", "Share ideas"],
+    "optionsZh": ["打架", "聊天", "运动", "独自工作", "分享想法"],
+    "correct": ["2", "3", "5"],
+    "correctZh": ["聊天", "运动", "分享想法"],
+    "example": "I share ideas with my friend.",
+    "exampleZh": "我和朋友分享想法。"
+  },
+  {
+    "word": "family",
+    "wordZh": "家庭",
+    "type": "multiple-choice",
+    "question": "What does 'family' mean?",
+    "questionZh": "‘家庭’ 的意思是什么？",
+    "options": ["Colleagues", "People you live with and love", "Neighbors", "Teachers"],
+    "optionsZh": ["同事", "你一起生活和爱的人", "邻居", "老师"],
+    "correct": "People you live with and love",
+    "correctZh": "你一起生活和爱的人",
+    "example": "My family eats together.",
+    "exampleZh": "我的家人一起吃饭。"
+  },
+  {
+    "word": "family",
+    "wordZh": "家庭",
+    "type": "true-false",
+    "question": "Family members often share traditions.",
+    "questionZh": "家庭成员经常分享传统。",
+    "options": ["True", "False"],
+    "optionsZh": ["正确", "错误"],
+    "correct": "True",
+    "correctZh": "正确",
+    "example": "My family shares cultural traditions.",
+    "exampleZh": "我的家人分享文化传统。"
+  },
+  {
+    "word": "community",
+    "wordZh": "社区",
+    "type": "multiple-choice",
+    "question": "What does 'community' mean?",
+    "questionZh": "‘社区’ 的意思是什么？",
+    "options": ["One person", "Group of people living together", "A car", "A school"],
+    "optionsZh": ["一个人", "一起生活的一群人", "汽车", "学校"],
+    "correct": "Group of people living together",
+    "correctZh": "一起生活的一群人",
+    "example": "My community organizes events.",
+    "exampleZh": "我的社区组织活动。"
+  },
+  {
+    "word": "community",
+    "wordZh": "社区",
+    "type": "select-all",
+    "question": "What does a 'community' do?",
+    "questionZh": "‘社区’ 做什么？",
+    "options": ["Work alone", "Hold festivals", "Help neighbors", "Make food", "Build parks"],
+    "optionsZh": ["独自工作", "举办节日", "帮助邻居", "做食物", "建公园"],
+    "correct": ["2", "3", "5"],
+    "correctZh": ["举办节日", "帮助邻居", "建公园"],
+    "example": "My community holds festivals.",
+    "exampleZh": "我的社区举办节日。"
+  },
+  {
+    "word": "culture",
+    "wordZh": "文化",
+    "type": "multiple-choice",
+    "question": "What does 'culture' mean?",
+    "questionZh": "‘文化’ 的意思是什么？",
+    "options": ["Weather", "Traditions and customs", "Jobs", "Machines"],
+    "optionsZh": ["天气", "传统和习俗", "工作", "机器"],
+    "correct": "Traditions and customs",
+    "correctZh": "传统和习俗",
+    "example": "Culture includes food and music.",
+    "exampleZh": "文化包括食物和音乐。"
+  },
+  {
+    "word": "culture",
+    "wordZh": "文化",
+    "type": "true-false",
+    "question": "Culture can influence how people eat.",
+    "questionZh": "文化可以影响人们的饮食方式。",
+    "options": ["True", "False"],
+    "optionsZh": ["正确", "错误"],
+    "correct": "True",
+    "correctZh": "正确",
+    "example": "My culture values healthy eating.",
+    "exampleZh": "我的文化重视健康饮食。"
+  },
+  {
+    "word": "neighbor",
+    "wordZh": "邻居",
+    "type": "multiple-choice",
+    "question": "What does 'neighbor' mean?",
+    "questionZh": "‘邻居’ 的意思是什么？",
+    "options": ["Person far away", "Person living nearby", "Enemy", "Teacher"],
+    "optionsZh": ["远方的人", "住在附近的人", "敌人", "老师"],
+    "correct": "Person living nearby",
+    "correctZh": "住在附近的人",
+    "example": "My neighbor is friendly.",
+    "exampleZh": "我的邻居很友好。"
+  },
+  {
+    "word": "neighbor",
+    "wordZh": "邻居",
+    "type": "select-all",
+    "question": "What can you do with a 'neighbor'?",
+    "questionZh": "你和 ‘邻居’ 做什么？",
+    "options": ["Argue", "Talk", "Share food", "Sleep", "Help each other"],
+    "optionsZh": ["争吵", "聊天", "分享食物", "睡觉", "互相帮助"],
+    "correct": ["2", "3", "5"],
+    "correctZh": ["聊天", "分享食物", "互相帮助"],
+    "example": "I help my neighbor.",
+    "exampleZh": "我帮助我的邻居。"
+  },
+  {
+    "word": "tradition",
+    "wordZh": "传统",
+    "type": "multiple-choice",
+    "question": "What does 'tradition' mean?",
+    "questionZh": "‘传统’ 的意思是什么？",
+    "options": ["New idea", "Old custom", "Machine", "Game"],
+    "optionsZh": ["新想法", "古老习俗", "机器", "游戏"],
+    "correct": "Old custom",
+    "correctZh": "古老习俗",
+    "example": "We follow family traditions.",
+    "exampleZh": "我们遵循家庭传统。"
+  },
+  {
+    "word": "tradition",
+    "wordZh": "传统",
+    "type": "true-false",
+    "question": "Traditions are shared by communities.",
+    "questionZh": "传统由社区分享。",
+    "options": ["True", "False"],
+    "optionsZh": ["正确", "错误"],
+    "correct": "True",
+    "correctZh": "正确",
+    "example": "Our community shares traditions.",
+    "exampleZh": "我们的社区分享传统。"
+  },
+  {
+    "word": "group",
+    "wordZh": "团体",
+    "type": "multiple-choice",
+    "question": "What does 'group' mean?",
+    "questionZh": "‘团体’ 的意思是什么？",
+    "options": ["One person", "Many people together", "A house", "A car"],
+    "optionsZh": ["一个人", "许多人一起", "房子", "汽车"],
+    "correct": "Many people together",
+    "correctZh": "许多人一起",
+    "example": "A group works together.",
+    "exampleZh": "一个团体一起工作。"
+  },
+  {
+    "word": "group",
+    "wordZh": "团体",
+    "type": "select-all",
+    "question": "What does a 'group' do in a community?",
+    "questionZh": "‘团体’ 在社区做什么？",
+    "options": ["Work alone", "Play together", "Share ideas", "Sleep", "Organize events"],
+    "optionsZh": ["独自工作", "一起玩", "分享想法", "睡觉", "组织活动"],
+    "correct": ["2", "3", "5"],
+    "correctZh": ["一起玩", "分享想法", "组织活动"],
+    "example": "The group organizes events.",
+    "exampleZh": "团体组织活动。"
+  },
+  {
+    "word": "festival",
+    "wordZh": "节日",
+    "type": "multiple-choice",
+    "question": "What does 'festival' mean?",
+    "questionZh": "‘节日’ 的意思是什么？",
+    "options": ["Work day", "Special celebration", "School test", "Rainy day"],
+    "optionsZh": ["工作日", "特别庆祝", "学校考试", "雨天"],
+    "correct": "Special celebration",
+    "correctZh": "特别庆祝",
+    "example": "Festivals bring people together.",
+    "exampleZh": "节日让人们聚在一起。"
+  },
+  {
+    "word": "festival",
+    "wordZh": "节日",
+    "type": "true-false",
+    "question": "Festivals include music and food.",
+    "questionZh": "节日包括音乐和食物。",
+    "options": ["True", "False"],
+    "optionsZh": ["正确", "错误"],
+    "correct": "True",
+    "correctZh": "正确",
+    "example": "We enjoy food at festivals.",
+    "exampleZh": "我们在节日享受食物。"
+  },
+  {
+    "word": "opinion",
+    "wordZh": "意见",
+    "type": "multiple-choice",
+    "question": "What does 'opinion' mean?",
+    "questionZh": "‘意见’ 的意思是什么？",
+    "options": ["Fact", "What you think", "Law", "Story"],
+    "optionsZh": ["事实", "你的想法", "法律", "故事"],
+    "correct": "What you think",
+    "correctZh": "你的想法",
+    "example": "My opinion is festivals are fun.",
+    "exampleZh": "我的意见是节日很有趣。"
+  },
+  {
+    "word": "opinion",
+    "wordZh": "意见",
+    "type": "select-all",
+    "question": "When do you share an 'opinion' in a community?",
+    "questionZh": "你在社区中什么时候分享 ‘意见’？",
+    "options": ["In class", "While sleeping", "With friends", "During a game", "In a discussion"],
+    "optionsZh": ["在课堂上", "睡觉时", "和朋友", "玩游戏时", "在讨论中"],
+    "correct": ["1", "3", "5"],
+    "correctZh": ["在课堂上", "和朋友", "在讨论中"],
+    "example": "I share opinions with friends.",
+    "exampleZh": "我和朋友分享意见。"
+  },
+  {
+    "word": "support",
+    "wordZh": "支持",
+    "type": "multiple-choice",
+    "question": "What does 'support' mean?",
+    "questionZh": "‘支持’ 的意思是什么？",
+    "options": ["Ignore", "Help or encourage", "Fight", "Hide"],
+    "optionsZh": ["忽略", "帮助或鼓励", "打架", "隐藏"],
+    "correct": "Help or encourage",
+    "correctZh": "帮助或鼓励",
+    "example": "Friends support each other.",
+    "exampleZh": "朋友互相支持。"
+  },
+  {
+    "word": "support",
+    "wordZh": "支持",
+    "type": "true-false",
+    "question": "Support builds strong communities.",
+    "questionZh": "支持建立强大的社区。",
+    "options": ["True", "False"],
+    "optionsZh": ["正确", "错误"],
+    "correct": "True",
+    "correctZh": "正确",
+    "example": "My community supports me.",
+    "exampleZh": "我的社区支持我。"
+  },
+  {
+    "word": "relationship",
+    "wordZh": "关系",
+    "type": "multiple-choice",
+    "question": "What does 'relationship' mean?",
+    "questionZh": "‘关系’ 的意思是什么？",
+    "options": ["Job", "Connection with others", "Car", "Food"],
+    "optionsZh": ["工作", "与他人的联系", "汽车", "食物"],
+    "correct": "Connection with others",
+    "correctZh": "与他人的联系",
+    "example": "Relationships make life better.",
+    "exampleZh": "关系让生活更美好。"
+  },
+  {
+    "word": "relationship",
+    "wordZh": "关系",
+    "type": "select-all",
+    "question": "What is part of a 'relationship'?",
+    "questionZh": "‘关系’ 包括什么？",
+    "options": ["Fighting", "Talking", "Helping", "Working alone", "Caring"],
+    "optionsZh": ["打架", "谈话", "帮助", "独自工作", "关心"],
+    "correct": ["2", "3", "5"],
+    "correctZh": ["谈话", "帮助", "关心"],
+    "example": "Talking builds relationships.",
+    "exampleZh": "谈话建立关系。"
+  },
+  {
+    "word": "trust",
+    "wordZh": "信任",
+    "type": "multiple-choice",
+    "question": "What does 'trust' mean?",
+    "questionZh": "‘信任’ 的意思是什么？",
+    "options": ["Doubt", "Believe in someone", "Hide", "Run"],
+    "optionsZh": ["怀疑", "相信某人", "隐藏", "跑"],
+    "correct": "Believe in someone",
+    "correctZh": "相信某人",
+    "example": "Trust strengthens friendships.",
+    "exampleZh": "信任加强友谊。"
+  },
+  {
+    "word": "trust",
+    "wordZh": "信任",
+    "type": "true-false",
+    "question": "Trust is important for relationships.",
+    "questionZh": "信任对关系很重要。",
+    "options": ["True", "False"],
+    "optionsZh": ["正确", "错误"],
+    "correct": "True",
+    "correctZh": "正确",
+    "example": "I trust my family.",
+    "exampleZh": "我信任我的家人。"
+  },
+  {
+    "word": "opinion",
+    "wordZh": "观点",
+    "type": "multiple-choice",
+    "question": "Which phrase expresses your view on community health?",
+    "questionZh": "哪个短语表达你对社区健康的看法？",
+    "options": ["As a result", "I believe", "Whereas", "Tackle"],
+    "optionsZh": ["因此", "我相信", "然而", "解决"],
+    "correct": "I believe",
+    "correctZh": "我相信",
+    "example": "I believe community support improves health.",
+    "exampleZh": "我相信社区支持改善健康。"
+  },
+  {
+    "word": "solution",
+    "wordZh": "解决方案",
+    "type": "multiple-choice",
+    "question": "Which phrase suggests solving social health issues?",
+    "questionZh": "哪个短语建议解决社交健康问题？",
+    "options": ["On the contrary", "Tackle", "I concur", "It seems to me"],
+    "optionsZh": ["相反", "解决", "我同意", "在我看来"],
+    "correct": "Tackle",
+    "correctZh": "解决",
+    "example": "We should tackle stress with community events.",
+    "exampleZh": "我们应该通过社区活动解决压力。"
+  },
+  {
+    "word": "opinion",
+    "wordZh": "观点",
+    "type": "true-false",
+    "question": "‘I believe’ is used to express a personal opinion on social connections.",
+    "questionZh": "‘我相信’ 用于表达对社交联系的个人意见。",
+    "options": ["True", "False"],
+    "optionsZh": ["正确", "错误"],
+    "correct": "True",
+    "correctZh": "正确",
+    "example": "I believe trust builds community health.",
+    "exampleZh": "我相信信任建立社区健康。"
+  },
+  {
+    "word": "opinion",
+    "wordZh": "观点",
+    "type": "true-false",
+    "question": "‘I concur’ means you disagree with a community health idea.",
+    "questionZh": "‘我同意’ 意味着你不同意社区健康想法。",
+    "options": ["True", "False"],
+    "optionsZh": ["正确", "错误"],
+    "correct": "False",
+    "correctZh": "错误",
+    "example": "I concur that festivals promote health.",
+    "exampleZh": "我同意节日促进健康。"
+  },
+  {
+    "word": "opinion",
+    "wordZh": "观点",
+    "type": "select-all",
+    "question": "Which phrases express opinions on social health?",
+    "questionZh": "哪些短语表达社交健康的意见？",
+    "options": ["I believe", "As a result", "In my view", "Tackle", "Owing to"],
+    "optionsZh": ["我相信", "因此", "在我看来", "解决", "由于"],
+    "correct": ["1", "3"],
+    "correctZh": ["我相信", "在我看来"],
+    "example": "I believe support improves health.",
+    "exampleZh": "我相信支持改善健康。"
+  },
+  {
+    "word": "solution",
+    "wordZh": "解决方案",
+    "type": "select-all",
+    "question": "Which phrases suggest solutions for community health?",
+    "questionZh": "哪些短语建议社区健康的解决方案？",
+    "options": ["I believe", "Tackle", "As a result", "Propose", "Whereas"],
+    "optionsZh": ["我相信", "解决", "因此", "提出", "然而"],
+    "correct": ["2", "4"],
+    "correctZh": ["解决", "提出"],
+    "example": "We propose community health programs.",
+    "exampleZh": "我们提出社区健康项目。"
+  }
+]
