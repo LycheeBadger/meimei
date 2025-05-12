@@ -1,396 +1,392 @@
-{
-  "thematic": [
-    {
-      "word": "automation",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'automation' mean?",
-          "questionZh": "‘自动化’ 的意思是什么？",
-          "options": ["Manual labor", "Use of machines to perform tasks", "Traditional methods", "Human supervision"],
-          "optionsZh": ["体力劳动", "使用机器执行任务", "传统方法", "人工监督"],
-          "correct": "Use of machines to perform tasks",
-          "correctZh": "使用机器执行任务",
-          "example": "Automation enhances efficiency in healthcare.",
-          "exampleZh": "自动化提高医疗效率。"
-        },
-        {
-          "type": "select-all",
-          "question": "Which are examples of 'automation'?",
-          "questionZh": "哪些是 ‘自动化’ 的例子？",
-          "options": ["Handwritten records", "Robotic surgery", "Self-driving cars", "Manual data entry", "Smart home systems"],
-          "optionsZh": ["手写记录", "机器人手术", "自动驾驶汽车", "手动数据输入", "智能家居系统"],
-          "correct": ["2", "3", "5"],
-          "correctZh": ["机器人手术", "自动驾驶汽车", "智能家居系统"],
-          "example": "Robotic surgery relies on automation.",
-          "exampleZh": "机器人手术依赖自动化。"
-        }
-      ]
-    },
-    {
-      "word": "connectivity",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'connectivity' mean?",
-          "questionZh": "‘连接性’ 的意思是什么？",
-          "options": ["Isolation", "Ability to link devices or systems", "Physical distance", "Manual communication"],
-          "optionsZh": ["孤立", "连接设备或系统的能力", "物理距离", "手动通信"],
-          "correct": "Ability to link devices or systems",
-          "correctZh": "连接设备或系统的能力",
-          "example": "Connectivity improves telemedicine access.",
-          "exampleZh": "连接性提高远程医疗的可及性。"
-        },
-        {
-          "type": "true-false",
-          "question": "Connectivity enables real-time health monitoring.",
-          "questionZh": "连接性支持实时健康监测。",
-          "options": ["True", "False"],
-          "optionsZh": ["正确", "错误"],
-          "correct": "True",
-          "correctZh": "正确",
-          "example": "Connectivity supports health apps.",
-          "exampleZh": "连接性支持健康应用。"
-        }
-      ]
-    },
-    {
-      "word": "innovation",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'innovation' mean?",
-          "questionZh": "‘创新’ 的意思是什么？",
-          "options": ["Repetition", "Creation of new ideas or methods", "Tradition", "Routine work"],
-          "optionsZh": ["重复", "创造新想法或方法", "传统", "常规工作"],
-          "correct": "Creation of new ideas or methods",
-          "correctZh": "创造新想法或方法",
-          "example": "Innovation drives medical advancements.",
-          "exampleZh": "创新推动医疗进步。"
-        },
-        {
-          "type": "select-all",
-          "question": "Which are examples of 'innovation' in technology?",
-          "questionZh": "哪些是技术中 ‘创新’ 的例子？",
-          "options": ["Typewriters", "Wearable health devices", "Artificial intelligence", "Paper records", "3D printing"],
-          "optionsZh": ["打字机", "可穿戴健康设备", "人工智能", "纸质记录", "3D打印"],
-          "correct": ["2", "3", "5"],
-          "correctZh": ["可穿戴健康设备", "人工智能", "3D打印"],
-          "example": "Wearable health devices are an innovation.",
-          "exampleZh": "可穿戴健康设备是一项创新。"
-        }
-      ]
-    },
-    {
-      "word": "algorithm",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'algorithm' mean?",
-          "questionZh": "‘算法’ 的意思是什么？",
-          "options": ["Physical device", "Set of computational instructions", "Manual process", "Random data"],
-          "optionsZh": ["物理设备", "计算指令集", "手动过程", "随机数据"],
-          "correct": "Set of computational instructions",
-          "correctZh": "计算指令集",
-          "example": "Algorithms optimize health diagnostics.",
-          "exampleZh": "算法优化健康诊断。"
-        },
-        {
-          "type": "true-false",
-          "question": "Algorithms enhance the accuracy of health apps.",
-          "questionZh": "算法提高健康应用的准确性。",
-          "options": ["True", "False"],
-          "optionsZh": ["正确", "错误"],
-          "correct": "True",
-          "correctZh": "正确",
-          "example": "Algorithms analyze patient data.",
-          "exampleZh": "算法分析患者数据。"
-        }
-      ]
-    },
-    {
-      "word": "cybersecurity",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'cybersecurity' mean?",
-          "questionZh": "‘网络安全’ 的意思是什么？",
-          "options": ["Physical security", "Protection of digital systems", "Manual data storage", "Open access systems"],
-          "optionsZh": ["物理安全", "数字系统保护", "手动数据存储", "开放访问系统"],
-          "correct": "Protection of digital systems",
-          "correctZh": "数字系统保护",
-          "example": "Cybersecurity safeguards health records.",
-          "exampleZh": "网络安全保护健康记录。"
-        },
-        {
-          "type": "select-all",
-          "question": "What measures support 'cybersecurity'?",
-          "questionZh": "哪些措施支持 ‘网络安全’？",
-          "options": ["Open networks", "Encryption", "Strong passwords", "Public data sharing", "Firewalls"],
-          "optionsZh": ["开放网络", "加密", "强密码", "公开数据共享", "防火墙"],
-          "correct": ["2", "3", "5"],
-          "correctZh": ["加密", "强密码", "防火墙"],
-          "example": "Encryption strengthens cybersecurity.",
-          "exampleZh": "加密增强网络安全。"
-        }
-      ]
-    },
-    {
-      "word": "artificial intelligence",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'artificial intelligence' mean?",
-          "questionZh": "‘人工智能’ 的意思是什么？",
-          "options": ["Human intelligence", "Machines mimicking human cognition", "Traditional computing", "Manual analysis"],
-          "optionsZh": ["人类智能", "机器模仿人类认知", "传统计算", "手动分析"],
-          "correct": "Machines mimicking human cognition",
-          "correctZh": "机器模仿人类认知",
-          "example": "Artificial intelligence enhances medical diagnostics.",
-          "exampleZh": "人工智能提升医疗诊断。"
-        },
-        {
-          "type": "true-false",
-          "question": "Artificial intelligence can assist in disease prediction.",
-          "questionZh": "人工智能可以协助疾病预测。",
-          "options": ["True", "False"],
-          "optionsZh": ["正确", "错误"],
-          "correct": "True",
-          "correctZh": "正确",
-          "example": "Artificial intelligence predicts health risks.",
-          "exampleZh": "人工智能预测健康风险。"
-        }
-      ]
-    },
-    {
-      "word": "digitalisation",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'digitalisation' mean?",
-          "questionZh": "‘数字化’ 的意思是什么？",
-          "options": ["Manual record-keeping", "Adoption of digital technology", "Physical storage", "Traditional communication"],
-          "optionsZh": ["手动记录", "采用数字技术", "物理存储", "传统通信"],
-          "correct": "Adoption of digital technology",
-          "correctZh": "采用数字技术",
-          "example": "Digitalisation streamlines healthcare services.",
-          "exampleZh": "数字化简化医疗服务。"
-        },
-        {
-          "type": "select-all",
-          "question": "What are examples of 'digitalisation'?",
-          "questionZh": "什么是 ‘数字化’ 的例子？",
-          "options": ["Paper files", "Electronic health records", "Online consultations", "Manual billing", "Cloud storage"],
-          "optionsZh": ["纸质文件", "电子健康记录", "在线咨询", "手动账单", "云存储"],
-          "correct": ["2", "3", "5"],
-          "correctZh": ["电子健康记录", "在线咨询", "云存储"],
-          "example": "Electronic health records reflect digitalisation.",
-          "exampleZh": "电子健康记录反映数字化。"
-        }
-      ]
-    },
-    {
-      "word": "interface",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'interface' mean?",
-          "questionZh": "‘界面’ 的意思是什么？",
-          "options": ["Physical device", "Point of interaction with technology", "Manual process", "Random data"],
-          "optionsZh": ["物理设备", "与技术交互的点", "手动过程", "随机数据"],
-          "correct": "Point of interaction with technology",
-          "correctZh": "与技术交互的点",
-          "example": "A user-friendly interface improves app usability.",
-          "exampleZh": "用户友好的界面提高应用可用性。"
-        },
-        {
-          "type": "true-false",
-          "question": "An intuitive interface enhances health app effectiveness.",
-          "questionZh": "直观的界面增强健康应用的有效性。",
-          "options": ["True", "False"],
-          "optionsZh": ["正确", "错误"],
-          "correct": "True",
-          "correctZh": "正确",
-          "example": "Interfaces simplify health tracking.",
-          "exampleZh": "界面简化健康跟踪。"
-        }
-      ]
-    },
-    {
-      "word": "blockchain",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'blockchain' mean?",
-          "questionZh": "‘区块链’ 的意思是什么？",
-          "options": ["Manual records", "Decentralized digital ledger", "Physical chain", "Traditional database"],
-          "optionsZh": ["手动记录", "去中心化的数字账本", "物理链", "传统数据库"],
-          "correct": "Decentralized digital ledger",
-          "correctZh": "去中心化的数字账本",
-          "example": "Blockchain secures patient data.",
-          "exampleZh": "区块链保护患者数据。"
-        },
-        {
-          "type": "select-all",
-          "question": "What applications use 'blockchain'?",
-          "questionZh": "哪些应用使用 ‘区块链’？",
-          "options": ["Paper ledgers", "Cryptocurrency", "Secure health records", "Manual logs", "Supply chain tracking"],
-          "optionsZh": ["纸质账本", "加密货币", "安全健康记录", "手动日志", "供应链跟踪"],
-          "correct": ["2", "3", "5"],
-          "correctZh": ["加密货币", "安全健康记录", "供应链跟踪"],
-          "example": "Blockchain secures health records.",
-          "exampleZh": "区块链保护健康记录。"
-        }
-      ]
-    },
-    {
-      "word": "biotechnology",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'biotechnology' mean?",
-          "questionZh": "‘生物技术’ 的意思是什么？",
-          "options": ["Mechanical engineering", "Application of biology in technology", "Traditional farming", "Manual surgery"],
-          "optionsZh": ["机械工程", "生物学在技术中的应用", "传统农业", "手动手术"],
-          "correct": "Application of biology in technology",
-          "correctZh": "生物学在技术中的应用",
-          "example": "Biotechnology advances healthcare solutions.",
-          "exampleZh": "生物技术推动医疗解决方案。"
-        },
-        {
-          "type": "true-false",
-          "question": "Biotechnology contributes to medical breakthroughs.",
-          "questionZh": "生物技术有助于医疗突破。",
-          "options": ["True", "False"],
-          "optionsZh": ["正确", "错误"],
-          "correct": "True",
-          "correctZh": "正确",
-          "example": "Biotechnology develops new vaccines.",
-          "exampleZh": "生物技术开发新疫苗。"
-        }
-      ]
-    },
-    {
-      "word": "virtual reality",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'virtual reality' mean?",
-          "questionZh": "‘虚拟现实’ 的意思是什么？",
-          "options": ["Physical reality", "Simulated digital environment", "Manual simulation", "Real-world training"],
-          "optionsZh": ["物理现实", "模拟数字环境", "手动模拟", "现实世界培训"],
-          "correct": "Simulated digital environment",
-          "correctZh": "模拟数字环境",
-          "example": "Virtual reality aids medical training.",
-          "exampleZh": "虚拟现实帮助医疗培训。"
-        },
-        {
-          "type": "select-all",
-          "question": "What are applications of 'virtual reality'?",
-          "questionZh": "‘虚拟现实’ 的应用有哪些？",
-          "options": ["Paper-based training", "Surgical simulations", "Therapeutic treatments", "Manual drawing", "Gaming"],
-          "optionsZh": ["纸质培训", "手术模拟", "治疗方法", "手动绘图", "游戏"],
-          "correct": ["2", "3", "5"],
-          "correctZh": ["手术模拟", "治疗方法", "游戏"],
-          "example": "Virtual reality is used in therapy.",
-          "exampleZh": "虚拟现实用于治疗。"
-        }
-      ]
-    },
-    {
-      "word": "data analytics",
-      "questions": [
-        {
-          "type": "multiple-choice",
-          "question": "What does 'data analytics' mean?",
-          "questionZh": "‘数据分析’ 的意思是什么？",
-          "options": ["Manual data collection", "Interpreting data for insights", "Physical storage", "Random sampling"],
-          "optionsZh": ["手动数据收集", "解读数据以获得洞察", "物理存储", "随机抽样"],
-          "correct": "Interpreting data for insights",
-          "correctZh": "解读数据以获得洞察",
-          "example": "Data analytics improves health outcomes.",
-          "exampleZh": "数据分析改善健康结果。"
-        },
-        {
-          "type": "true-false",
-          "question": "Data analytics supports predictive healthcare.",
-          "questionZh": "数据分析支持预测性医疗。",
-          "options": ["True", "False"],
-          "optionsZh": ["正确", "错误"],
-          "correct": "True",
-          "correctZh": "正确",
-          "example": "Data analytics predicts disease trends.",
-          "exampleZh": "数据分析预测疾病趋势。"
-        }
-      ]
-    }
-  ],
-  "functional": [
-    {
-      "type": "multiple-choice",
-      "question": "Which phrase expresses your view on technology’s impact on health?",
-      "questionZh": "哪个短语表达你对技术对健康影响的看法？",
-      "options": ["As a result", "I believe", "Whereas", "Tackle"],
-      "optionsZh": ["因此", "我相信", "然而", "解决"],
-      "correct": "I believe",
-      "correctZh": "我相信",
-      "example": "I believe biotechnology enhances healthcare.",
-      "exampleZh": "我相信生物技术提升医疗水平。"
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Which phrase suggests addressing technology-related health concerns?",
-      "questionZh": "哪个短语建议解决技术相关的健康问题？",
-      "options": ["On the contrary", "Tackle", "I concur", "It seems to me"],
-      "optionsZh": ["相反", "解决", "我同意", "在我看来"],
-      "correct": "Tackle",
-      "correctZh": "解决",
-      "example": "We should tackle cybersecurity stress with training.",
-      "exampleZh": "我们应该通过培训解决网络安全压力。"
-    },
-    {
-      "type": "true-false",
-      "question": "‘I believe’ is used to express a personal opinion on technology’s health benefits.",
-      "questionZh": "‘我相信’ 用于表达对技术健康益处的个人意见。",
-      "options": ["True", "False"],
-      "optionsZh": ["正确", "错误"],
-      "correct": "True",
-      "correctZh": "正确",
-      "example": "I believe virtual reality improves therapy.",
-      "exampleZh": "我相信虚拟现实改善治疗。"
-    },
-    {
-      "type": "true-false",
-      "question": "‘Owing to’ indicates the result of a technological advancement.",
-      "questionZh": "‘由于’ 表示技术进步的结果。",
-      "options": ["True", "False"],
-      "optionsZh": ["正确", "错误"],
-      "correct": "False",
-      "correctZh": "错误",
-      "example": "Owing to poor cybersecurity, health data is at risk.",
-      "exampleZh": "由于网络安全不足，健康数据面临风险。"
-    },
-    {
-      "type": "select-all",
-      "question": "Which phrases express opinions on technology’s health impact?",
-      "questionZh": "哪些短语表达技术对健康影响的意见？",
-      "options": ["I believe", "As a result", "In my view", "Tackle", "Owing to"],
-      "optionsZh": ["我相信", "因此", "在我看来", "解决", "由于"],
-      "correct": ["1", "3"],
-      "correctZh": ["我相信", "在我看来"],
-      "example": "In my view, data analytics improves health outcomes.",
-      "exampleZh": "在我看来，数据分析改善健康结果。"
-    },
-    {
-      "type": "select-all",
-      "question": "Which phrases suggest solutions for technology-related health issues?",
-      "questionZh": "哪些短语建议解决技术相关的健康问题？",
-      "options": ["I believe", "Tackle", "As a result", "Propose", "Whereas"],
-      "optionsZh": ["我相信", "解决", "因此", "提出", "然而"],
-      "correct": ["2", "4"],
-      "correctZh": ["解决", "提出"],
-      "example": "We propose enhanced cybersecurity measures.",
-      "exampleZh": "我们提出加强网络安全措施。"
-    }
-  ]
-}
+[
+  {
+    "word": "automation",
+    "wordZh": "自动化",
+    "type": "multiple-choice",
+    "question": "What does 'automation' mean?",
+    "questionZh": "‘自动化’ 的意思是什么？",
+    "options": ["Manual labor", "Use of machines to perform tasks", "Traditional methods", "Human supervision"],
+    "optionsZh": ["体力劳动", "使用机器执行任务", "传统方法", "人工监督"],
+    "correct": "Use of machines to perform tasks",
+    "correctZh": "使用机器执行任务",
+    "example": "Automation enhances efficiency in healthcare.",
+    "exampleZh": "自动化提高医疗效率。"
+  },
+  {
+    "word": "automation",
+    "wordZh": "自动化",
+    "type": "select-all",
+    "question": "Which are examples of 'automation'?",
+    "questionZh": "哪些是 ‘自动化’ 的例子？",
+    "options": ["Handwritten records", "Robotic surgery", "Self-driving cars", "Manual data entry", "Smart home systems"],
+    "optionsZh": ["手写记录", "机器人手术", "自动驾驶汽车", "手动数据输入", "智能家居系统"],
+    "correct": ["2", "3", "5"],
+    "correctZh": ["机器人手术", "自动驾驶汽车", "智能家居系统"],
+    "example": "Robotic surgery relies on automation.",
+    "exampleZh": "机器人手术依赖自动化。"
+  },
+  {
+    "word": "connectivity",
+    "wordZh": "连接性",
+    "type": "multiple-choice",
+    "question": "What does 'connectivity' mean?",
+    "questionZh": "‘连接性’ 的意思是什么？",
+    "options": ["Isolation", "Ability to link devices or systems", "Physical distance", "Manual communication"],
+    "optionsZh": ["孤立", "连接设备或系统的能力", "物理距离", "手动通信"],
+    "correct": "Ability to link devices or systems",
+    "correctZh": "连接设备或系统的能力",
+    "example": "Connectivity improves telemedicine access.",
+    "exampleZh": "连接性提高远程医疗的可及性。"
+  },
+  {
+    "word": "connectivity",
+    "wordZh": "连接性",
+    "type": "true-false",
+    "question": "Connectivity enables real-time health monitoring.",
+    "questionZh": "连接性支持实时健康监测。",
+    "options": ["True", "False"],
+    "optionsZh": ["正确", "错误"],
+    "correct": "True",
+    "correctZh": "正确",
+    "example": "Connectivity supports health apps.",
+    "exampleZh": "连接性支持健康应用。"
+  },
+  {
+    "word": "innovation",
+    "wordZh": "创新",
+    "type": "multiple-choice",
+    "question": "What does 'innovation' mean?",
+    "questionZh": "‘创新’ 的意思是什么？",
+    "options": ["Repetition", "Creation of new ideas or methods", "Tradition", "Routine work"],
+    "optionsZh": ["重复", "创造新想法或方法", "传统", "常规工作"],
+    "correct": "Creation of new ideas or methods",
+    "correctZh": "创造新想法或方法",
+    "example": "Innovation drives medical advancements.",
+    "exampleZh": "创新推动医疗进步。"
+  },
+  {
+    "word": "innovation",
+    "wordZh": "创新",
+    "type": "select-all",
+    "question": "Which are examples of 'innovation' in technology?",
+    "questionZh": "哪些是技术中 ‘创新’ 的例子？",
+    "options": ["Typewriters", "Wearable health devices", "Artificial intelligence", "Paper records", "3D printing"],
+    "optionsZh": ["打字机", "可穿戴健康设备", "人工智能", "纸质记录", "3D打印"],
+    "correct": ["2", "3", "5"],
+    "correctZh": ["可穿戴健康设备", "人工智能", "3D打印"],
+    "example": "Wearable health devices are an innovation.",
+    "exampleZh": "可穿戴健康设备是一项创新。"
+  },
+  {
+    "word": "algorithm",
+    "wordZh": "算法",
+    "type": "multiple-choice",
+    "question": "What does 'algorithm' mean?",
+    "questionZh": "‘算法’ 的意思是什么？",
+    "options": ["Physical device", "Set of computational instructions", "Manual process", "Random data"],
+    "optionsZh": ["物理设备", "计算指令集", "手动过程", "随机数据"],
+    "correct": "Set of computational instructions",
+    "correctZh": "计算指令集",
+    "example": "Algorithms optimize health diagnostics.",
+    "exampleZh": "算法优化健康诊断。"
+  },
+  {
+    "word": "algorithm",
+    "wordZh": "算法",
+    "type": "true-false",
+    "question": "Algorithms enhance the accuracy of health apps.",
+    "questionZh": "算法提高健康应用的准确性。",
+    "options": ["True", "False"],
+    "optionsZh": ["正确", "错误"],
+    "correct": "True",
+    "correctZh": "正确",
+    "example": "Algorithms analyze patient data.",
+    "exampleZh": "算法分析患者数据。"
+  },
+  {
+    "word": "cybersecurity",
+    "wordZh": "网络安全",
+    "type": "multiple-choice",
+    "question": "What does 'cybersecurity' mean?",
+    "questionZh": "‘网络安全’ 的意思是什么？",
+    "options": ["Physical security", "Protection of digital systems", "Manual data storage", "Open access systems"],
+    "optionsZh": ["物理安全", "数字系统保护", "手动数据存储", "开放访问系统"],
+    "correct": "Protection of digital systems",
+    "correctZh": "数字系统保护",
+    "example": "Cybersecurity safeguards health records.",
+    "exampleZh": "网络安全保护健康记录。"
+  },
+  {
+    "word": "cybersecurity",
+    "wordZh": "网络安全",
+    "type": "select-all",
+    "question": "What measures support 'cybersecurity'?",
+    "questionZh": "哪些措施支持 ‘网络安全’？",
+    "options": ["Open networks", "Encryption", "Strong passwords", "Public data sharing", "Firewalls"],
+    "optionsZh": ["开放网络", "加密", "强密码", "公开数据共享", "防火墙"],
+    "correct": ["2", "3", "5"],
+    "correctZh": ["加密", "强密码", "防火墙"],
+    "example": "Encryption strengthens cybersecurity.",
+    "exampleZh": "加密增强网络安全。"
+  },
+  {
+    "word": "artificial intelligence",
+    "wordZh": "人工智能",
+    "type": "multiple-choice",
+    "question": "What does 'artificial intelligence' mean?",
+    "questionZh": "‘人工智能’ 的意思是什么？",
+    "options": ["Human intelligence", "Machines mimicking human cognition", "Traditional computing", "Manual analysis"],
+    "optionsZh": ["人类智能", "机器模仿人类认知", "传统计算", "手动分析"],
+    "correct": "Machines mimicking human cognition",
+    "correctZh": "机器模仿人类认知",
+    "example": "Artificial intelligence enhances medical diagnostics.",
+    "exampleZh": "人工智能提升医疗诊断。"
+  },
+  {
+    "word": "artificial intelligence",
+    "wordZh": "人工智能",
+    "type": "true-false",
+    "question": "Artificial intelligence can assist in disease prediction.",
+    "questionZh": "人工智能可以协助疾病预测。",
+    "options": ["True", "False"],
+    "optionsZh": ["正确", "错误"],
+    "correct": "True",
+    "correctZh": "正确",
+    "example": "Artificial intelligence predicts health risks.",
+    "exampleZh": "人工智能预测健康风险。"
+  },
+  {
+    "word": "digitalisation",
+    "wordZh": "数字化",
+    "type": "multiple-choice",
+    "question": "What does 'digitalisation' mean?",
+    "questionZh": "‘数字化’ 的意思是什么？",
+    "options": ["Manual record-keeping", "Adoption of digital technology", "Physical storage", "Traditional communication"],
+    "optionsZh": ["手动记录", "采用数字技术", "物理存储", "传统通信"],
+    "correct": "Adoption of digital technology",
+    "correctZh": "采用数字技术",
+    "example": "Digitalisation streamlines healthcare services.",
+    "exampleZh": "数字化简化医疗服务。"
+  },
+  {
+    "word": "digitalisation",
+    "wordZh": "数字化",
+    "type": "select-all",
+    "question": "What are examples of 'digitalisation'?",
+    "questionZh": "什么是 ‘数字化’ 的例子？",
+    "options": ["Paper files", "Electronic health records", "Online consultations", "Manual billing", "Cloud storage"],
+    "optionsZh": ["纸质文件", "电子健康记录", "在线咨询", "手动账单", "云存储"],
+    "correct": ["2", "3", "5"],
+    "correctZh": ["电子健康记录", "在线咨询", "云存储"],
+    "example": "Electronic health records reflect digitalisation.",
+    "exampleZh": "电子健康记录反映数字化。"
+  },
+  {
+    "word": "interface",
+    "wordZh": "界面",
+    "type": "multiple-choice",
+    "question": "What does 'interface' mean?",
+    "questionZh": "‘界面’ 的意思是什么？",
+    "options": ["Physical device", "Point of interaction with technology", "Manual process", "Random data"],
+    "optionsZh": ["物理设备", "与技术交互的点", "手动过程", "随机数据"],
+    "correct": "Point of interaction with technology",
+    "correctZh": "与技术交互的点",
+    "example": "A user-friendly interface improves app usability.",
+    "exampleZh": "用户友好的界面提高应用可用性。"
+  },
+  {
+    "word": "interface",
+    "wordZh": "界面",
+    "type": "true-false",
+    "question": "An intuitive interface enhances health app effectiveness.",
+    "questionZh": "直观的界面增强健康应用的有效性。",
+    "options": ["True", "False"],
+    "optionsZh": ["正确", "错误"],
+    "correct": "True",
+    "correctZh": "正确",
+    "example": "Interfaces simplify health tracking.",
+    "exampleZh": "界面简化健康跟踪。"
+  },
+  {
+    "word": "blockchain",
+    "wordZh": "区块链",
+    "type": "multiple-choice",
+    "question": "What does 'blockchain' mean?",
+    "questionZh": "‘区块链’ 的意思是什么？",
+    "options": ["Manual records", "Decentralized digital ledger", "Physical chain", "Traditional database"],
+    "optionsZh": ["手动记录", "去中心化的数字账本", "物理链", "传统数据库"],
+    "correct": "Decentralized digital ledger",
+    "correctZh": "去中心化的数字账本",
+    "example": "Blockchain secures patient data.",
+    "exampleZh": "区块链保护患者数据。"
+  },
+  {
+    "word": "blockchain",
+    "wordZh": "区块链",
+    "type": "select-all",
+    "question": "What applications use 'blockchain'?",
+    "questionZh": "哪些应用使用 ‘区块链’？",
+    "options": ["Paper ledgers", "Cryptocurrency", "Secure health records", "Manual logs", "Supply chain tracking"],
+    "optionsZh": ["纸质账本", "加密货币", "安全健康记录", "手动日志", "供应链跟踪"],
+    "correct": ["2", "3", "5"],
+    "correctZh": ["加密货币", "安全健康记录", "供应链跟踪"],
+    "example": "Blockchain secures health records.",
+    "exampleZh": "区块链保护健康记录。"
+  },
+  {
+    "word": "biotechnology",
+    "wordZh": "生物技术",
+    "type": "multiple-choice",
+    "question": "What does 'biotechnology' mean?",
+    "questionZh": "‘生物技术’ 的意思是什么？",
+    "options": ["Mechanical engineering", "Application of biology in technology", "Traditional farming", "Manual surgery"],
+    "optionsZh": ["机械工程", "生物学在技术中的应用", "传统农业", "手动手术"],
+    "correct": "Application of biology in technology",
+    "correctZh": "生物学在技术中的应用",
+    "example": "Biotechnology advances healthcare solutions.",
+    "exampleZh": "生物技术推动医疗解决方案。"
+  },
+  {
+    "word": "biotechnology",
+    "wordZh": "生物技术",
+    "type": "true-false",
+    "question": "Biotechnology contributes to medical breakthroughs.",
+    "questionZh": "生物技术有助于医疗突破。",
+    "options": ["True", "False"],
+    "optionsZh": ["正确", "错误"],
+    "correct": "True",
+    "correctZh": "正确",
+    "example": "Biotechnology develops new vaccines.",
+    "exampleZh": "生物技术开发新疫苗。"
+  },
+  {
+    "word": "virtual reality",
+    "wordZh": "虚拟现实",
+    "type": "multiple-choice",
+    "question": "What does 'virtual reality' mean?",
+    "questionZh": "‘虚拟现实’ 的意思是什么？",
+    "options": ["Physical reality", "Simulated digital environment", "Manual simulation", "Real-world training"],
+    "optionsZh": ["物理现实", "模拟数字环境", "手动模拟", "现实世界培训"],
+    "correct": "Simulated digital environment",
+    "correctZh": "模拟数字环境",
+    "example": "Virtual reality aids medical training.",
+    "exampleZh": "虚拟现实帮助医疗培训。"
+  },
+  {
+    "word": "virtual reality",
+    "wordZh": "虚拟现实",
+    "type": "select-all",
+    "question": "What are applications of 'virtual reality'?",
+    "questionZh": "‘虚拟现实’ 的应用有哪些？",
+    "options": ["Paper-based training", "Surgical simulations", "Therapeutic treatments", "Manual drawing", "Gaming"],
+    "optionsZh": ["纸质培训", "手术模拟", "治疗方法", "手动绘图", "游戏"],
+    "correct": ["2", "3", "5"],
+    "correctZh": ["手术模拟", "治疗方法", "游戏"],
+    "example": "Virtual reality is used in therapy.",
+    "exampleZh": "虚拟现实用于治疗。"
+  },
+  {
+    "word": "data analytics",
+    "wordZh": "数据分析",
+    "type": "multiple-choice",
+    "question": "What does 'data analytics' mean?",
+    "questionZh": "‘数据分析’ 的意思是什么？",
+    "options": ["Manual data collection", "Interpreting data for insights", "Physical storage", "Random sampling"],
+    "optionsZh": ["手动数据收集", "解读数据以获得洞察", "物理存储", "随机抽样"],
+    "correct": "Interpreting data for insights",
+    "correctZh": "解读数据以获得洞察",
+    "example": "Data analytics improves health outcomes.",
+    "exampleZh": "数据分析改善健康结果。"
+  },
+  {
+    "word": "data analytics",
+    "wordZh": "数据分析",
+    "type": "true-false",
+    "question": "Data analytics supports predictive healthcare.",
+    "questionZh": "数据分析支持预测性医疗。",
+    "options": ["True", "False"],
+    "optionsZh": ["正确", "错误"],
+    "correct": "True",
+    "correctZh": "正确",
+    "example": "Data analytics predicts disease trends.",
+    "exampleZh": "数据分析预测疾病趋势。"
+  },
+  {
+    "word": "opinion",
+    "wordZh": "观点",
+    "type": "multiple-choice",
+    "question": "Which phrase expresses your view on technology’s impact on health?",
+    "questionZh": "哪个短语表达你对技术对健康影响的看法？",
+    "options": ["As a result", "I believe", "Whereas", "Tackle"],
+    "optionsZh": ["因此", "我相信", "然而", "解决"],
+    "correct": "I believe",
+    "correctZh": "我相信",
+    "example": "I believe biotechnology enhances healthcare.",
+    "exampleZh": "我相信生物技术提升医疗水平。"
+  },
+  {
+    "word": "solution",
+    "wordZh": "解决方案",
+    "type": "multiple-choice",
+    "question": "Which phrase suggests addressing technology-related health concerns?",
+    "questionZh": "哪个短语建议解决技术相关的健康问题？",
+    "options": ["On the contrary", "Tackle", "I concur", "It seems to me"],
+    "optionsZh": ["相反", "解决", "我同意", "在我看来"],
+    "correct": "Tackle",
+    "correctZh": "解决",
+    "example": "We should tackle cybersecurity stress with training.",
+    "exampleZh": "我们应该通过培训解决网络安全压力。"
+  },
+  {
+    "word": "opinion",
+    "wordZh": "观点",
+    "type": "true-false",
+    "question": "‘I believe’ is used to express a personal opinion on technology’s health benefits.",
+    "questionZh": "‘我相信’ 用于表达对技术健康益处的个人意见。",
+    "options": ["True", "False"],
+    "optionsZh": ["正确", "错误"],
+    "correct": "True",
+    "correctZh": "正确",
+    "example": "I believe virtual reality improves therapy.",
+    "exampleZh": "我相信虚拟现实改善治疗。"
+  },
+  {
+    "word": "opinion",
+    "wordZh": "观点",
+    "type": "true-false",
+    "question": "‘Owing to’ indicates the result of a technological advancement.",
+    "questionZh": "‘由于’ 表示技术进步的结果。",
+    "options": ["True", "False"],
+    "optionsZh": ["正确", "错误"],
+    "correct": "False",
+    "correctZh": "错误",
+    "example": "Owing to poor cybersecurity, health data is at risk.",
+    "exampleZh": "由于网络安全不足，健康数据面临风险。"
+  },
+  {
+    "word": "opinion",
+    "wordZh": "观点",
+    "type": "select-all",
+    "question": "Which phrases express opinions on technology’s health impact?",
+    "questionZh": "哪些短语表达技术对健康影响的意见？",
+    "options": ["I believe", "As a result", "In my view", "Tackle", "Owing to"],
+    "optionsZh": ["我相信", "因此", "在我看来", "解决", "由于"],
+    "correct": ["1", "3"],
+    "correctZh": ["我相信", "在我看来"],
+    "example": "In my view, data analytics improves health outcomes.",
+    "exampleZh": "在我看来，数据分析改善健康结果。"
+  },
+  {
+    "word": "solution",
+    "wordZh": "解决方案",
+    "type": "select-all",
+    "question": "Which phrases suggest solutions for technology-related health issues?",
+    "questionZh": "哪些短语建议解决技术相关的健康问题？",
+    "options": ["I believe", "Tackle", "As a result", "Propose", "Whereas"],
+    "optionsZh": ["我相信", "解决", "因此", "提出", "然而"],
+    "correct": ["2", "4"],
+    "correctZh": ["解决", "提出"],
+    "example": "We propose enhanced cybersecurity measures.",
+    "exampleZh": "我们提出加强网络安全措施。"
+  }
+]
