@@ -1,0 +1,396 @@
+{
+  "thematic": [
+    {
+      "word": "technology",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'technology' mean?",
+          "questionZh": "‘技术’ 的意思是什么？",
+          "options": ["Food", "Tools and machines for tasks", "Clothes", "Games"],
+          "optionsZh": ["食物", "用于任务的工具和机器", "衣服", "游戏"],
+          "correct": "Tools and machines for tasks",
+          "correctZh": "用于任务的工具和机器",
+          "example": "Technology helps improve healthcare.",
+          "exampleZh": "技术有助于改善医疗。"
+        },
+        {
+          "type": "select-all",
+          "question": "What are examples of 'technology'?",
+          "questionZh": "什么是 ‘技术’ 的例子？",
+          "options": ["Books", "Smartphones", "Computers", "Trees", "Health apps"],
+          "optionsZh": ["书籍", "智能手机", "电脑", "树木", "健康应用"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["智能手机", "电脑", "健康应用"],
+          "example": "Smartphones are modern technology.",
+          "exampleZh": "智能手机是现代技术。"
+        }
+      ]
+    },
+    {
+      "word": "device",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'device' mean?",
+          "questionZh": "‘设备’ 的意思是什么？",
+          "options": ["A book", "A tool or machine", "A meal", "A tree"],
+          "optionsZh": ["书籍", "工具或机器", "餐食", "树木"],
+          "correct": "A tool or machine",
+          "correctZh": "工具或机器",
+          "example": "My device tracks my health.",
+          "exampleZh": "我的设备跟踪我的健康。"
+        },
+        {
+          "type": "true-false",
+          "question": "Devices can help monitor fitness.",
+          "questionZh": "设备可以帮助监测健身。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I use a device to count steps.",
+          "exampleZh": "我用设备来计数步数。"
+        }
+      ]
+    },
+    {
+      "word": "internet",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'internet' mean?",
+          "questionZh": "‘互联网’ 的意思是什么？",
+          "options": ["A library", "A network connecting computers", "A car", "A kitchen"],
+          "optionsZh": ["图书馆", "连接电脑的网络", "汽车", "厨房"],
+          "correct": "A network connecting computers",
+          "correctZh": "连接电脑的网络",
+          "example": "The internet provides health information.",
+          "exampleZh": "互联网提供健康信息。"
+        },
+        {
+          "type": "select-all",
+          "question": "What can you do with the 'internet'?",
+          "questionZh": "你可以用 ‘互联网’ 做什么？",
+          "options": ["Cook food", "Find health tips", "Watch videos", "Drive a car", "Connect with friends"],
+          "optionsZh": ["做饭", "寻找健康建议", "观看视频", "开车", "与朋友联系"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["寻找健康建议", "观看视频", "与朋友联系"],
+          "example": "I find health tips on the internet.",
+          "exampleZh": "我在网上寻找健康建议。"
+        }
+      ]
+    },
+    {
+      "word": "application",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'application' mean?",
+          "questionZh": "‘应用’ 的意思是什么？",
+          "options": ["A book", "A program on a device", "A meal", "A tree"],
+          "optionsZh": ["书籍", "设备上的程序", "餐食", "树木"],
+          "correct": "A program on a device",
+          "correctZh": "设备上的程序",
+          "example": "I use a health application.",
+          "exampleZh": "我使用健康应用。"
+        },
+        {
+          "type": "true-false",
+          "question": "Applications can help with daily tasks.",
+          "questionZh": "应用可以帮助完成日常任务。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "My application tracks my exercise.",
+          "exampleZh": "我的应用跟踪我的运动。"
+        }
+      ]
+    },
+    {
+      "word": "digital",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'digital' mean?",
+          "questionZh": "‘数字的’ 的意思是什么？",
+          "options": ["Paper-based", "Related to computers or technology", "Handwritten", "Physical"],
+          "optionsZh": ["基于纸张的", "与电脑或技术相关的", "手写的", "物理的"],
+          "correct": "Related to computers or technology",
+          "correctZh": "与电脑或技术相关的",
+          "example": "Digital tools improve communication.",
+          "exampleZh": "数字工具改善沟通。"
+        },
+        {
+          "type": "select-all",
+          "question": "What are examples of 'digital' technology?",
+          "questionZh": "什么是 ‘数字’ 技术的例子？",
+          "options": ["Paper notebooks", "Smartphones", "Health trackers", "Typewriters", "Online apps"],
+          "optionsZh": ["纸质笔记本", "智能手机", "健康追踪器", "打字机", "在线应用"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["智能手机", "健康追踪器", "在线应用"],
+          "example": "Health trackers are digital devices.",
+          "exampleZh": "健康追踪器是数字设备。"
+        }
+      ]
+    },
+    {
+      "word": "innovation",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'innovation' mean?",
+          "questionZh": "‘创新’ 的意思是什么？",
+          "options": ["Old methods", "New ideas or inventions", "Routine work", "Cooking"],
+          "optionsZh": ["旧方法", "新想法或发明", "常规工作", "烹饪"],
+          "correct": "New ideas or inventions",
+          "correctZh": "新想法或发明",
+          "example": "Innovation improves healthcare apps.",
+          "exampleZh": "创新改善医疗应用。"
+        },
+        {
+          "type": "true-false",
+          "question": "Innovation can make life healthier.",
+          "questionZh": "创新可以让生活更健康。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "Innovation creates better devices.",
+          "exampleZh": "创新创造更好的设备。"
+        }
+      ]
+    },
+    {
+      "word": "communication",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'communication' mean?",
+          "questionZh": "‘沟通’ 的意思是什么？",
+          "options": ["Sleeping", "Sharing information", "Cooking", "Hiding"],
+          "optionsZh": ["睡觉", "分享信息", "烹饪", "隐藏"],
+          "correct": "Sharing information",
+          "correctZh": "分享信息",
+          "example": "Communication connects people online.",
+          "exampleZh": "沟通通过网络连接人们。"
+        },
+        {
+          "type": "select-all",
+          "question": "What tools help with 'communication'?",
+          "questionZh": "哪些工具帮助 ‘沟通’？",
+          "options": ["Paper letters", "Phones", "Emails", "Cars", "Video calls"],
+          "optionsZh": ["纸质信件", "电话", "电子邮件", "汽车", "视频通话"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["电话", "电子邮件", "视频通话"],
+          "example": "Video calls improve communication.",
+          "exampleZh": "视频通话改善沟通。"
+        }
+      ]
+    },
+    {
+      "word": "screen",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'screen' mean?",
+          "questionZh": "‘屏幕’ 的意思是什么？",
+          "options": ["A book", "A display on a device", "A meal", "A tree"],
+          "optionsZh": ["书籍", "设备上的显示屏", "餐食", "树木"],
+          "correct": "A display on a device",
+          "correctZh": "设备上的显示屏",
+          "example": "Too much screen time can harm health.",
+          "exampleZh": "过多屏幕时间可能损害健康。"
+        },
+        {
+          "type": "true-false",
+          "question": "Long screen time can cause eye strain.",
+          "questionZh": "长时间使用屏幕可能导致眼睛疲劳。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I limit my screen time.",
+          "exampleZh": "我限制我的屏幕时间。"
+        }
+      ]
+    },
+    {
+      "word": "data",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'data' mean?",
+          "questionZh": "‘数据’ 的意思是什么？",
+          "options": ["Food", "Information stored digitally", "Clothes", "Games"],
+          "optionsZh": ["食物", "数字存储的信息", "衣服", "游戏"],
+          "correct": "Information stored digitally",
+          "correctZh": "数字存储的信息",
+          "example": "Data helps track my fitness.",
+          "exampleZh": "数据帮助跟踪我的健身。"
+        },
+        {
+          "type": "select-all",
+          "question": "What uses 'data' in technology?",
+          "questionZh": "技术中什么使用 ‘数据’？",
+          "options": ["Paper notes", "Health apps", "Fitness trackers", "Manual logs", "Online platforms"],
+          "optionsZh": ["纸质笔记", "健康应用", "健身追踪器", "手动日志", "在线平台"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["健康应用", "健身追踪器", "在线平台"],
+          "example": "Health apps collect data.",
+          "exampleZh": "健康应用收集数据。"
+        }
+      ]
+    },
+    {
+      "word": "robot",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'robot' mean?",
+          "questionZh": "‘机器人’ 的意思是什么？",
+          "options": ["A person", "A machine that does tasks", "A book", "A meal"],
+          "optionsZh": ["人", "执行任务的机器", "书籍", "餐食"],
+          "correct": "A machine that does tasks",
+          "correctZh": "执行任务的机器",
+          "example": "Robots help in medical surgeries.",
+          "exampleZh": "机器人帮助进行医疗手术。"
+        },
+        {
+          "type": "true-false",
+          "question": "Robots can assist in healthcare.",
+          "questionZh": "机器人可以协助医疗。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "Robots improve hospital tasks.",
+          "exampleZh": "机器人改善医院任务。"
+        }
+      ]
+    },
+    {
+      "word": "system",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'system' mean?",
+          "questionZh": "‘系统’ 的意思是什么？",
+          "options": ["A single tool", "A set of connected parts", "A meal", "A tree"],
+          "optionsZh": ["单一工具", "一组连接的部件", "餐食", "树木"],
+          "correct": "A set of connected parts",
+          "correctZh": "一组连接的部件",
+          "example": "Systems manage health data.",
+          "exampleZh": "系统管理健康数据。"
+        },
+        {
+          "type": "select-all",
+          "question": "What are examples of a 'system' in technology?",
+          "questionZh": "技术中 ‘系统’ 的例子有哪些？",
+          "options": ["Paper files", "Computer networks", "Health monitoring systems", "Manual records", "Smart home systems"],
+          "optionsZh": ["纸质文件", "计算机网络", "健康监测系统", "手动记录", "智能家居系统"],
+          "correct": ["2", "3", "5"],
+          "correctZh": ["计算机网络", "健康监测系统", "智能家居系统"],
+          "example": "Health monitoring systems use technology.",
+          "exampleZh": "健康监测系统使用技术。"
+        }
+      ]
+    },
+    {
+      "word": "network",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What does 'network' mean?",
+          "questionZh": "‘网络’ 的意思是什么？",
+          "options": ["A single computer", "Connected computers or devices", "A book", "A meal"],
+          "optionsZh": ["单一电脑", "连接的电脑或设备", "书籍", "餐食"],
+          "correct": "Connected computers or devices",
+          "correctZh": "连接的电脑或设备",
+          "example": "Networks share health information.",
+          "exampleZh": "网络分享健康信息。"
+        },
+        {
+          "type": "true-false",
+          "question": "Networks improve communication for health apps.",
+          "questionZh": "网络改善健康应用的沟通。",
+          "options": ["True", "False"],
+          "optionsZh": ["正确", "错误"],
+          "correct": "True",
+          "correctZh": "正确",
+          "example": "I use a network for my apps.",
+          "exampleZh": "我用网络运行我的应用。"
+        }
+      ]
+    }
+  ],
+  "functional": [
+    {
+      "type": "multiple-choice",
+      "question": "Which phrase expresses your view on technology’s impact on health?",
+      "questionZh": "哪个短语表达你对技术对健康影响的看法？",
+      "options": ["As a result", "I believe", "Whereas", "Tackle"],
+      "optionsZh": ["因此", "我相信", "然而", "解决"],
+      "correct": "I believe",
+      "correctZh": "我相信",
+      "example": "I believe health apps improve wellness.",
+      "exampleZh": "我相信健康应用改善健康。"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Which phrase suggests solving technology-related health issues?",
+      "questionZh": "哪个短语建议解决技术相关的健康问题？",
+      "options": ["On the contrary", "Tackle", "I concur", "It seems to me"],
+      "optionsZh": ["相反", "解决", "我同意", "在我看来"],
+      "correct": "Tackle",
+      "correctZh": "解决",
+      "example": "We should tackle screen time with limits.",
+      "exampleZh": "我们应该通过限制解决屏幕时间问题。"
+    },
+    {
+      "type": "true-false",
+      "question": "‘I believe’ is used to express a personal opinion on technology’s benefits.",
+      "questionZh": "‘我相信’ 用于表达对技术益处的个人意见。",
+      "options": ["True", "False"],
+      "optionsZh": ["正确", "错误"],
+      "correct": "True",
+      "correctZh": "正确",
+      "example": "I believe robots help healthcare.",
+      "exampleZh": "我相信机器人帮助医疗。"
+    },
+    {
+      "type": "true-false",
+      "question": "‘As a result’ shows the cause of a technology issue.",
+      "questionZh": "‘因此’ 显示技术问题的原因。",
+      "options": ["True", "False"],
+      "optionsZh": ["正确", "错误"],
+      "correct": "False",
+      "correctZh": "错误",
+      "example": "As a result of innovation, health apps improve.",
+      "exampleZh": "由于创新，健康应用得到改善。"
+    },
+    {
+      "type": "select-all",
+      "question": "Which phrases express opinions on technology’s health impact?",
+      "questionZh": "哪些短语表达技术对健康影响的意见？",
+      "options": ["I believe", "As a result", "In my view", "Tackle", "Owing to"],
+      "optionsZh": ["我相信", "因此", "在我看来", "解决", "由于"],
+      "correct": ["1", "3"],
+      "correctZh": ["我相信", "在我看来"],
+      "example": "In my view, digital tools improve health.",
+      "exampleZh": "在我看来，数字工具改善健康。"
+    },
+    {
+      "type": "select-all",
+      "question": "Which phrases suggest solutions for technology-related health issues?",
+      "questionZh": "哪些短语建议解决技术相关的健康问题？",
+      "options": ["I believe", "Tackle", "As a result", "Propose", "Whereas"],
+      "optionsZh": ["我相信", "解决", "因此", "提出", "然而"],
+      "correct": ["2", "4"],
+      "correctZh": ["解决", "提出"],
+      "example": "We propose limiting screen time for health.",
+      "exampleZh": "我们提出限制屏幕时间以保护健康。"
+    }
+  ]
+}
