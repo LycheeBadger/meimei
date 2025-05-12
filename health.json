@@ -1,0 +1,247 @@
+[
+  {
+    "word": "well-being",
+    "questions": [
+      {
+        "type": "multiple-choice",
+        "question": "What does 'well-being' mean?",
+        "questionZh": "‘幸福感’ 的意思是什么？",
+        "options": [
+          "Physical illness",
+          "State of being healthy and happy",
+          "Financial success",
+          "Social isolation",
+        ],
+        "optionsZh": ["身体疾病", "健康和幸福的状态", "财务成功", "社交孤立"],
+        "correct": "State of being healthy and happy",
+        "correctZh": "健康和幸福的状态",
+        "example": "Regular exercise contributes to overall well-being.",
+        "exampleZh": "定期锻炼有助于整体幸福感。"
+      },
+      {
+        "type": "true-false",
+        "question": "'Well-being' includes both physical and mental health.",
+        "questionZh": "‘幸福感’ 包括身体和心理健康。",
+        "options": ["True", "False"],
+        "optionsZh": ["正确", "错误"],
+        "correct": "True",
+        "correctZh": "正确",
+        "example": "Well-being is enhanced by a balanced diet and stress management.",
+        "exampleZh": "均衡饮食和压力管理可以提升幸福感。"
+      },
+      {
+        "type": "select-all",
+        "question": "Which factors contribute to 'well-being'?",
+        "questionZh": "哪些因素有助于 ‘幸福感’？",
+        "options": [
+          "Regular exercise",
+          "Poor sleep habits",
+          "Healthy diet",
+          "Chronic stress",
+          "Social connections",
+        ],
+        "optionsZh": ["定期锻炼", "不良睡眠习惯", "健康饮食", "慢性压力", "社交联系"],
+        "correct": ["1", "3", "5"],
+        "correctZh": ["定期锻炼", "健康饮食", "社交联系"],
+        "example": "Social connections and exercise boost well-being.",
+        "exampleZh": "社交联系和锻炼提升幸福感。"
+      }
+    ]
+  },
+  {
+    "word": "obesity",
+    "questions": [
+      {
+        "type": "multiple-choice",
+        "question": "What does 'obesity' refer to?",
+        "questionZh": "‘肥胖’ 是指什么？",
+        "options": [
+          "Excessive body fat",
+          "Low body weight",
+          "High muscle mass",
+          "Balanced diet",
+        ],
+        "optionsZh": ["过多的体脂", "低体重", "高肌肉量", "均衡饮食"],
+        "correct": "Excessive body fat",
+        "correctZh": "过多的体脂",
+        "example": "Obesity is a major risk factor for heart disease.",
+        "exampleZh": "肥胖是心脏病的主要风险因素。"
+      },
+      {
+        "type": "true-false",
+        "question": "Obesity can lead to health issues like diabetes.",
+        "questionZh": "肥胖可能导致糖尿病等健康问题。",
+        "options": ["True", "False"],
+        "optionsZh": ["正确", "错误"],
+        "correct": "True",
+        "correctZh": "正确",
+        "example": "Obesity increases the likelihood of chronic diseases.",
+        "exampleZh": "肥胖增加慢性疾病的可能性。"
+      },
+      {
+        "type": "select-all",
+        "question": "Which factors can contribute to 'obesity'?",
+        "questionZh": "哪些因素可能导致 ‘肥胖’？",
+        "options": [
+          "Unhealthy diet",
+          "Regular exercise",
+          "Lack of physical activity",
+          "Genetic predisposition",
+          "Adequate sleep",
+        ],
+        "optionsZh": ["不健康饮食", "定期锻炼", "缺乏体力活动", "遗传倾向", "充足睡眠"],
+        "correct": ["1", "3", "4"],
+        "correctZh": ["不健康饮食", "缺乏体力活动", "遗传倾向"],
+        "example": "An unhealthy diet and lack of exercise contribute to obesity.",
+        "exampleZh": "不健康饮食和缺乏锻炼导致肥胖。"
+      }
+    ]
+  },
+  {
+    "word": "sedentary",
+    "questions": [
+      {
+        "type": "multiple-choice",
+        "question": "What does 'sedentary' mean?",
+        "questionZh": "‘久坐的’ 的意思是什么？",
+        "options": [
+          "Highly active",
+          "Involving little physical activity",
+          "Nutritionally balanced",
+          "Mentally stimulating",
+        ],
+        "optionsZh": ["高度活跃", "几乎没有体力活动", "营养均衡", "精神刺激"],
+        "correct": "Involving little physical activity",
+        "correctZh": "几乎没有体力活动",
+        "example": "A sedentary lifestyle can harm your health.",
+        "exampleZh": "久坐的生活方式可能损害健康。"
+      },
+      {
+        "type": "true-false",
+        "question": "A sedentary lifestyle is associated with increased health risks.",
+        "questionZh": "久坐的生活方式与健康风险增加有关。",
+        "options": ["True", "False"],
+        "optionsZh": ["正确", "错误"],
+        "correct": "True",
+        "correctZh": "正确",
+        "example": "Sedentary habits can lead to obesity and heart issues.",
+        "exampleZh": "久坐习惯可能导致肥胖和心脏问题。"
+      },
+      {
+        "type": "select-all",
+        "question": "Which activities are considered 'sedentary'?",
+        "questionZh": "哪些活动被认为是 ‘久坐的’？",
+        "options": [
+          "Watching TV for hours",
+          "Jogging daily",
+          "Sitting at a desk all day",
+          "Playing sports",
+          "Using a computer for long periods",
+        ],
+        "optionsZh": ["长时间看电视", "每天慢跑", "整天坐在办公桌前", "运动", "长时间使用电脑"],
+        "correct": ["1", "3", "5"],
+        "correctZh": ["长时间看电视", "整天坐在办公桌前", "长时间使用电脑"],
+        "example": "Sitting at a desk for hours is a sedentary activity.",
+        "exampleZh": "整天坐在办公桌前是一种久坐活动。"
+      }
+    ]
+  },
+  {
+    "word": "nutrition",
+    "questions": [
+      {
+        "type": "multiple-choice",
+        "question": "What does 'nutrition' refer to?",
+        "questionZh": "‘营养’ 是指什么？",
+        "options": [
+          "Physical exercise",
+          "Process of obtaining food for health",
+          "Mental relaxation",
+          "Social interaction",
+        ],
+        "optionsZh": ["体育锻炼", "为健康获取食物的过程", "精神放松", "社交互动"],
+        "correct": "Process of obtaining food for health",
+        "correctZh": "为健康获取食物的过程",
+        "example": "Good nutrition is essential for growth and development.",
+        "exampleZh": "良好的营养对成长和发展至关重要。"
+      },
+      {
+        "type": "true-false",
+        "question": "Nutrition only involves eating healthy foods.",
+        "questionZh": "营养只涉及吃健康食品。",
+        "options": ["True", "False"],
+        "optionsZh": ["正确", "错误"],
+        "correct": "False",
+        "correctZh": "错误",
+        "example": "Nutrition includes how the body uses food, not just eating healthy.",
+        "exampleZh": "营养包括身体如何使用食物，而不仅仅是吃健康食品。"
+      },
+      {
+        "type": "select-all",
+        "question": "Which elements are important for good 'nutrition'?",
+        "questionZh": "哪些元素对良好的 ‘营养’ 很重要？",
+        "options": [
+          "Balanced diet",
+          "Excessive sugar intake",
+          "Adequate hydration",
+          "Vitamin supplements",
+          "Skipping meals",
+        ],
+        "optionsZh": ["均衡饮食", "过量糖摄入", "充足水分", "维生素补充剂", "不吃饭"],
+        "correct": ["1", "3", "4"],
+        "correctZh": ["均衡饮食", "充足水分", "维生素补充剂"],
+        "example": "A balanced diet and hydration support proper nutrition.",
+        "exampleZh": "均衡饮食和充足水分支持适当的营养。"
+      }
+    ]
+  },
+  {
+    "word": "mental health",
+    "questions": [
+      {
+        "type": "multiple-choice",
+        "question": "What does 'mental health' refer to?",
+        "questionZh": "‘心理健康’ 是指什么？",
+        "options": [
+          "Physical fitness",
+          "Emotional and psychological well-being",
+          "Academic success",
+          "Financial stability",
+        ],
+        "optionsZh": ["身体健康", "情感和心理健康", "学业成功", "财务稳定"],
+        "correct": "Emotional and psychological well-being",
+        "correctZh": "情感和心理健康",
+        "example": "Mental health affects how we think and feel.",
+        "exampleZh": "心理健康影响我们的思维和感受。"
+      },
+      {
+        "type": "true-false",
+        "question": "Mental health issues can affect anyone, regardless of age.",
+        "questionZh": "心理健康问题可能影响任何人，无论年龄。",
+        "options": ["True", "False"],
+        "optionsZh": ["正确", "错误"],
+        "correct": "True",
+        "correctZh": "正确",
+        "example": "Mental health challenges are common across all age groups.",
+        "exampleZh": "心理健康挑战在所有年龄段都很常见。"
+      },
+      {
+        "type": "select-all",
+        "question": "Which practices support good 'mental health'?",
+        "questionZh": "哪些做法支持良好的 ‘心理健康’？",
+        "options": [
+          "Regular meditation",
+          "Social isolation",
+          "Adequate sleep",
+          "Excessive work stress",
+          "Therapy or counseling",
+        ],
+        "optionsZh": ["定期冥想", "社交孤立", "充足睡眠", "过度工作压力", "治疗或咨询"],
+        "correct": ["1", "3", "5"],
+        "correctZh": ["定期冥想", "充足睡眠", "治疗或咨询"],
+        "example": "Meditation and therapy can improve mental health.",
+        "exampleZh": "冥想和治疗可以改善心理健康。"
+      }
+    ]
+  }
+]
