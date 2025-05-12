@@ -1,1110 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IELTS Vocabulary Practice</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Vocabulary Practice - Home</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        margin: 0;
-        background-color: #f4f4f4;
-      }
-      #quiz-container {
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        max-width: 600px;
-        width: 90%;
-        text-align: center;
-        margin: 20px;
-      }
-      h1 {
-        font-size: 24px;
-        margin-bottom: 20px;
-      }
-      #question {
-        font-size: 18px;
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-      }
-      #question-zh {
-        font-size: 14px;
-        color: #555;
-        font-style: italic;
-        margin-bottom: 20px;
-        text-align: center; /* Center-align question translation */
-      }
-      .option-zh {
-        font-size: 14px;
-        color: #555;
-        font-style: italic;
-        margin-bottom: 10px;
-        text-align: left;
-        margin-left: 12px; /* Left-align option translations */
-      }
-      .option,
-      .select-all-option,
-      .true-false-option {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 12px;
-        margin: 10px auto;
-        width: 94%;
-        background: #e0e0e0;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 16px;
-        text-align: left;
-        transition: background 0.2s;
-      }
-      .option:hover,
-      .select-all-option:hover,
-      .true-false-option:hover {
-        background: #d0d0d0;
-      }
-      .select-all-option label {
-        flex-grow: 1;
-      }
-      .correct {
-        background: #c8e6c9 !important; /* Green for correct answers */
-      }
-      .incorrect {
-        background: #ffcdd2 !important; /* Red for incorrect answers */
-      }
-      .audio-icon {
-        cursor: pointer;
-        width: 20px;
-        height: 20px;
-        color: #28a745;
-      }
-      .audio-icon:hover {
-        color: #218838;
-      }
-      #feedback {
-        margin-top: 20px;
-        font-size: 16px;
-        color: #333;
-      }
-      #feedback.green {
-        background: #c8e6c9;
-        color: #2e7d32;
-      }
-      #feedback.red {
-        background: #ffcdd2;
-        color: #c62828;
-      }
-      #next-btn,
-      #exit-btn,
-      #submit-btn {
-        margin: 10px;
-        padding: 10px 20px;
-        background: #28a745;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-      }
-      #next-btn:hover,
-      #exit-btn:hover,
-      #submit-btn:hover {
-        background: #218838;
-      }
-      .button-container {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 10px;
-      }
-      #progress-container {
-        width: 80%;
-        margin: 20px auto;
-        font-size: 14px;
-      }
-      #progress-bar {
-        height: 20px;
-        background: #28a745;
-        width: 0%;
-        border-radius: 10px;
-        margin-bottom: 5px;
-      }
-      #missed-progress-bar {
-        height: 20px;
-        background: #ff6f61;
-        width: 0%;
-        border-radius: 10px;
-        margin-bottom: 5px;
-      }
-      #stats {
-        text-align: center;
-        margin-top: 5px;
-      }
-      @media (max-width: 600px) {
-        #quiz-container {
-          padding: 15px;
-          width: 100%;
-          margin: 10px;
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        #home-container {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            margin: 24px;
         }
         h1 {
-          font-size: 20px;
+            font-size: 28px;
+            margin-bottom: 24px;
         }
-        #question {
-          font-size: 16px;
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
         }
-        #question-zh,
-        .option-zh,
-        #stats {
-          font-size: 12px;
-          margin-left: 10px; /* Adjust for options */
+        label {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
         }
-        #question-zh {
-          margin-left: 0; /* Keep centered */
+        input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
         }
-        .option,
-        .select-all-option,
-        .true-false-option {
-          padding: 10px;
-          font-size: 14px;
-          width: 92%;
+        select {
+            font-size: 18px;
+            padding: 10px;
+            width: 100%;
+            border-radius: 6px;
+            border: 1px solid #ccc;
         }
-        .audio-icon {
-          width: 18px;
-          height: 18px;
+        #start-btn {
+            padding: 12px 24px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            min-width: 120px;
+            min-height: 48px;
         }
-        #next-btn,
-        #exit-btn,
-        #submit-btn {
-          font-size: 14px;
-          padding: 8px;
-          margin: 5px;
+        #start-btn:hover {
+            background: #218838;
         }
-        #progress-container {
-          width: 90%;
+        #error {
+            color: #c62828;
+            font-size: 16px;
+            margin-top: 10px;
+            display: none;
         }
-        #progress-bar,
-        #missed-progress-bar {
-          height: 15px;
-          margin-bottom: 3px;
+        @media (max-width: 600px) {
+            #home-container {
+                padding: 16px;
+                margin: 16px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            label, select {
+                font-size: 16px;
+            }
+            input[type="checkbox"] {
+                width: 20px;
+                height: 20px;
+            }
+            #start-btn {
+                font-size: 16px;
+                padding: 10px 20px;
+                min-width: 100px;
+                min-height: 44px;
+            }
+            #error {
+                font-size: 14px;
+            }
         }
-        #stats {
-          margin-top: 3px;
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 20px;
+            }
+            label, select {
+                font-size: 14px;
+            }
         }
-        .button-container {
-          flex-direction: column;
-          align-items: center;
-          gap: 5px;
-        }
-      }
     </style>
-  </head>
-  <body>
-    <div id="quiz-container">
-      <h1>IELTS Vocabulary Practice</h1>
-      <div id="progress-container">
-        <div id="progress-bar"></div>
-        <div id="missed-progress-bar"></div>
-        <p id="stats">Progress: 0% | Correct: 0 | Missed: 0</p>
-      </div>
-      <div id="question"></div>
-      <div id="options"></div>
-      <div id="feedback"></div>
-      <div class="button-container">
-        <button id="submit-btn" style="display: none">Submit</button>
-        <button id="next-btn" style="display: none">Next Question</button>
-        <button id="exit-btn">Exit</button>
-      </div>
+</head>
+<body>
+    <div id="home-container">
+        <h1>IELTS Vocabulary Practice</h1>
+        <form id="quiz-form">
+            <div class="form-group">
+                <h2 style="font-size: 20px; margin-bottom: 12px;">Select Databases</h2>
+                <label><input type="checkbox" name="database" value="env"> Environment</label>
+                <label><input type="checkbox" name="database" value="edu"> Education</label>
+            </div>
+            <div class="form-group">
+                <h2 style="font-size: 20px; margin-bottom: 12px;">Question Limit</h2>
+                <select name="limit">
+                    <option value="5">5 Questions</option>
+                    <option value="10">10 Questions</option>
+                    <option value="20">20 Questions</option>
+                    <option value="all">All Questions</option>
+                </select>
+            </div>
+            <button type="submit" id="start-btn">Start Quiz</button>
+            <p id="error">Please select at least one database.</p>
+        </form>
     </div>
-
-    <script src="https://code.responsivevoice.org/responsivevoice.js?key=lsWadmqI"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        let originalVocabList = [
-          // Mitigate
-          {
-            type: "multiple-choice",
-            question: "What does 'mitigate' mean?",
-            questionZh: "‘减轻’ 的意思是什么？",
-            options: [
-              "To worsen",
-              "To reduce or lessen",
-              "To ignore",
-              "To complicate",
-            ],
-            optionsZh: ["恶化", "减轻或减少", "忽略", "复杂化"],
-            correct: "To reduce or lessen",
-            correctZh: "减轻或减少",
-            example: "Governments must mitigate the effects of climate change.",
-            exampleZh: "政府必须减轻气候变化的影响。",
-          },
-          {
-            type: "true-false",
-            question: "'Mitigate' means to make worse.",
-            questionZh: "‘减轻’ 的意思是使情况恶化。",
-            options: ["True", "False"],
-            optionsZh: ["正确", "错误"],
-            correct: "False",
-            correctZh: "错误",
-            example: "Mitigate means to reduce or lessen, not to make worse.",
-            exampleZh: "减轻意味着减少或缓解，而不是使情况恶化。",
-          },
-          {
-            type: "select-all",
-            question: "Which of the following are synonyms for 'mitigate'?",
-            questionZh: "以下哪些是 ‘减轻’ 的同义词？",
-            options: ["Alleviate", "Exacerbate", "Ease", "Worsen"],
-            optionsZh: ["缓解", "恶化", "减轻", "恶化"],
-            correct: ["1", "3"],
-            correctZh: ["缓解", "减轻"],
-            example: "Policies can mitigate or alleviate environmental damage.",
-            exampleZh: "政策可以减轻或缓解环境损害。",
-          },
-          // Awareness
-          {
-            type: "multiple-choice",
-            question: "Complete: 'Raise ___' (education context).",
-            questionZh: "完成句子：在教育背景下，‘提高 ___’。",
-            options: ["awareness", "money", "questions", "standards"],
-            optionsZh: ["意识", "资金", "问题", "标准"],
-            correct: "awareness",
-            correctZh: "意识",
-            example:
-              "Campaigns raise awareness about the importance of education.",
-            exampleZh: "活动提高了人们对教育重要性的意识。",
-          },
-          {
-            type: "true-false",
-            question: "Awareness is a verb.",
-            questionZh: "‘意识’ 是一个动词。",
-            options: ["True", "False"],
-            optionsZh: ["正确", "错误"],
-            correct: "False",
-            correctZh: "错误",
-            example: "Awareness is a noun meaning knowledge or perception.",
-            exampleZh: "意识是一个名词，意为知识或感知。",
-          },
-          {
-            type: "select-all",
-            question: "Which contexts correctly use 'awareness'?",
-            questionZh: "以下哪些语境正确使用了 ‘意识’？",
-            options: [
-              "Raise awareness of issues",
-              "Awareness of funds",
-              "Promote awareness about health",
-              "Awareness as a policy",
-            ],
-            optionsZh: [
-              "提高问题的意识",
-              "资金的意识",
-              "促进健康意识",
-              "意识作为政策",
-            ],
-            correct: ["1", "3"],
-            correctZh: ["提高问题的意识", "促进健康意识"],
-            example:
-              "Promoting awareness about health improves public outcomes.",
-            exampleZh: "促进健康意识改善公众成果。",
-          },
-          // Sustainable
-          {
-            type: "multiple-choice",
-            question: "What does 'sustainable' mean?",
-            questionZh: "‘可持续’ 的意思是什么？",
-            options: [
-              "Short-term",
-              "Able to be maintained",
-              "Expensive",
-              "Unreliable",
-            ],
-            optionsZh: ["短期的", "可持续的", "昂贵的", "不可靠的"],
-            correct: "Able to be maintained",
-            correctZh: "可持续的",
-            example: "Sustainable energy reduces environmental damage.",
-            exampleZh: "可持续能源减少环境损害。",
-          },
-          {
-            type: "true-false",
-            question:
-              "'Sustainable' can describe long-term environmental practices.",
-            questionZh: "‘可持续’ 可以描述长期环保实践。",
-            options: ["True", "False"],
-            optionsZh: ["正确", "错误"],
-            correct: "True",
-            correctZh: "正确",
-            example:
-              "Sustainable practices ensure resources last for future generations.",
-            exampleZh: "可持续实践确保资源为后代保留。",
-          },
-          {
-            type: "select-all",
-            question: "Which practices are considered 'sustainable'?",
-            questionZh: "以下哪些实践被认为是 ‘可持续’ 的？",
-            options: [
-              "Renewable energy use",
-              "Deforestation",
-              "Recycling programs",
-              "Overfishing",
-            ],
-            optionsZh: ["可再生能源使用", "砍伐森林", "回收项目", "过度捕捞"],
-            correct: ["1", "3"],
-            correctZh: ["可再生能源使用", "回收项目"],
-            example:
-              "Sustainable practices like recycling help the environment.",
-            exampleZh: "像回收这样的可持续实践有助于环境。",
-          },
-          // Alleviate
-          {
-            type: "multiple-choice",
-            question: "What does 'alleviate' mean?",
-            questionZh: "‘缓解’ 的意思是什么？",
-            options: [
-              "To intensify",
-              "To relieve or reduce",
-              "To create",
-              "To measure",
-            ],
-            optionsZh: ["加剧", "缓解", "创造", "测量"],
-            correct: "To relieve or reduce",
-            correctZh: "缓解",
-            example:
-              "Charities work to alleviate poverty in developing countries.",
-            exampleZh: "慈善机构致力于缓解发展中国家的贫困。",
-          },
-          {
-            type: "true-false",
-            question: "'Alleviate' is a synonym for 'worsen'.",
-            questionZh: "‘缓解’ 是 ‘恶化’ 的同义词。",
-            options: ["True", "False"],
-            optionsZh: ["正确", "错误"],
-            correct: "False",
-            correctZh: "错误",
-            example: "Alleviate means to reduce or relieve, not worsen.",
-            exampleZh: "缓解意味着减少或减轻，而不是恶化。",
-          },
-          {
-            type: "select-all",
-            question: "Which of the following are synonyms for 'alleviate'?",
-            questionZh: "以下哪些是 ‘缓解’ 的同义词？",
-            options: ["Mitigate", "Aggravate", "Ease", "Intensify"],
-            optionsZh: ["减轻", "加重", "缓解", "加强"],
-            correct: ["1", "3"],
-            correctZh: ["减轻", "缓解"],
-            example: "Medicines can alleviate or mitigate pain.",
-            exampleZh: "药物可以缓解或减轻疼痛。",
-          },
-          // Innovation
-          {
-            type: "multiple-choice",
-            question: "What is the noun form of 'innovate'?",
-            questionZh: "‘创新’ 的名词形式是什么？",
-            options: ["Innovator", "Innovation", "Innovative", "Invent"],
-            optionsZh: ["创新者", "创新", "创新的", "发明"],
-            correct: "Innovation",
-            correctZh: "创新",
-            example: "Innovation drives economic growth.",
-            exampleZh: "创新推动经济增长。",
-          },
-          {
-            type: "true-false",
-            question: "Innovation refers to new ideas or methods.",
-            questionZh: "‘创新’ 指新想法或方法。",
-            options: ["True", "False"],
-            optionsZh: ["正确", "错误"],
-            correct: "True",
-            correctZh: "正确",
-            example: "Innovation in technology creates new opportunities.",
-            exampleZh: "技术创新创造新机会。",
-          },
-          {
-            type: "select-all",
-            question: "Which fields often rely on 'innovation'?",
-            questionZh: "哪些领域经常依赖 ‘创新’？",
-            options: [
-              "Technology",
-              "Agriculture",
-              "Manufacturing",
-              "Tradition",
-            ],
-            optionsZh: ["技术", "农业", "制造业", "传统"],
-            correct: ["1", "2", "3"],
-            correctZh: ["技术", "农业", "制造业"],
-            example:
-              "Innovation in technology and agriculture boosts productivity.",
-            exampleZh: "技术和农业的创新提高生产力。",
-          },
-          // Exacerbate
-          {
-            type: "multiple-choice",
-            question: "What does 'exacerbate' mean?",
-            questionZh: "‘恶化’ 的意思是什么？",
-            options: [
-              "To improve",
-              "To make worse",
-              "To maintain",
-              "To measure",
-            ],
-            optionsZh: ["改善", "恶化", "维持", "测量"],
-            correct: "To make worse",
-            correctZh: "恶化",
-            example: "Pollution exacerbates health issues.",
-            exampleZh: "污染加剧健康问题。",
-          },
-          {
-            type: "true-false",
-            question: "'Exacerbate' is the opposite of 'alleviate'.",
-            questionZh: "‘恶化’ 是 ‘缓解’ 的反义词。",
-            options: ["True", "False"],
-            optionsZh: ["正确", "错误"],
-            correct: "True",
-            correctZh: "正确",
-            example:
-              "Exacerbate worsens conditions, while alleviate improves them.",
-            exampleZh: "恶化使情况变糟，而缓解使情况改善。",
-          },
-          {
-            type: "select-all",
-            question: "Which situations might 'exacerbate' a problem?",
-            questionZh: "哪些情况可能会 ‘恶化’ 一个问题？",
-            options: [
-              "Ignoring it",
-              "Addressing it",
-              "Worsening conditions",
-              "Solving it",
-            ],
-            optionsZh: ["忽略它", "解决它", "恶化条件", "解决它"],
-            correct: ["1", "3"],
-            correctZh: ["忽略它", "恶化条件"],
-            example: "Ignoring pollution can exacerbate environmental damage.",
-            exampleZh: "忽略污染会恶化环境损害。",
-          },
-          // Issue
-          {
-            type: "multiple-choice",
-            question: "Complete: 'Address an ___' (problem context).",
-            questionZh: "完成句子：在问题背景下，‘解决 ___’。",
-            options: ["issue", "audience", "email", "event"],
-            optionsZh: ["问题", "观众", "电子邮件", "事件"],
-            correct: "issue",
-            correctZh: "问题",
-            example: "Governments must address the issue of unemployment.",
-            exampleZh: "政府必须解决失业问题。",
-          },
-          {
-            type: "true-false",
-            question: "An 'issue' can refer to a topic or problem.",
-            questionZh: "‘问题’ 可以指一个话题或问题。",
-            options: ["True", "False"],
-            optionsZh: ["正确", "错误"],
-            correct: "True",
-            correctZh: "正确",
-            example: "Unemployment is a major issue in many countries.",
-            exampleZh: "失业是许多国家的主要问题。",
-          },
-          {
-            type: "select-all",
-            question: "Which are examples of an 'issue'?",
-            questionZh: "以下哪些是 ‘问题’ 的例子？",
-            options: [
-              "Climate change",
-              "A meeting",
-              "Poverty",
-              "A celebration",
-            ],
-            optionsZh: ["气候变化", "会议", "贫困", "庆祝活动"],
-            correct: ["1", "3"],
-            correctZh: ["气候变化", "贫困"],
-            example: "Climate change is a global issue requiring action.",
-            exampleZh: "气候变化是一个需要行动的全球问题。",
-          },
-          // Prevalent
-          {
-            type: "multiple-choice",
-            question: "What does 'prevalent' mean?",
-            questionZh: "‘普遍’ 的意思是什么？",
-            options: ["Rare", "Widespread", "Temporary", "Hidden"],
-            optionsZh: ["稀有的", "普遍的", "临时的", "隐藏的"],
-            correct: "Widespread",
-            correctZh: "普遍的",
-            example: "Obesity is prevalent in many developed countries.",
-            exampleZh: "肥胖在许多发达国家很普遍。",
-          },
-          {
-            type: "true-false",
-            question: "'Prevalent' means something is uncommon.",
-            questionZh: "‘普遍’ 意味着某事物不常见。",
-            options: ["True", "False"],
-            optionsZh: ["正确", "错误"],
-            correct: "False",
-            correctZh: "错误",
-            example: "Prevalent means widespread or common, not uncommon.",
-            exampleZh: "普遍意味着广泛或常见，而不是不常见。",
-          },
-          {
-            type: "select-all",
-            question: "Which issues are 'prevalent' in modern society?",
-            questionZh: "现代社会中哪些问题是 ‘普遍’ 的？",
-            options: [
-              "Obesity",
-              "Smallpox",
-              "Mental health issues",
-              "Silent films",
-            ],
-            optionsZh: ["肥胖", "天花", "心理健康问题", "无声电影"],
-            correct: ["1", "3"],
-            correctZh: ["肥胖", "心理健康问题"],
-            example: "Mental health issues are prevalent and need attention.",
-            exampleZh: "心理健康问题很普遍，需要关注。",
-          },
-          // Advantage
-          {
-            type: "multiple-choice",
-            question: "Synonym for 'benefit' in academic writing?",
-            questionZh: "学术写作中 ‘优势’ 的同义词是什么？",
-            options: ["Drawback", "Advantage", "Cost", "Risk"],
-            optionsZh: ["缺点", "优势", "成本", "风险"],
-            correct: "Advantage",
-            correctZh: "优势",
-            example:
-              "Recycling offers a significant advantage to the environment.",
-            exampleZh: "回收对环境提供了显著的优势。",
-          },
-          {
-            type: "true-false",
-            question: "An 'advantage' is a negative outcome.",
-            questionZh: "‘优势’ 是一个负面结果。",
-            options: ["True", "False"],
-            optionsZh: ["正确", "错误"],
-            correct: "False",
-            correctZh: "错误",
-            example:
-              "An advantage is a positive benefit, not a negative outcome.",
-            exampleZh: "优势是一个积极的好处，而不是负面结果。",
-          },
-          {
-            type: "select-all",
-            question: "Which are synonyms for 'advantage'?",
-            questionZh: "以下哪些是 ‘优势’ 的同义词？",
-            options: ["Benefit", "Disadvantage", "Gain", "Loss"],
-            optionsZh: ["好处", "劣势", "收益", "损失"],
-            correct: ["1", "3"],
-            correctZh: ["好处", "收益"],
-            example: "Education provides a significant advantage or benefit.",
-            exampleZh: "教育提供了显著的优势或好处。",
-          },
-          // Conservation
-          {
-            type: "multiple-choice",
-            question: "What does 'conservation' mean?",
-            questionZh: "‘保护’ 的意思是什么？",
-            options: [
-              "Destruction",
-              "Preservation",
-              "Consumption",
-              "Expansion",
-            ],
-            optionsZh: ["破坏", "保护", "消耗", "扩展"],
-            correct: "Preservation",
-            correctZh: "保护",
-            example: "Conservation efforts protect endangered species.",
-            exampleZh: "保护工作保护濒危物种。",
-          },
-          {
-            type: "true-false",
-            question: "Conservation involves protecting natural resources.",
-            questionZh: "‘保护’ 涉及保护自然资源。",
-            options: ["True", "False"],
-            optionsZh: ["正确", "错误"],
-            correct: "True",
-            correctZh: "正确",
-            example: "Conservation ensures the sustainable use of resources.",
-            exampleZh: "保护确保资源的可持续使用。",
-          },
-          {
-            type: "select-all",
-            question: "Which activities support 'conservation'?",
-            questionZh: "哪些活动支持 ‘保护’？",
-            options: [
-              "Recycling",
-              "Deforestation",
-              "Wildlife protection",
-              "Pollution",
-            ],
-            optionsZh: ["回收", "砍伐森林", "野生动物保护", "污染"],
-            correct: ["1", "3"],
-            correctZh: ["回收", "野生动物保护"],
-            example: "Wildlife protection is a key conservation effort.",
-            exampleZh: "野生动物保护是一项关键的保护工作。",
-          },
-        ];
-
-        // Shuffle function for randomizing questions
-        function shuffle(array) {
-          for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-          }
-          return array;
-        }
-
-        let vocabList = shuffle([...originalVocabList]);
-        let originalVocabLength = vocabList.length;
-        let currentQuestion = 0;
-        let score = 0;
-        let missedWords = [];
-        let originalMissedWords = [];
-        let answerSelected = false;
-        let missedQuestionsAnswered = 0;
-
-        const questionEl = document.getElementById("question");
-        const optionsEl = document.getElementById("options");
-        const feedbackEl = document.getElementById("feedback");
-        const nextBtn = document.getElementById("next-btn");
-        const submitBtn = document.getElementById("submit-btn");
-        const exitBtn = document.getElementById("exit-btn");
-        const progressBar = document.getElementById("progress-bar");
-        const missedProgressBar = document.getElementById(
-          "missed-progress-bar"
-        );
-        const statsEl = document.getElementById("stats");
-
-        console.log("DOM Loaded:", {
-          questionEl,
-          optionsEl,
-          vocabListLength: vocabList.length,
+        document.getElementById('quiz-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const databases = Array.from(document.querySelectorAll('input[name="database"]:checked')).map(input => input.value);
+            const limit = document.querySelector('select[name="limit"]').value;
+            if (databases.length === 0) {
+                document.getElementById('error').style.display = 'block';
+                return;
+            }
+            document.getElementById('error').style.display = 'none';
+            const params = new URLSearchParams({ databases: databases.join(','), limit });
+            window.location.href = `quiz.html?${params.toString()}`;
         });
-
-        function updateProgress() {
-          try {
-            const totalQuestions = originalVocabLength + missedWords.length;
-            const progress =
-              vocabList.length > 0
-                ? (currentQuestion / vocabList.length) * 100
-                : 0;
-            progressBar.style.width = `${progress}%`;
-            const missedProgress =
-              missedWords.length > 0
-                ? (missedQuestionsAnswered / missedWords.length) * 100
-                : 0;
-            missedProgressBar.style.width = `${missedProgress}%`;
-            statsEl.textContent = `Progress: ${progress.toFixed(
-              1
-            )}% | Correct: ${score} | Missed: ${originalMissedWords.length}`;
-          } catch (e) {
-            console.error("Error in updateProgress:", e);
-          }
-        }
-
-        function loadQuestion() {
-          try {
-            console.log(
-              "Loading question:",
-              currentQuestion,
-              vocabList[currentQuestion]
-            );
-            if (!vocabList.length) {
-              questionEl.textContent = "No questions available.";
-              optionsEl.innerHTML = "";
-              feedbackEl.textContent = "";
-              nextBtn.style.display = "none";
-              submitBtn.style.display = "none";
-              updateProgress();
-              return;
-            }
-            if (!questionEl || !optionsEl) {
-              console.error("DOM elements missing:", { questionEl, optionsEl });
-              return;
-            }
-            const q = vocabList[currentQuestion];
-            const speechQuestion = q.question
-              .replace(/___/g, "fill in the blank")
-              .replace(/'/g, "\\'");
-            questionEl.innerHTML = `<span>${q.question}</span><svg class="audio-icon" onclick="responsiveVoice.speak('${speechQuestion}', 'UK English Female'); console.log('TTS Question:', '${speechQuestion}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
-
-            // Remove any existing question-zh div
-            const existingQuestionZh = document.getElementById("question-zh");
-            if (existingQuestionZh) {
-              existingQuestionZh.remove();
-            }
-
-            optionsEl.innerHTML = "";
-            feedbackEl.textContent = "";
-            nextBtn.style.display = "none";
-            submitBtn.style.display = "none";
-            answerSelected = false;
-
-            if (q.type === "multiple-choice" || q.type === "true-false") {
-              q.options.forEach((option) => {
-                const optionDiv = document.createElement("div");
-                optionDiv.className =
-                  q.type === "true-false" ? "true-false-option" : "option";
-                optionDiv.dataset.value = option;
-                const speechOption = option
-                  .replace(/___/g, "fill in the blank")
-                  .replace(/'/g, "\\'");
-                optionDiv.innerHTML = `<span>${option}</span><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female'); console.log('TTS Option:', '${speechOption}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
-                optionDiv.onclick = (e) => {
-                  if (e.target.tagName !== "SVG" && !e.target.closest("svg"))
-                    checkAnswer(option);
-                };
-                optionsEl.appendChild(optionDiv);
-              });
-            } else if (q.type === "select-all") {
-              q.options.forEach((option, i) => {
-                const optionDiv = document.createElement("div");
-                optionDiv.className = "select-all-option";
-                const optionNumber = (i + 1).toString();
-                optionDiv.dataset.value = optionNumber;
-                const speechOption = option
-                  .replace(/___/g, "fill in the blank")
-                  .replace(/'/g, "\\'");
-                optionDiv.innerHTML = `<label><input type="checkbox" value="${optionNumber}" style="margin-right: 10px;" name="select-all-option">${optionNumber}. ${option}</label><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female'); console.log('TTS Option:', '${speechOption}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
-                console.log(`Rendered checkbox: value="${optionNumber}"`);
-                optionsEl.appendChild(optionDiv);
-              });
-              submitBtn.style.display = "block";
-            }
-
-            updateProgress();
-          } catch (e) {
-            console.error("Error in loadQuestion:", e);
-            questionEl.textContent =
-              "Error loading question. Please try again.";
-          }
-        }
-
-        function showChineseTranslations() {
-          if (answerSelected) return;
-          const q = vocabList[currentQuestion];
-
-          try {
-            // Add Chinese question below question
-            const questionZhDiv = document.createElement("div");
-            questionZhDiv.id = "question-zh";
-            questionZhDiv.textContent = q.questionZh || q.question;
-            questionEl.insertAdjacentElement("afterend", questionZhDiv);
-
-            if (q.type === "multiple-choice") {
-              const newOptionsEl = document.createElement("div");
-              q.options.forEach((option, i) => {
-                const optionContainer = document.createElement("div");
-                const optionDiv = document.createElement("div");
-                optionDiv.className = "option";
-                optionDiv.dataset.value = option;
-                // Preserve highlighting classes
-                if (
-                  optionsEl.querySelector(`.option[data-value="${option}"]`)
-                ) {
-                  const originalDiv = optionsEl.querySelector(
-                    `.option[data-value="${option}"]`
-                  );
-                  if (originalDiv.classList.contains("correct")) {
-                    optionDiv.classList.add("correct");
-                  } else if (originalDiv.classList.contains("incorrect")) {
-                    optionDiv.classList.add("incorrect");
-                  }
-                }
-                const speechOption = option
-                  .replace(/___/g, "fill in the blank")
-                  .replace(/'/g, "\\'");
-                optionDiv.innerHTML = `<span>${option}</span><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female'); console.log('TTS Option:', '${speechOption}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
-                optionDiv.onclick = (e) => {
-                  if (e.target.tagName !== "SVG" && !e.target.closest("svg"))
-                    checkAnswer(option);
-                };
-                if (
-                  optionsEl.querySelectorAll(".option").length > 0 &&
-                  optionsEl.querySelectorAll(".option")[0].style
-                    .pointerEvents === "none"
-                ) {
-                  optionDiv.style.pointerEvents = "none";
-                }
-                optionContainer.appendChild(optionDiv);
-                const optionZhDiv = document.createElement("div");
-                optionZhDiv.className = "option-zh";
-                optionZhDiv.textContent =
-                  q.optionsZh[i] || "No Chinese translation";
-                optionContainer.appendChild(optionZhDiv);
-                newOptionsEl.appendChild(optionContainer);
-              });
-              optionsEl.innerHTML = "";
-              optionsEl.appendChild(newOptionsEl);
-            } else if (q.type === "true-false") {
-              const newOptionsEl = document.createElement("div");
-              q.options.forEach((option, i) => {
-                const optionDiv = document.createElement("div");
-                optionDiv.className = "true-false-option";
-                optionDiv.dataset.value = option;
-                // Preserve highlighting classes
-                if (
-                  optionsEl.querySelector(
-                    `.true-false-option[data-value="${option}"]`
-                  )
-                ) {
-                  const originalDiv = optionsEl.querySelector(
-                    `.true-false-option[data-value="${option}"]`
-                  );
-                  if (originalDiv.classList.contains("correct")) {
-                    optionDiv.classList.add("correct");
-                  } else if (originalDiv.classList.contains("incorrect")) {
-                    optionDiv.classList.add("incorrect");
-                  }
-                }
-                const speechOption = option
-                  .replace(/___/g, "fill in the blank")
-                  .replace(/'/g, "\\'");
-                optionDiv.innerHTML = `<span>${option}</span><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female'); console.log('TTS Option:', '${speechOption}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
-                optionDiv.onclick = (e) => {
-                  if (e.target.tagName !== "SVG" && !e.target.closest("svg"))
-                    checkAnswer(option);
-                };
-                if (
-                  optionsEl.querySelectorAll(".true-false-option").length > 0 &&
-                  optionsEl.querySelectorAll(".true-false-option")[0].style
-                    .pointerEvents === "none"
-                ) {
-                  optionDiv.style.pointerEvents = "none";
-                }
-                newOptionsEl.appendChild(optionDiv);
-              });
-              optionsEl.innerHTML = "";
-              optionsEl.appendChild(newOptionsEl);
-            } else if (q.type === "select-all") {
-              const newOptionsEl = document.createElement("div");
-              q.options.forEach((option, i) => {
-                const optionContainer = document.createElement("div");
-                const optionDiv = document.createElement("div");
-                optionDiv.className = "select-all-option";
-                const optionNumber = (i + 1).toString();
-                optionDiv.dataset.value = optionNumber;
-                // Preserve highlighting classes
-                if (
-                  optionsEl.querySelector(
-                    `.select-all-option[data-value="${optionNumber}"]`
-                  )
-                ) {
-                  const originalDiv = optionsEl.querySelector(
-                    `.select-all-option[data-value="${optionNumber}"]`
-                  );
-                  if (originalDiv.classList.contains("correct")) {
-                    optionDiv.classList.add("correct");
-                  } else if (originalDiv.classList.contains("incorrect")) {
-                    optionDiv.classList.add("incorrect");
-                  }
-                }
-                const speechOption = option
-                  .replace(/___/g, "fill in the blank")
-                  .replace(/'/g, "\\'");
-                optionDiv.innerHTML = `<label><input type="checkbox" value="${optionNumber}" style="margin-right: 10px;" name="select-all-option">${optionNumber}. ${option}</label><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female'); console.log('TTS Option:', '${speechOption}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
-                if (
-                  optionsEl.querySelectorAll(".select-all-option").length > 0 &&
-                  optionsEl.querySelectorAll(".select-all-option")[0].style
-                    .pointerEvents === "none"
-                ) {
-                  optionDiv.style.pointerEvents = "none";
-                  optionDiv.querySelector("input").disabled = true;
-                }
-                optionContainer.appendChild(optionDiv);
-                const optionZhDiv = document.createElement("div");
-                optionZhDiv.className = "option-zh";
-                optionZhDiv.textContent =
-                  q.optionsZh[i] || "No Chinese translation";
-                optionContainer.appendChild(optionZhDiv);
-                newOptionsEl.appendChild(optionContainer);
-              });
-              optionsEl.innerHTML = "";
-              optionsEl.appendChild(newOptionsEl);
-            }
-          } catch (e) {
-            console.error("Error in showChineseTranslations:", e);
-          }
-
-          answerSelected = true;
-        }
-
-        function checkAnswer(selected) {
-          const q = vocabList[currentQuestion];
-          let isCorrect = false;
-          let feedbackText = "";
-
-          try {
-            if (q.type === "multiple-choice" || q.type === "true-false") {
-              isCorrect = selected === q.correct;
-              feedbackText = isCorrect
-                ? `Correct! ${q.example} (${q.exampleZh || q.example})`
-                : `Incorrect. The correct answer is "${q.correct}". ${
-                    q.example
-                  } (${q.exampleZh || q.example})`;
-              optionsEl
-                .querySelectorAll(".option, .true-false-option")
-                .forEach((div) => {
-                  // Apply pointerEvents only to non-SVG content
-                  div.querySelector("span").style.pointerEvents = "none";
-                  if (div.dataset.value === q.correct) {
-                    div.classList.add("correct");
-                  } else if (div.dataset.value === selected) {
-                    div.classList.add("incorrect");
-                  }
-                });
-            } else if (q.type === "select-all") {
-              const selectedOptions = Array.from(
-                optionsEl.querySelectorAll(
-                  'input[name="select-all-option"]:checked'
-                )
-              ).map((input) => input.value);
-              console.log("Selected Options:", selectedOptions);
-              console.log("Correct Options:", q.correct);
-              console.log(
-                "Checked Inputs:",
-                optionsEl.querySelectorAll(
-                  'input[name="select-all-option"]:checked'
-                )
-              );
-              if (selectedOptions.length === 0) {
-                isCorrect = false;
-                feedbackText = `Incorrect. You must select at least one option. The correct answers are options ${q.correct.join(
-                  ", "
-                )}. ${q.example} (${q.exampleZh || q.example})`;
-              } else {
-                const sortedSelected = selectedOptions.sort();
-                const sortedCorrect = q.correct.sort();
-                isCorrect =
-                  sortedSelected.length === sortedCorrect.length &&
-                  sortedSelected.every((opt, i) => opt === sortedCorrect[i]);
-                feedbackText = isCorrect
-                  ? `Correct! ${q.example} (${q.exampleZh || q.example})`
-                  : `Incorrect. The correct answers are options ${q.correct.join(
-                      ", "
-                    )}. ${q.example} (${q.exampleZh || q.example})`;
-              }
-              optionsEl
-                .querySelectorAll(".select-all-option")
-                .forEach((div) => {
-                  // Apply pointerEvents only to non-SVG content
-                  div.querySelector("label").style.pointerEvents = "none";
-                  div.querySelector("input").disabled = true;
-                  const value = div.dataset.value;
-                  if (q.correct.includes(value)) {
-                    div.classList.add("correct");
-                  } else if (selectedOptions.includes(value)) {
-                    div.classList.add("incorrect");
-                  }
-                });
-            }
-
-            showChineseTranslations();
-            feedbackEl.textContent = feedbackText;
-            feedbackEl.className = isCorrect ? "green" : "red";
-            if (isCorrect && currentQuestion < originalVocabLength) {
-              score++;
-            } else if (!isCorrect) {
-              if (
-                currentQuestion < originalVocabLength &&
-                !originalMissedWords.includes(q)
-              ) {
-                originalMissedWords.push(q);
-              }
-              if (!missedWords.includes(q)) {
-                missedWords.push(q);
-              }
-            }
-            nextBtn.style.display = "block";
-            submitBtn.style.display = "none";
-            updateProgress();
-          } catch (e) {
-            console.error("Error in checkAnswer:", e);
-            feedbackEl.textContent =
-              "Error processing answer. Please try again.";
-          }
-        }
-
-        submitBtn.onclick = () => {
-          try {
-            const q = vocabList[currentQuestion];
-            if (q.type === "select-all") {
-              checkAnswer(null);
-            }
-          } catch (e) {
-            console.error("Error in submitBtn.onclick:", e);
-          }
-        };
-
-        exitBtn.onclick = () => {
-          try {
-            vocabList = shuffle([...originalVocabList]);
-            currentQuestion = 0;
-            score = 0;
-            missedWords = [];
-            originalMissedWords = [];
-            missedQuestionsAnswered = 0;
-            answerSelected = false;
-            loadQuestion();
-          } catch (e) {
-            console.error("Error in exitBtn.onclick:", e);
-          }
-        };
-
-        nextBtn.onclick = () => {
-          try {
-            currentQuestion++;
-            if (currentQuestion < vocabList.length) {
-              loadQuestion();
-            } else {
-              if (missedWords.length > 0) {
-                missedQuestionsAnswered += missedWords.length;
-                vocabList = missedWords;
-                missedWords = [];
-                currentQuestion = 0;
-                loadQuestion();
-              } else {
-                questionEl.textContent = "Quiz Complete!";
-                const existingQuestionZh =
-                  document.getElementById("question-zh");
-                if (existingQuestionZh) {
-                  existingQuestionZh.remove();
-                }
-                optionsEl.innerHTML = "";
-                feedbackEl.textContent =
-                  originalMissedWords.length > 0
-                    ? `Review these: ${originalMissedWords
-                        .map((q) =>
-                          q.question
-                            .split(" ")
-                            .slice(-2)[0]
-                            .replace(/[^a-zA-Z]/g, "")
-                        )
-                        .join(", ")}.`
-                    : "Perfect!";
-                feedbackEl.className = "";
-                nextBtn.style.display = "none";
-                submitBtn.style.display = "none";
-                updateProgress();
-              }
-            }
-          } catch (e) {
-            console.error("Error in nextBtn.onclick:", e);
-          }
-        };
-
-        // Initial load
-        try {
-          loadQuestion();
-        } catch (e) {
-          console.error("Initial loadQuestion error:", e);
-          questionEl.textContent =
-            "Error loading quiz. Please refresh the page.";
-        }
-      });
     </script>
-  </body>
+</body>
 </html>
-
