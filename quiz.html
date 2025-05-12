@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Vocabulary Practice - Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        #quiz-container {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            margin: 24px;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 24px;
+        }
+        #question {
+            font-size: 20px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        #question-zh {
+            font-size: 16px;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        .option-zh {
+            font-size: 16px;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 12px;
+            text-align: left;
+            margin-left: 16px;
+        }
+        .option, .select-all-option, .true-false-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            margin: 12px auto;
+            width: 94%;
+            background: #e0e0e0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            text-align: left;
+            transition: background 0.2s;
+            word-wrap: break-word;
+        }
+        .option:hover, .select-all-option:hover, .true-false-option:hover {
+            background: #d0d0d0;
+        }
+        .select-all-option label {
+            flex-grow: 1;
+        }
+        .select-all-option input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+        }
+        .correct {
+            background: #c8e6c9 !important;
+        }
+        .incorrect {
+            background: #ffcdd2 !important;
+        }
+        .audio-icon {
+            cursor: pointer;
+            width: 28px;
+            height: 28px;
+            color: #28a745;
+            flex-shrink: 0;
+        }
+        .audio-icon:hover, .audio-icon:active {
+            color: #218838;
+        }
+        #feedback {
+            margin-top: 24px;
+            font-size: 18px;
+            color: #333;
+        }
+        #feedback.green {
+            background: #c8e6c9;
+            color: #2e7d32;
+        }
+        #feedback.red {
+            background: #ffcdd2;
+            color: #c62828;
+        }
+        #next-btn, #exit-btn, #submit-btn {
+            margin: 12px;
+            padding: 12px 24px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            min-width: 120px;
+            min-height: 48px;
+        }
+        #next-btn:hover, #exit-btn:hover, #submit-btn:hover {
+            background: #218838;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        #progress-container {
+            width: 85%;
+            margin: 24px auto;
+            font-size: 16px;
+        }
+        #progress-bar {
+            height: 24px;
+            background: #28a745;
+            width: 0%;
+            border-radius: 12px;
+            margin-bottom: 8px;
+        }
+        #missed-progress-bar {
+            height: 24px;
+            background: #ff6f61;
+            width: 0%;
+            border-radius: 12px;
+            margin-bottom: 8px;
+        }
+        #stats {
+            text-align: center;
+            margin-top: 8px;
+        }
+        #loading, #error {
+            font-size: 18px;
+            margin: 20px;
+            color: #333;
+        }
+        #error {
+            color: #c62828;
+        }
+        @media (max-width: 600px) {
+            #quiz-container {
+                padding: 16px;
+                width: 92%;
+                margin: 16px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            #question {
+                font-size: 18px;
+                gap: 10px;
+            }
+            #question-zh, .option-zh, #stats {
+                font-size: 14px;
+                margin-left: 12px;
+            }
+            #question-zh {
+                margin-left: 0;
+            }
+            .option, .select-all-option, .true-false-option {
+                padding: 12px;
+                font-size: 16px;
+                width: 92%;
+                margin: 8px auto;
+            }
+            .select-all-option input[type="checkbox"] {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+            }
+            .audio-icon {
+                width: 24px;
+                height: 24px;
+            }
+            #feedback {
+                font-size: 16px;
+                margin-top: 16px;
+            }
+            #next-btn, #exit-btn, #submit-btn {
+                font-size: 16px;
+                padding: 10px 20px;
+                margin: 8px;
+                min-width: 100px;
+                min-height: 44px;
+            }
+            #progress-container {
+                width: 90%;
+                font-size: 14px;
+            }
+            #progress-bar, #missed-progress-bar {
+                height: 20px;
+                margin-bottom: 6px;
+            }
+            #stats {
+                margin-top: 6px;
+            }
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
+            #loading, #error {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 400px) {
+            #quiz-container {
+                padding: 12px;
+                margin: 12px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            #question {
+                font-size: 16px;
+            }
+            #question-zh, .option-zh, #stats {
+                font-size: 12px;
+            }
+            .option, .select-all-option, .true-false-option {
+                padding: 10px;
+                font-size: 14px;
+            }
+            #feedback {
+                font-size: 14px;
+            }
+            #next-btn, #exit-btn, #submit-btn {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+            #loading, #error {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="quiz-container">
+        <h1>IELTS Vocabulary Practice</h1>
+        <div id="progress-container" style="display: none;">
+            <div id="progress-bar"></div>
+            <div id="missed-progress-bar"></div>
+            <p id="stats">Progress: 0% | Correct: 0 | Missed: 0</p>
+        </div>
+        <div id="question"></div>
+        <div id="options"></div>
+        <div id="feedback"></div>
+        <div id="loading">Loading questions...</div>
+        <div id="error" style="display: none;">Error loading questions. Please try again.</div>
+        <div class="button-container" style="display: none;">
+            <button id="submit-btn" style="display: none;">Submit</button>
+            <button id="next-btn" style="display: none;">Next Question</button>
+            <button id="exit-btn">Back to Home</button>
+        </div>
+    </div>
+
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=lsWadmqI"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const questionEl = document.getElementById('question');
+            const optionsEl = document.getElementById('options');
+            const feedbackEl = document.getElementById('feedback');
+            const nextBtn = document.getElementById('next-btn');
+            const submitBtn = document.getElementById('submit-btn');
+            const exitBtn = document.getElementById('exit-btn');
+            const progressBar = document.getElementById('progress-bar');
+            const missedProgressBar = document.getElementById('missed-progress-bar');
+            const statsEl = document.getElementById('stats');
+            const loadingEl = document.getElementById('loading');
+            const errorEl = document.getElementById('error');
+            const progressContainer = document.getElementById('progress-container');
+            const buttonContainer = document.querySelector('.button-container');
+
+            // Parse URL parameters
+            const params = new URLSearchParams(window.location.search);
+            const selectedDatabases = params.get('databases') ? params.get('databases').split(',') : ['env', 'edu'];
+            const limit = params.get('limit') || 'all';
+
+            // Fetch databases
+            let vocabList = [];
+            try {
+                const fetchPromises = selectedDatabases.map(db => 
+                    fetch(`data/${db}.json`).then(res => {
+                        if (!res.ok) throw new Error(`Failed to load ${db}.json`);
+                        return res.json();
+                    })
+                );
+                const databaseLists = await Promise.all(fetchPromises);
+                vocabList = databaseLists.flat();
+
+                // Apply question limit
+                if (limit !== 'all') {
+                    const maxQuestions = parseInt(limit);
+                    vocabList = vocabList.sort(() => Math.random() - 0.5).slice(0, maxQuestions);
+                } else {
+                    vocabList = vocabList.sort(() => Math.random() - 0.5);
+                }
+
+                loadingEl.style.display = 'none';
+                progressContainer.style.display = 'block';
+                buttonContainer.style.display = 'flex';
+            } catch (e) {
+                console.error('Error loading databases:', e);
+                loadingEl.style.display = 'none';
+                errorEl.style.display = 'block';
+                return;
+            }
+
+            let originalVocabLength = vocabList.length;
+            let currentQuestion = 0;
+            let score = 0;
+            let missedWords = [];
+            let originalMissedWords = [];
+            let answerSelected = false;
+            let missedQuestionsAnswered = 0;
+
+            console.log('DOM Loaded:', { questionEl, optionsEl, vocabListLength: vocabList.length });
+
+            function updateProgress() {
+                try {
+                    const totalQuestions = originalVocabLength + missedWords.length;
+                    const progress = vocabList.length > 0 ? (currentQuestion / vocabList.length) * 100 : 0;
+                    progressBar.style.width = `${progress}%`;
+                    const missedProgress = missedWords.length > 0 ? (missedQuestionsAnswered / missedWords.length) * 100 : 0;
+                    missedProgressBar.style.width = `${missedProgress}%`;
+                    statsEl.textContent = `Progress: ${progress.toFixed(1)}% | Correct: ${score} | Missed: ${originalMissedWords.length}`;
+                } catch (e) {
+                    console.error('Error in updateProgress:', e);
+                }
+            }
+
+            function loadQuestion() {
+                try {
+                    console.log('Loading question:', currentQuestion, vocabList[currentQuestion]);
+                    if (!vocabList.length) {
+                        questionEl.textContent = 'No questions available.';
+                        optionsEl.innerHTML = '';
+                        feedbackEl.textContent = '';
+                        nextBtn.style.display = 'none';
+                        submitBtn.style.display = 'none';
+                        updateProgress();
+                        return;
+                    }
+                    if (!questionEl || !optionsEl) {
+                        console.error('DOM elements missing:', { questionEl, optionsEl });
+                        return;
+                    }
+                    const q = vocabList[currentQuestion];
+                    const speechQuestion = q.question.replace(/___/g, 'fill in the blank').replace(/'/g, "\\'");
+                    questionEl.innerHTML = `<span>${q.question}</span><svg class="audio-icon" onclick="responsiveVoice.speak('${speechQuestion}', 'UK English Female'); console.log('TTS Question:', '${speechQuestion}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
+
+                    const existingQuestionZh = document.getElementById('question-zh');
+                    if (existingQuestionZh) {
+                        existingQuestionZh.remove();
+                    }
+
+                    optionsEl.innerHTML = '';
+                    feedbackEl.textContent = '';
+                    nextBtn.style.display = 'none';
+                    submitBtn.style.display = 'none';
+                    answerSelected = false;
+
+                    if (q.type === 'multiple-choice' || q.type === 'true-false') {
+                        q.options.forEach(option => {
+                            const optionDiv = document.createElement('div');
+                            optionDiv.className = q.type === 'true-false' ? 'true-false-option' : 'option';
+                            optionDiv.dataset.value = option;
+                            const speechOption = option.replace(/___/g, 'fill in the blank').replace(/'/g, "\\'");
+                            optionDiv.innerHTML = `<span>${option}</span><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female'); console.log('TTS Option:', '${speechOption}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
+                            optionDiv.onclick = (e) => {
+                                if (e.target.tagName !== 'SVG' && !e.target.closest('svg')) checkAnswer(option);
+                            };
+                            optionsEl.appendChild(optionDiv);
+                        });
+                    } else if (q.type === 'select-all') {
+                        q.options.forEach((option, i) => {
+                            const optionDiv = document.createElement('div');
+                            optionDiv.className = 'select-all-option';
+                            const optionNumber = (i + 1).toString();
+                            optionDiv.dataset.value = optionNumber;
+                            const speechOption = option.replace(/___/g, 'fill in the blank').replace(/'/g, "\\'");
+                            optionDiv.innerHTML = `<label><input type="checkbox" value="${optionNumber}" style="margin-right: 10px;" name="select-all-option">${optionNumber}. ${option}</label><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female'); console.log('TTS Option:', '${speechOption}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
+                            console.log(`Rendered checkbox: value="${optionNumber}"`);
+                            optionsEl.appendChild(optionDiv);
+                        });
+                        submitBtn.style.display = 'block';
+                    }
+
+                    updateProgress();
+                } catch (e) {
+                    console.error('Error in loadQuestion:', e);
+                    questionEl.textContent = 'Error loading question. Please try again.';
+                }
+            }
+
+            function showChineseTranslations() {
+                if (answerSelected) return;
+                const q = vocabList[currentQuestion];
+
+                try {
+                    const questionZhDiv = document.createElement('div');
+                    questionZhDiv.id = 'question-zh';
+                    questionZhDiv.textContent = q.questionZh || q.question;
+                    questionEl.insertAdjacentElement('afterend', questionZhDiv);
+
+                    if (q.type === 'multiple-choice') {
+                        const newOptionsEl = document.createElement('div');
+                        q.options.forEach((option, i) => {
+                            const optionContainer = document.createElement('div');
+                            const optionDiv = document.createElement('div');
+                            optionDiv.className = 'option';
+                            optionDiv.dataset.value = option;
+                            if (optionsEl.querySelector(`.option[data-value="${option}"]`)) {
+                                const originalDiv = optionsEl.querySelector(`.option[data-value="${option}"]`);
+                                if (originalDiv.classList.contains('correct')) {
+                                    optionDiv.classList.add('correct');
+                                } else if (originalDiv.classList.contains('incorrect')) {
+                                    optionDiv.classList.add('incorrect');
+                                }
+                            }
+                            const speechOption = option.replace(/___/g, 'fill in the blank').replace(/'/g, "\\'");
+                            optionDiv.innerHTML = `<span>${option}</span><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female'); console.log('TTS Option:', '${speechOption}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
+                            optionDiv.onclick = (e) => {
+                                if (e.target.tagName !== 'SVG' && !e.target.closest('svg')) checkAnswer(option);
+                            };
+                            if (optionsEl.querySelectorAll('.option').length > 0 && optionsEl.querySelectorAll('.option')[0].style.pointerEvents === 'none') {
+                                optionDiv.style.pointerEvents = 'none';
+                            }
+                            optionContainer.appendChild(optionDiv);
+                            const optionZhDiv = document.createElement('div');
+                            optionZhDiv.className = 'option-zh';
+                            optionZhDiv.textContent = q.optionsZh[i] || 'No Chinese translation';
+                            optionContainer.appendChild(optionZhDiv);
+                            newOptionsEl.appendChild(optionContainer);
+                        });
+                        optionsEl.innerHTML = '';
+                        optionsEl.appendChild(newOptionsEl);
+                    } else if (q.type === 'true-false') {
+                        const newOptionsEl = document.createElement('div');
+                        q.options.forEach((option, i) => {
+                            const optionDiv = document.createElement('div');
+                            optionDiv.className = 'true-false-option';
+                            optionDiv.dataset.value = option;
+                            if (optionsEl.querySelector(`.true-false-option[data-value="${option}"]`)) {
+                                const originalDiv = optionsEl.querySelector(`.true-false-option[data-value="${option}"]`);
+                                if (originalDiv.classList.contains('correct')) {
+                                    optionDiv.classList.add('correct');
+                                } else if (originalDiv.classList.contains('incorrect')) {
+                                    optionDiv.classList.add('incorrect');
+                                }
+                            }
+                            const speechOption = option.replace(/___/g, 'fill in the blank').replace(/'/g, "\\'");
+                            optionDiv.innerHTML = `<span>${option}</span><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female'); console.log('TTS Option:', '${speechOption}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
+                            optionDiv.onclick = (e) => {
+                                if (e.target.tagName !== 'SVG' && !e.target.closest('svg')) checkAnswer(option);
+                            };
+                            if (optionsEl.querySelectorAll('.true-false-option').length > 0 && optionsEl.querySelectorAll('.true-false-option')[0].style.pointerEvents === 'none') {
+                                optionDiv.style.pointerEvents = 'none';
+                            }
+                            newOptionsEl.appendChild(optionDiv);
+                        });
+                        optionsEl.innerHTML = '';
+                        optionsEl.appendChild(newOptionsEl);
+                    } else if (q.type === 'select-all') {
+                        const newOptionsEl = document.createElement('div');
+                        q.options.forEach((option, i) => {
+                            const optionContainer = document.createElement('div');
+                            const optionDiv = document.createElement('div');
+                            optionDiv.className = 'select-all-option';
+                            const optionNumber = (i + 1).toString();
+                            optionDiv.dataset.value = optionNumber;
+                            if (optionsEl.querySelector(`.select-all-option[data-value="${optionNumber}"]`)) {
+                                const originalDiv = optionsEl.querySelector(`.select-all-option[data-value="${optionNumber}"]`);
+                                if (originalDiv.classList.contains('correct')) {
+                                    optionDiv.classList.add('correct');
+                                } else if (originalDiv.classList.contains('incorrect')) {
+                                    optionDiv.classList.add('incorrect');
+                                }
+                            }
+                            const speechOption = option.replace(/___/g, 'fill in the blank').replace(/'/g, "\\'");
+                            optionDiv.innerHTML = `<label><input type="checkbox" value="${optionNumber}" style="margin-right: 10px;" name="select-all-option">${optionNumber}. ${option}</label><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female'); console.log('TTS Option:', '${speechOption}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
+                            if (optionsEl.querySelectorAll('.select-all-option').length > 0 && optionsEl.querySelectorAll('.select-all-option')[0].style.pointerEvents === 'none') {
+                                optionDiv.style.pointerEvents = 'none';
+                                optionDiv.querySelector('input').disabled = true;
+                            }
+                            optionContainer.appendChild(optionDiv);
+                            const optionZhDiv = document.createElement('div');
+                            optionZhDiv.className = 'option-zh';
+                            optionZhDiv.textContent = q.optionsZh[i] || 'No Chinese translation';
+                            optionContainer.appendChild(optionZhDiv);
+                            newOptionsEl.appendChild(optionContainer);
+                        });
+                        optionsEl.innerHTML = '';
+                        optionsEl.appendChild(newOptionsEl);
+                    }
+                } catch (e) {
+                    console.error('Error in showChineseTranslations:', e);
+                }
+
+                answerSelected = true;
+            }
+
+            function checkAnswer(selected) {
+                const q = vocabList[currentQuestion];
+                let isCorrect = false;
+                let feedbackText = '';
+
+                try {
+                    if (q.type === 'multiple-choice' || q.type === 'true-false') {
+                        isCorrect = selected === q.correct;
+                        feedbackText = isCorrect
+                            ? `Correct! ${q.example} (${q.exampleZh || q.example})`
+                            : `Incorrect. The correct answer is "${q.correct}". ${q.example} (${q.exampleZh || q.example})`;
+                        optionsEl.querySelectorAll('.option, .true-false-option').forEach(div => {
+                            div.querySelector('span').style.pointerEvents = 'none';
+                            if (div.dataset.value === q.correct) {
+                                div.classList.add('correct');
+                            } else if (div.dataset.value === selected) {
+                                div.classList.add('incorrect');
+                            }
+                        });
+                    } else if (q.type === 'select-all') {
+                        const selectedOptions = Array.from(optionsEl.querySelectorAll('input[name="select-all-option"]:checked')).map(input => input.value);
+                        console.log('Selected Options:', selectedOptions);
+                        console.log('Correct Options:', q.correct);
+                        console.log('Checked Inputs:', optionsEl.querySelectorAll('input[name="select-all-option"]:checked'));
+                        if (selectedOptions.length === 0) {
+                            isCorrect = false;
+                            feedbackText = `Incorrect. You must select at least one option. The correct answers are options ${q.correct.join(', ')}. ${q.example} (${q.exampleZh || q.example})`;
+                        } else {
+                            const sortedSelected = selectedOptions.sort();
+                            const sortedCorrect = q.correct.sort();
+                            isCorrect = sortedSelected.length === sortedCorrect.length && sortedSelected.every((opt, i) => opt === sortedCorrect[i]);
+                            feedbackText = isCorrect
+                                ? `Correct! ${q.example} (${q.exampleZh || q.example})`
+                                : `Incorrect. The correct answers are options ${q.correct.join(', ')}. ${q.example} (${q.exampleZh || q.example})`;
+                        }
+                        optionsEl.querySelectorAll('.select-all-option').forEach(div => {
+                            div.querySelector('label').style.pointerEvents = 'none';
+                            div.querySelector('input').disabled = true;
+                            const value = div.dataset.value;
+                            if (q.correct.includes(value)) {
+                                div.classList.add('correct');
+                            } else if (selectedOptions.includes(value)) {
+                                div.classList.add('incorrect');
+                            }
+                        });
+                    }
+
+                    showChineseTranslations();
+                    feedbackEl.textContent = feedbackText;
+                    feedbackEl.className = isCorrect ? 'green' : 'red';
+                    if (isCorrect && currentQuestion < originalVocabLength) {
+                        score++;
+                    } else if (!isCorrect) {
+                        if (currentQuestion < originalVocabLength && !originalMissedWords.includes(q)) {
+                            originalMissedWords.push(q);
+                        }
+                        if (!missedWords.includes(q)) {
+                            missedWords.push(q);
+                        }
+                    }
+                    nextBtn.style.display = 'block';
+                    submitBtn.style.display = 'none';
+                    updateProgress();
+                } catch (e) {
+                    console.error('Error in checkAnswer:', e);
+                    feedbackEl.textContent = 'Error processing answer. Please try again.';
+                }
+            }
+
+            submitBtn.onclick = () => {
+                try {
+                    const q = vocabList[currentQuestion];
+                    if (q.type === 'select-all') {
+                        checkAnswer(null);
+                    }
+                } catch (e) {
+                    console.error('Error in submitBtn.onclick:', e);
+                }
+            };
+
+            exitBtn.onclick = () => {
+                try {
+                    window.location.href = 'index.html';
+                } catch (e) {
+                    console.error('Error in exitBtn.onclick:', e);
+                    feedbackEl.textContent = 'Error returning to homepage. Please try again.';
+                }
+            };
+
+            nextBtn.onclick = () => {
+                try {
+                    currentQuestion++;
+                    if (currentQuestion < vocabList.length) {
+                        loadQuestion();
+                    } else {
+                        if (missedWords.length > 0) {
+                            missedQuestionsAnswered += missedWords.length;
+                            vocabList = missedWords;
+                            missedWords = [];
+                            currentQuestion = 0;
+                            loadQuestion();
+                        } else {
+                            questionEl.textContent = 'Quiz Complete!';
+                            const existingQuestionZh = document.getElementById('question-zh');
+                            if (existingQuestionZh) {
+                                existingQuestionZh.remove();
+                            }
+                            optionsEl.innerHTML = '';
+                            feedbackEl.textContent = originalMissedWords.length > 0
+                                ? `Review these: ${originalMissedWords.map(q => q.question.split(' ').slice(-2)[0].replace(/[^a-zA-Z]/g, '')).join(', ')}.`
+                                : 'Perfect!';
+                            feedbackEl.className = '';
+                            nextBtn.style.display = 'none';
+                            submitBtn.style.display = 'none';
+                            updateProgress();
+                        }
+                    }
+                } catch (e) {
+                    console.error('Error in nextBtn.onclick:', e);
+                }
+            };
+
+            try {
+                loadQuestion();
+            } catch (e) {
+                console.error('Initial loadQuestion error:', e);
+                questionEl.textContent = 'Error loading quiz. Please refresh the page.';
+                loadingEl.style.display = 'none';
+                errorEl.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
