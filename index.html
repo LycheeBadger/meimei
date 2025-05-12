@@ -111,8 +111,7 @@
         <form id="quiz-form">
             <div class="form-group">
                 <h2 style="font-size: 20px; margin-bottom: 12px;">Select Databases</h2>
-                <label><input type="checkbox" name="database" value="env"> Environment</label>
-                <label><input type="checkbox" name="database" value="edu"> Education</label>
+                <div id="database-options"></div>
             </div>
             <div class="form-group">
                 <h2 style="font-size: 20px; margin-bottom: 12px;">Question Limit</h2>
@@ -128,11 +127,40 @@
         </form>
     </div>
     <script>
+        // Fetch databases from database.json and populate checkboxes
+        async function loadDatabases() {
+            try {
+                const response = await fetch('database.json');
+                const databases = await response.json();
+                const container = document.getElementById('database-options');
+
+                databases.forEach(db => {
+                    const label = document.createElement('label');
+                    const checkbox = document.createElement('input');
+                    checkbox.type = 'checkbox';
+                    checkbox.name = 'database';
+                    checkbox.value = db.value;
+                    label.appendChild(checkbox);
+                    label.appendChild(document.createTextNode(db.name));
+                    container.appendChild(label);
+                });
+            } catch (error) {
+                console.error('Error loading databases:', error);
+                document.getElementById('error').textContent = 'Failed to load databases.';
+                document.getElementById('error').style.display = 'block';
+            }
+        }
+
+        // Load databases when the page loads
+        loadDatabases();
+
+        // Handle form submission
         document.getElementById('quiz-form').addEventListener('submit', (e) => {
             e.preventDefault();
             const databases = Array.from(document.querySelectorAll('input[name="database"]:checked')).map(input => input.value);
             const limit = document.querySelector('select[name="limit"]').value;
             if (databases.length === 0) {
+                document.getElementById('error').textContent = 'Please select at least one database.';
                 document.getElementById('error').style.display = 'block';
                 return;
             }
