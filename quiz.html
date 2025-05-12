@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IELTS Vocabulary Practice - Quiz</title>
     <style>
+        /* Your existing CSS remains unchanged */
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -299,15 +300,19 @@
             const selectedDatabases = params.get('databases') ? params.get('databases').split(',') : ['env', 'edu'];
             const limit = params.get('limit') || 'all';
 
-            // Fetch databases
+            // Configure base path for GitHub Pages (adjust 'ielts-vocab' to your repository name)
+            const basePath = '/ielts-vocab/data/'; // Use '/data/' if hosted at username.github.io (root)
+
+            // Fetch databases from data/ folder
             let vocabList = [];
             try {
-                const fetchPromises = selectedDatabases.map(db => 
-                    fetch(`data/${db}.json`).then(res => {
-                        if (!res.ok) throw new Error(`Failed to load ${db}.json`);
-                        return res.json();
-                    })
-                );
+                const fetchPromises = selectedDatabases.map(async db => {
+                    const url = `${basePath}${db}.json`;
+                    console.log(`Fetching: ${url}`); // Debug log
+                    const res = await fetch(url);
+                    if (!res.ok) throw new Error(`Failed to load ${db}.json (Status: ${res.status})`);
+                    return res.json();
+                });
                 const databaseLists = await Promise.all(fetchPromises);
                 vocabList = databaseLists.flat();
 
@@ -324,8 +329,9 @@
                 buttonContainer.style.display = 'flex';
             } catch (e) {
                 console.error('Error loading databases:', e);
-                loadingEl.style.display = 'none';
+                errorEl.textContent = `Error loading questions: ${e.message}. Check if JSON files exist in data/ folder.`;
                 errorEl.style.display = 'block';
+                loadingEl.style.display = 'none';
                 return;
             }
 
