@@ -728,7 +728,7 @@
             const speechQuestion = q.question
               .replace(/___/g, "fill in the blank")
               .replace(/'/g, "\\'");
-            questionEl.innerHTML = `<span>${q.question}</span><svg class="audio-icon" onclick="responsiveVoice.speak('${speechQuestion}', 'UK English Female')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
+            questionEl.innerHTML = `<span>${q.question}</span><svg class="audio-icon" onclick="responsiveVoice.speak('${speechQuestion}', 'UK English Female'); console.log('TTS Question:', '${speechQuestion}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
 
             // Remove any existing question-zh div
             const existingQuestionZh = document.getElementById("question-zh");
@@ -751,7 +751,7 @@
                 const speechOption = option
                   .replace(/___/g, "fill in the blank")
                   .replace(/'/g, "\\'");
-                optionDiv.innerHTML = `<span>${option}</span><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
+                optionDiv.innerHTML = `<span>${option}</span><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female'); console.log('TTS Option:', '${speechOption}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
                 optionDiv.onclick = (e) => {
                   if (e.target.tagName !== "SVG" && !e.target.closest("svg"))
                     checkAnswer(option);
@@ -767,7 +767,7 @@
                 const speechOption = option
                   .replace(/___/g, "fill in the blank")
                   .replace(/'/g, "\\'");
-                optionDiv.innerHTML = `<label><input type="checkbox" value="${optionNumber}" style="margin-right: 10px;" name="select-all-option">${optionNumber}. ${option}</label><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
+                optionDiv.innerHTML = `<label><input type="checkbox" value="${optionNumber}" style="margin-right: 10px;" name="select-all-option">${optionNumber}. ${option}</label><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female'); console.log('TTS Option:', '${speechOption}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
                 console.log(`Rendered checkbox: value="${optionNumber}"`);
                 optionsEl.appendChild(optionDiv);
               });
@@ -816,7 +816,7 @@
                 const speechOption = option
                   .replace(/___/g, "fill in the blank")
                   .replace(/'/g, "\\'");
-                optionDiv.innerHTML = `<span>${option}</span><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
+                optionDiv.innerHTML = `<span>${option}</span><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female'); console.log('TTS Option:', '${speechOption}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
                 optionDiv.onclick = (e) => {
                   if (e.target.tagName !== "SVG" && !e.target.closest("svg"))
                     checkAnswer(option);
@@ -862,7 +862,7 @@
                 const speechOption = option
                   .replace(/___/g, "fill in the blank")
                   .replace(/'/g, "\\'");
-                optionDiv.innerHTML = `<span>${option}</span><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
+                optionDiv.innerHTML = `<span>${option}</span><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female'); console.log('TTS Option:', '${speechOption}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
                 optionDiv.onclick = (e) => {
                   if (e.target.tagName !== "SVG" && !e.target.closest("svg"))
                     checkAnswer(option);
@@ -904,7 +904,7 @@
                 const speechOption = option
                   .replace(/___/g, "fill in the blank")
                   .replace(/'/g, "\\'");
-                optionDiv.innerHTML = `<label><input type="checkbox" value="${optionNumber}" style="margin-right: 10px;" name="select-all-option">${optionNumber}. ${option}</label><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
+                optionDiv.innerHTML = `<label><input type="checkbox" value="${optionNumber}" style="margin-right: 10px;" name="select-all-option">${optionNumber}. ${option}</label><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female'); console.log('TTS Option:', '${speechOption}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
                 if (
                   optionsEl.querySelectorAll(".select-all-option").length > 0 &&
                   optionsEl.querySelectorAll(".select-all-option")[0].style
@@ -947,7 +947,8 @@
               optionsEl
                 .querySelectorAll(".option, .true-false-option")
                 .forEach((div) => {
-                  div.style.pointerEvents = "none";
+                  // Apply pointerEvents only to non-SVG content
+                  div.querySelector("span").style.pointerEvents = "none";
                   if (div.dataset.value === q.correct) {
                     div.classList.add("correct");
                   } else if (div.dataset.value === selected) {
@@ -988,7 +989,8 @@
               optionsEl
                 .querySelectorAll(".select-all-option")
                 .forEach((div) => {
-                  div.style.pointerEvents = "none";
+                  // Apply pointerEvents only to non-SVG content
+                  div.querySelector("label").style.pointerEvents = "none";
                   div.querySelector("input").disabled = true;
                   const value = div.dataset.value;
                   if (q.correct.includes(value)) {
@@ -1105,3 +1107,4 @@
     </script>
   </body>
 </html>
+
