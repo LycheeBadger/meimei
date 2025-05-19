@@ -1,77 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vocabulary Quiz Selector</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IELTS Quiz Selector</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+      h1 {
+        margin: 24px 0;
+        font-size: 28px;
+        color: #333;
+      }
+      .selector {
+        background: white;
+        padding: 24px;
+        border-radius: 12px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+        margin: 24px;
+      }
+      .tabs {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24px;
+      }
+      .tab {
+        flex: 1;
+        padding: 12px;
+        background-color: #e0e0e0;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 8px 8px 0 0;
+      }
+      .tab.active,
+      .tab:hover {
+        background-color: #28a745;
+        color: white;
+      }
+      .tab:first-child {
+        margin-right: 6px;
+      }
+      .tab:last-child {
+        margin-left: 6px;
+      }
+      .quiz-list {
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .quiz-list.active {
+        display: flex;
+      }
+      .quiz-item {
+        padding: 16px;
+        background-color: #f8f9fa;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        font-size: 18px;
+        text-align: left;
+      }
+      .quiz-item:hover {
+        background-color: #e0e0e0;
+      }
+      .quiz-item.selected {
+        background-color: #c8e6c9;
+        border-color: #28a745;
+      }
+      button {
+        padding: 12px 24px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-top: 24px;
+        width: 100%;
+        font-size: 18px;
+        min-height: 48px;
+      }
+      button:hover {
+        background-color: #218838;
+      }
+      @media (max-width: 600px) {
+        .selector {
+          width: 90%;
+          padding: 16px;
+          margin: 16px;
         }
         h1 {
-            margin-top: 20px;
+          font-size: 24px;
         }
-        .selector {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            width: 300px;
-            text-align: center;
+        .tab {
+          padding: 10px;
+          font-size: 16px;
         }
-        select {
-            padding: 10px;
-            width: 100%;
-            margin-bottom: 20px;
-            border-radius: 5px;
+        .quiz-item {
+          padding: 12px;
+          font-size: 16px;
         }
         button {
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+          font-size: 16px;
+          padding: 10px 20px;
         }
-        button:hover {
-            background-color: #0056b3;
+      }
+      @media (max-width: 400px) {
+        h1 {
+          font-size: 20px;
         }
+        .tab {
+          font-size: 14px;
+        }
+        .quiz-item {
+          font-size: 14px;
+        }
+        button {
+          font-size: 14px;
+        }
+      }
     </style>
-</head>
-<body>
-    <h1>Select a Vocabulary Quiz</h1>
+  </head>
+  <body>
+    <h1>IELTS Quiz Selector</h1>
     <div class="selector">
-        <select id="database">
-            <option value="environment1">Environment 1</option>
-            <option value="environment2">Environment 2</option>
-            <option value="environment3">Environment 3</option>
-            <option value="schoolwork1">Schoolwork 1</option>
-            <option value="schoolwork2">Schoolwork 2</option>
-            <option value="schoolwork3">Schoolwork 3</option>
-            <option value="social1">Social 1</option>
-            <option value="social2">Social 2</option>
-            <option value="social3">Social 3</option>
-            <option value="technology1">Technology 1</option>
-            <option value="technology2">Technology 2</option>
-            <option value="technology3">Technology 3</option>
-            <option value="health1">Health 1</option>
-            <option value="health2">Health 2</option>
-            <option value="health3">Health 3</option>
-        </select>
-        <button onclick="startQuiz()">Start Quiz</button>
+      <div class="tabs">
+        <div class="tab active" onclick="showTab('vocabulary')">Vocabulary</div>
+        <div class="tab" onclick="showTab('grammar')">Grammar</div>
+      </div>
+      <div id="vocabulary" class="quiz-list active">
+        <div class="quiz-item" onclick="selectQuiz('environment1')">
+          Environment 1 - Pollution & Nature
+        </div>
+        <div class="quiz-item" onclick="selectQuiz('environment2')">
+          Environment 2 - Climate & Resources
+        </div>
+        <div class="quiz-item" onclick="selectQuiz('environment3')">
+          Environment 3 - Conservation
+        </div>
+        <div class="quiz-item" onclick="selectQuiz('schoolwork1')">
+          Schoolwork 1 - Academic Terms
+        </div>
+        <div class="quiz-item" onclick="selectQuiz('schoolwork2')">
+          Schoolwork 2 - Study Skills
+        </div>
+        <div class="quiz-item" onclick="selectQuiz('schoolwork3')">
+          Schoolwork 3 - Classroom Vocabulary
+        </div>
+        <div class="quiz-item" onclick="selectQuiz('social1')">
+          Social 1 - Relationships
+        </div>
+        <div class="quiz-item" onclick="selectQuiz('social2')">
+          Social 2 - Communication
+        </div>
+        <div class="quiz-item" onclick="selectQuiz('social3')">
+          Social 3 - Culture & Society
+        </div>
+        <div class="quiz-item" onclick="selectQuiz('technology1')">
+          Technology 1 - Devices & Systems
+        </div>
+        <div class="quiz-item" onclick="selectQuiz('technology2')">
+          Technology 2 - Innovation
+        </div>
+        <div class="quiz-item" onclick="selectQuiz('technology3')">
+          Technology 3 - Digital Terms
+        </div>
+        <div class="quiz-item" onclick="selectQuiz('health1')">
+          Health 1 - Body & Wellness
+        </div>
+        <div class="quiz-item" onclick="selectQuiz('health2')">
+          Health 2 - Medical Terms
+        </div>
+        <div class="quiz-item" onclick="selectQuiz('health3')">
+          Health 3 - Healthy Living
+        </div>
+      </div>
+      <div id="grammar" class="quiz-list">
+        <div class="quiz-item" onclick="selectQuiz('grammar1')">
+          Grammar 1 - Basic Sentence Structure
+        </div>
+        <div class="quiz-item" onclick="selectQuiz('grammar2')">
+          Grammar 2 - Verb Tenses
+        </div>
+        <div class="quiz-item" onclick="selectQuiz('grammar3')">
+          Grammar 3 - Advanced Grammar
+        </div>
+        <div class="quiz-item" onclick="selectQuiz('tenses1')">
+          Tenses 1 - Present & Past
+        </div>
+        <div class="quiz-item" onclick="selectQuiz('tenses2')">
+          Tenses 2 - Future & Perfect
+        </div>
+        <div class="quiz-item" onclick="selectQuiz('punctuation1')">
+          Punctuation 1 - Basic Rules
+        </div>
+      </div>
+      <button onclick="startQuiz()">Start Quiz</button>
     </div>
 
     <script>
-        function startQuiz() {
-            const db = document.getElementById('database').value;
-            window.location.href = `quiz.html?db=${db}`;
+      let selectedQuiz = null;
+
+      function showTab(tabId) {
+        document
+          .querySelectorAll(".tab")
+          .forEach((tab) => tab.classList.remove("active"));
+        document
+          .querySelectorAll(".quiz-list")
+          .forEach((list) => list.classList.remove("active"));
+        document
+          .querySelector(`.tab[onclick="showTab('${tabId}')"]`)
+          .classList.add("active");
+        document.getElementById(tabId).classList.add("active");
+        selectedQuiz = null; // Reset selection when switching tabs
+        document
+          .querySelectorAll(".quiz-item")
+          .forEach((item) => item.classList.remove("selected"));
+      }
+
+      function selectQuiz(quizId) {
+        selectedQuiz = quizId;
+        document
+          .querySelectorAll(".quiz-item")
+          .forEach((item) => item.classList.remove("selected"));
+        document
+          .querySelector(`.quiz-item[onclick="selectQuiz('${quizId}')"]`)
+          .classList.add("selected");
+      }
+
+      function startQuiz() {
+        if (selectedQuiz) {
+          window.location.href = `quiz.html?db=${selectedQuiz}`;
+        } else {
+          alert("Please select a quiz first!");
         }
+      }
     </script>
-</body>
+  </body>
 </html>
