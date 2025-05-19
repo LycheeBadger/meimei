@@ -347,9 +347,10 @@
 
         // Parse URL parameters
         const params = new URLSearchParams(window.location.search);
-        const dbName = params.get("db") || "environment1"; // Default to 'environment1'
+        const dbName = params.get("db") || "environment1";
+        const quizType = params.get("type") || "vocabulary"; // Default to vocabulary
         const limit = params.get("limit") || "all";
-        const jsonFile = `data/${dbName}.json`;
+        const jsonFile = `data/${quizType}/${dbName}.json`; // Updated path with subfolder
 
         // Load JSON data
         async function loadQuestions() {
