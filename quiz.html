@@ -82,6 +82,30 @@
         height: 24px;
         margin-right: 12px;
       }
+      .fill-in-the-blank {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 12px auto;
+        width: 94%;
+      }
+      .fill-in-the-blank input[type="text"] {
+        padding: 12px;
+        width: 100%;
+        max-width: 300px;
+        font-size: 18px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin-bottom: 12px;
+      }
+      .fill-in-the-blank input[type="text"].correct {
+        background: #c8e6c9;
+        border-color: #2e7d32;
+      }
+      .fill-in-the-blank input[type="text"].incorrect {
+        background: #ffcdd2;
+        border-color: #c62828;
+      }
       .correct {
         background: #c8e6c9 !important;
       }
@@ -114,7 +138,8 @@
       }
       #next-btn,
       #exit-btn,
-      #submit-btn {
+      #submit-btn,
+      #retry-btn {
         margin: 12px;
         padding: 12px 24px;
         background: #28a745;
@@ -128,7 +153,8 @@
       }
       #next-btn:hover,
       #exit-btn:hover,
-      #submit-btn:hover {
+      #submit-btn:hover,
+      #retry-btn:hover {
         background: #218838;
       }
       .button-container {
@@ -191,6 +217,11 @@
           width: 92%;
           margin: 8px auto;
         }
+        .fill-in-the-blank input[type="text"] {
+          font-size: 16px;
+          padding: 10px;
+          max-width: 250px;
+        }
         .select-all-option input[type="checkbox"] {
           width: 20px;
           height: 20px;
@@ -206,7 +237,8 @@
         }
         #next-btn,
         #exit-btn,
-        #submit-btn {
+        #submit-btn,
+        #retry-btn {
           font-size: 16px;
           padding: 10px 20px;
           margin: 8px;
@@ -253,12 +285,18 @@
           padding: 10px;
           font-size: 14px;
         }
+        .fill-in-the-blank input[type="text"] {
+          font-size: 14px;
+          padding: 8px;
+          max-width: 200px;
+        }
         #feedback {
           font-size: 14px;
         }
         #next-btn,
         #exit-btn,
-        #submit-btn {
+        #submit-btn,
+        #retry-btn {
           font-size: 14px;
           padding: 8px 16px;
         }
@@ -279,6 +317,7 @@
       <div class="button-container">
         <button id="submit-btn" style="display: none">Submit</button>
         <button id="next-btn" style="display: none">Next Question</button>
+        <button id="retry-btn" style="display: none">Retry</button>
         <button id="exit-btn">Back to Home</button>
       </div>
     </div>
@@ -301,13 +340,14 @@
         const nextBtn = document.getElementById("next-btn");
         const submitBtn = document.getElementById("submit-btn");
         const exitBtn = document.getElementById("exit-btn");
+        const retryBtn = document.getElementById("retry-btn");
         const progressBar = document.getElementById("progress-bar");
         const missedProgressBar = document.getElementById("missed-progress-bar");
         const statsEl = document.getElementById("stats");
 
         // Parse URL parameters
         const params = new URLSearchParams(window.location.search);
-        const dbName = params.get("db") || "social1"; // Default to 'social1' if no db specified
+        const dbName = params.get("db") || "environment1"; // Default to 'environment1'
         const limit = params.get("limit") || "all";
         const jsonFile = `data/${dbName}.json`;
 
@@ -315,9 +355,13 @@
         async function loadQuestions() {
           try {
             const response = await fetch(jsonFile);
-            if (!response.ok) throw new Error(`Failed to load ${jsonFile}`);
+            if (!response.ok) {
+              throw new Error(
+                `Failed to load ${jsonFile}: ${response.status} ${response.statusText}`
+              );
+            }
             vocabList = await response.json();
-            console.log("Loaded vocabList:", vocabList);
+            console.log("HDR: Loaded vocabList:", vocabList);
 
             // Apply question limit
             if (limit !== "all") {
@@ -332,12 +376,14 @@
             originalVocabLength = vocabList.length;
             loadQuestion();
           } catch (e) {
-            console.error("Error loading questions:", e);
-            questionEl.textContent = "Error loading quiz data. Please try again.";
+            console.error("HDR: Error loading questions:", e);
+            questionEl.textContent = `Error loading quiz data for "${dbName}". File "${jsonFile}" may be missing or invalid.`;
             optionsEl.innerHTML = "";
-            feedbackEl.textContent = "";
+            feedbackEl.textContent = "Please check the file or try another quiz.";
             nextBtn.style.display = "none";
             submitBtn.style.display = "none";
+            retryBtn.style.display = "block";
+            exitBtn.style.display = "block";
             updateProgress();
           }
         }
@@ -359,14 +405,14 @@
               1
             )}% | Correct: ${score} | Missed: ${originalMissedWords.length}`;
           } catch (e) {
-            console.error("Error in updateProgress:", e);
+            console.error("HDR: Error in updateProgress:", e);
           }
         }
 
         function loadQuestion() {
           try {
             console.log(
-              "Loading question:",
+              "HDR: Loading question:",
               currentQuestion,
               vocabList[currentQuestion]
             );
@@ -376,11 +422,12 @@
               feedbackEl.textContent = "";
               nextBtn.style.display = "none";
               submitBtn.style.display = "none";
+              retryBtn.style.display = "none";
               updateProgress();
               return;
             }
             if (!questionEl || !optionsEl) {
-              console.error("DOM elements missing:", { questionEl, optionsEl });
+              console.error("HDR: DOM elements missing:", { questionEl, optionsEl });
               return;
             }
             const q = vocabList[currentQuestion];
@@ -398,6 +445,7 @@
             feedbackEl.textContent = "";
             nextBtn.style.display = "none";
             submitBtn.style.display = "none";
+            retryBtn.style.display = "none";
             answerSelected = false;
 
             if (q.type === "multiple-choice" || q.type === "true-false") {
@@ -426,17 +474,24 @@
                   .replace(/___/g, "fill in the blank")
                   .replace(/'/g, "\\'");
                 optionDiv.innerHTML = `<label><input type="checkbox" value="${optionNumber}" style="margin-right: 10px;" name="select-all-option">${optionNumber}. ${option}</label><svg class="audio-icon" onclick="responsiveVoice.speak('${speechOption}', 'UK English Female'); console.log('TTS Option:', '${speechOption}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
-                console.log(`Rendered checkbox: value="${optionNumber}"`);
+                console.log(`HDR: Rendered checkbox: value="${optionNumber}"`);
                 optionsEl.appendChild(optionDiv);
               });
+              submitBtn.style.display = "block";
+            } else if (q.type === "fill-in-the-blank") {
+              const fillDiv = document.createElement("div");
+              fillDiv.className = "fill-in-the-blank";
+              fillDiv.innerHTML = `<input type="text" id="fill-input" placeholder="Type your answer" /><svg class="audio-icon" onclick="responsiveVoice.speak('${speechQuestion}', 'UK English Female'); console.log('TTS Fill:', '${speechQuestion}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
+              optionsEl.appendChild(fillDiv);
               submitBtn.style.display = "block";
             }
 
             updateProgress();
           } catch (e) {
-            console.error("Error in loadQuestion:", e);
+            console.error("HDR: Error in loadQuestion:", e);
             questionEl.textContent =
               "Error loading question. Please try again.";
+            retryBtn.style.display = "block";
           }
         }
 
@@ -544,12 +599,29 @@
               });
               optionsEl.innerHTML = "";
               optionsEl.appendChild(newOptionsEl);
+            } else if (q.type === "fill-in-the-blank") {
+              const newOptionsEl = document.createElement("div");
+              const fillDiv = document.createElement("div");
+              fillDiv.className = "fill-in-the-blank";
+              const inputEl = optionsEl.querySelector("#fill-input");
+              if (inputEl) {
+                if (inputEl.classList.contains("correct")) {
+                  fillDiv.innerHTML = `<input type="text" id="fill-input" value="${inputEl.value}" class="correct" disabled />`;
+                } else if (inputEl.classList.contains("incorrect")) {
+                  fillDiv.innerHTML = `<input type="text" id="fill-input" value="${inputEl.value}" class="incorrect" disabled />`;
+                } else {
+                  fillDiv.innerHTML = `<input type="text" id="fill-input" placeholder="Type your answer" />`;
+                }
+                fillDiv.innerHTML += `<svg class="audio-icon" onclick="responsiveVoice.speak('${speechQuestion}', 'UK English Female'); console.log('TTS Fill:', '${speechQuestion}')" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>`;
+              }
+              newOptionsEl.appendChild(fillDiv);
+              optionsEl.innerHTML = "";
+              optionsEl.appendChild(newOptionsEl);
             }
+            answerSelected = true;
           } catch (e) {
-            console.error("Error in showChineseTranslations:", e);
+            console.error("HDR: Error in showChineseTranslations:", e);
           }
-
-          answerSelected = true;
         }
 
         function checkAnswer(selected) {
@@ -568,7 +640,7 @@
               optionsEl
                 .querySelectorAll(".option, .true-false-option")
                 .forEach((div) => {
-                  div.querySelector("span").style.pointerEvents = "none";
+                  div.style.pointerEvents = "none";
                   if (div.dataset.value === q.correct) {
                     div.classList.add("correct");
                   } else if (div.dataset.value === selected) {
@@ -581,8 +653,8 @@
                   'input[name="select-all-option"]:checked'
                 )
               ).map((input) => input.value);
-              console.log("Selected Options:", selectedOptions);
-              console.log("Correct Options:", q.correct);
+              console.log("HDR: Selected Options:", selectedOptions);
+              console.log("HDR: Correct Options:", q.correct);
               if (selectedOptions.length === 0) {
                 isCorrect = false;
                 feedbackText = `Incorrect. You must select at least one option. The correct answers are options ${q.correct.join(
@@ -603,7 +675,7 @@
               optionsEl
                 .querySelectorAll(".select-all-option")
                 .forEach((div) => {
-                  div.querySelector("label").style.pointerEvents = "none";
+                  div.style.pointerEvents = "none";
                   div.querySelector("input").disabled = true;
                   const value = div.dataset.value;
                   if (q.correct.includes(value)) {
@@ -612,6 +684,20 @@
                     div.classList.add("incorrect");
                   }
                 });
+            } else if (q.type === "fill-in-the-blank") {
+              const userInput = optionsEl
+                .querySelector("#fill-input")
+                .value.trim()
+                .toLowerCase();
+              isCorrect = userInput === q.correct.toLowerCase();
+              feedbackText = isCorrect
+                ? `Correct! ${q.example} (${q.exampleZh || q.example})`
+                : `Incorrect. The correct answer is "${q.correct}". ${
+                    q.example
+                  } (${q.exampleZh || q.example})`;
+              const inputEl = optionsEl.querySelector("#fill-input");
+              inputEl.classList.add(isCorrect ? "correct" : "incorrect");
+              inputEl.disabled = true;
             }
 
             showChineseTranslations();
@@ -632,22 +718,24 @@
             }
             nextBtn.style.display = "block";
             submitBtn.style.display = "none";
+            retryBtn.style.display = "none";
             updateProgress();
           } catch (e) {
-            console.error("Error in checkAnswer:", e);
+            console.error("HDR: Error in checkAnswer:", e);
             feedbackEl.textContent =
               "Error processing answer. Please try again.";
+            retryBtn.style.display = "block";
           }
         }
 
         submitBtn.onclick = () => {
           try {
             const q = vocabList[currentQuestion];
-            if (q.type === "select-all") {
+            if (q.type === "select-all" || q.type === "fill-in-the-blank") {
               checkAnswer(null);
             }
           } catch (e) {
-            console.error("Error in submitBtn.onclick:", e);
+            console.error("HDR: Error in submitBtn.onclick:", e);
           }
         };
 
@@ -655,7 +743,15 @@
           try {
             window.location.href = "index.html";
           } catch (e) {
-            console.error("Error in exitBtn.onclick:", e);
+            console.error("HDR: Error in exitBtn.onclick:", e);
+          }
+        };
+
+        retryBtn.onclick = () => {
+          try {
+            loadQuestions();
+          } catch (e) {
+            console.error("HDR: Error in retryBtn.onclick:", e);
           }
         };
 
@@ -688,20 +784,24 @@
                 feedbackEl.className = "";
                 nextBtn.style.display = "none";
                 submitBtn.style.display = "none";
+                retryBtn.style.display = "none";
+                exitBtn.style.display = "block";
                 updateProgress();
               }
             }
           } catch (e) {
-            console.error("Error in nextBtn.onclick:", e);
+            console.error("HDR: Error in nextBtn.onclick:", e);
+            retryBtn.style.display = "block";
           }
         };
 
         try {
           loadQuestions();
         } catch (e) {
-          console.error("Initial loadQuestions error:", e);
+          console.error("HDR: Initial loadQuestions error:", e);
           questionEl.textContent =
             "Error loading quiz. Please refresh the page.";
+          retryBtn.style.display = "block";
         }
       });
     </script>
