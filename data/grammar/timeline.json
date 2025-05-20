@@ -1,0 +1,464 @@
+[
+  {
+    "word": "talk",
+    "wordZh": "谈话",
+    "type": "multiple-choice",
+    "question": "An action that happens regularly every day (e.g., She ___ to her friends). Which tense is correct?",
+    "questionZh": "每天定期发生的动作（例如，她___朋友）。哪个时态正确？",
+    "options": [
+      "Simple Present",
+      "Simple Past",
+      "Simple Future",
+      "Present Continuous"
+    ],
+    "optionsZh": ["一般现在时", "一般过去时", "一般将来时", "现在进行时"],
+    "correct": "Simple Present",
+    "correctZh": "一般现在时",
+    "example": "She talks to her friends every day, so Simple Present is used.",
+    "exampleZh": "她每天和朋友谈话，因此使用一般现在时。"
+  },
+  {
+    "word": "go",
+    "wordZh": "去",
+    "type": "multiple-choice",
+    "question": "An action that happens every week (e.g., He ___ to the market). Which tense is correct?",
+    "questionZh": "每周发生的动作（例如，他___市场）。哪个时态正确？",
+    "options": [
+      "Simple Present",
+      "Simple Past",
+      "Present Perfect",
+      "Future Continuous"
+    ],
+    "optionsZh": ["一般现在时", "一般过去时", "现在完成时", "将来进行时"],
+    "correct": "Simple Present",
+    "correctZh": "一般现在时",
+    "example": "He goes to the market every week, so Simple Present is used.",
+    "exampleZh": "他每周去市场，因此使用一般现在时。"
+  },
+  {
+    "word": "play",
+    "wordZh": "玩",
+    "type": "multiple-choice",
+    "question": "An action that happened at a specific time in the past (e.g., They ___ soccer yesterday). Which tense is correct?",
+    "questionZh": "在过去特定时间发生的动作（例如，他们昨天___足球）。哪个时态正确？",
+    "options": [
+      "Simple Past",
+      "Simple Present",
+      "Past Continuous",
+      "Past Perfect"
+    ],
+    "optionsZh": ["一般过去时", "一般现在时", "过去进行时", "过去完成时"],
+    "correct": "Simple Past",
+    "correctZh": "一般过去时",
+    "example": "They played soccer yesterday, so Simple Past is used.",
+    "exampleZh": "他们昨天玩了足球，因此使用一般过去时。"
+  },
+  {
+    "word": "write",
+    "wordZh": "写",
+    "type": "multiple-choice",
+    "question": "An action completed in the past at a definite time (e.g., She ___ a letter last week). Which tense is correct?",
+    "questionZh": "在过去特定时间完成的动作（例如，她上周___一封信）。哪个时态正确？",
+    "options": [
+      "Simple Past",
+      "Simple Future",
+      "Present Perfect",
+      "Past Continuous"
+    ],
+    "optionsZh": ["一般过去时", "一般将来时", "现在完成时", "过去进行时"],
+    "correct": "Simple Past",
+    "correctZh": "一般过去时",
+    "example": "She wrote a letter last week, so Simple Past is used.",
+    "exampleZh": "她上周写了一封信，因此使用一般过去时。"
+  },
+  {
+    "word": "learn",
+    "wordZh": "学习",
+    "type": "multiple-choice",
+    "question": "An action that will happen at a specific time in the future (e.g., He ___ Spanish next semester). Which tense is correct?",
+    "questionZh": "将在未来特定时间发生的动作（例如，他下学期___西班牙语）。哪个时态正确？",
+    "options": [
+      "Simple Future",
+      "Simple Present",
+      "Future Continuous",
+      "Present Perfect"
+    ],
+    "optionsZh": ["一般将来时", "一般现在时", "将来进行时", "现在完成时"],
+    "correct": "Simple Future",
+    "correctZh": "一般将来时",
+    "example": "He will learn Spanish next semester, so Simple Future is used.",
+    "exampleZh": "他下学期将学习西班牙语，因此使用一般将来时。"
+  },
+  {
+    "word": "see",
+    "wordZh": "看",
+    "type": "multiple-choice",
+    "question": "An action planned for a future time (e.g., They ___ a movie next weekend). Which tense is correct?",
+    "questionZh": "计划在未来时间发生的动作（例如，他们下周末___电影）。哪个时态正确？",
+    "options": [
+      "Simple Future",
+      "Simple Past",
+      "Future Perfect",
+      "Present Continuous"
+    ],
+    "optionsZh": ["一般将来时", "一般过去时", "将来完成时", "现在进行时"],
+    "correct": "Simple Future",
+    "correctZh": "一般将来时",
+    "example": "They will see a movie next weekend, so Simple Future is used.",
+    "exampleZh": "他们下周末将看电影，因此使用一般将来时。"
+  },
+  {
+    "word": "work",
+    "wordZh": "工作",
+    "type": "multiple-choice",
+    "question": "An action completed recently with present relevance (e.g., She ___ in the office this month). Which tense is correct?",
+    "questionZh": "最近完成且与现在相关的动作（例如，她这个月___办公室）。哪个时态正确？",
+    "options": [
+      "Present Perfect",
+      "Simple Past",
+      "Present Continuous",
+      "Past Perfect"
+    ],
+    "optionsZh": ["现在完成时", "一般过去时", "现在进行时", "过去完成时"],
+    "correct": "Present Perfect",
+    "correctZh": "现在完成时",
+    "example": "She has worked in the office this month, so Present Perfect is used.",
+    "exampleZh": "她这个月已在办公室工作，因此使用现在完成时。"
+  },
+  {
+    "word": "eat",
+    "wordZh": "吃",
+    "type": "multiple-choice",
+    "question": "An action completed in the recent past (e.g., He ___ sushi this week). Which tense is correct?",
+    "questionZh": "最近过去完成的动作（例如，他这周___寿司）。哪个时态正确？",
+    "options": [
+      "Present Perfect",
+      "Simple Past",
+      "Present Perfect Continuous",
+      "Future Perfect"
+    ],
+    "optionsZh": ["现在完成时", "一般过去时", "现在完成进行时", "将来完成时"],
+    "correct": "Present Perfect",
+    "correctZh": "现在完成时",
+    "example": "He has eaten sushi this week, so Present Perfect is used.",
+    "exampleZh": "他这周已吃了寿司，因此使用现在完成时。"
+  },
+  {
+    "word": "talk",
+    "wordZh": "谈话",
+    "type": "multiple-choice",
+    "question": "An action completed before another past action (e.g., They ___ to the manager before the meeting started). Which tense is correct?",
+    "questionZh": "在另一个过去动作前完成的动作（例如，他们在会议开始前___经理）。哪个时态正确？",
+    "options": [
+      "Past Perfect",
+      "Simple Past",
+      "Past Continuous",
+      "Present Perfect"
+    ],
+    "optionsZh": ["过去完成时", "一般过去时", "过去进行时", "现在完成时"],
+    "correct": "Past Perfect",
+    "correctZh": "过去完成时",
+    "example": "They had talked to the manager before the meeting started, so Past Perfect is used.",
+    "exampleZh": "他们在会议开始前已和经理谈话，因此使用过去完成时。"
+  },
+  {
+    "word": "go",
+    "wordZh": "去",
+    "type": "multiple-choice",
+    "question": "An action finished before a past event (e.g., She ___ to the beach before the summer ended). Which tense is correct?",
+    "questionZh": "在过去事件前完成的动作（例如，她在夏天结束前___海滩）。哪个时态正确？",
+    "options": [
+      "Past Perfect",
+      "Simple Past",
+      "Past Perfect Continuous",
+      "Simple Future"
+    ],
+    "optionsZh": ["过去完成时", "一般过去时", "过去完成进行时", "一般将来时"],
+    "correct": "Past Perfect",
+    "correctZh": "过去完成时",
+    "example": "She had gone to the beach before the summer ended, so Past Perfect is used.",
+    "exampleZh": "她在夏天结束前已去了海滩，因此使用过去完成时。"
+  },
+  {
+    "word": "play",
+    "wordZh": "玩",
+    "type": "multiple-choice",
+    "question": "An action that will be completed by a future time (e.g., He ___ chess by tomorrow evening). Which tense is correct?",
+    "questionZh": "到未来某时间将完成的动作（例如，他到明天晚上___象棋）。哪个时态正确？",
+    "options": [
+      "Future Perfect",
+      "Simple Future",
+      "Future Continuous",
+      "Present Perfect"
+    ],
+    "optionsZh": ["将来完成时", "一般将来时", "将来进行时", "现在完成时"],
+    "correct": "Future Perfect",
+    "correctZh": "将来完成时",
+    "example": "He will have played chess by tomorrow evening, so Future Perfect is used.",
+    "exampleZh": "他到明天晚上将已玩了象棋，因此使用将来完成时。"
+  },
+  {
+    "word": "write",
+    "wordZh": "写",
+    "type": "multiple-choice",
+    "question": "An action completed by a specific future point (e.g., They ___ a book by next year). Which tense is correct?",
+    "questionZh": "到未来特定时间完成的动作（例如，他们到明年___一本书）。哪个时态正确？",
+    "options": [
+      "Future Perfect",
+      "Simple Past",
+      "Future Perfect Continuous",
+      "Present Continuous"
+    ],
+    "optionsZh": ["将来完成时", "一般过去时", "将来完成进行时", "现在进行时"],
+    "correct": "Future Perfect",
+    "correctZh": "将来完成时",
+    "example": "They will have written a book by next year, so Future Perfect is used.",
+    "exampleZh": "他们到明年将已写了一本书，因此使用将来完成时。"
+  },
+  {
+    "word": "learn",
+    "wordZh": "学习",
+    "type": "multiple-choice",
+    "question": "An action happening at the moment of speaking (e.g., She ___ English right now). Which tense is correct?",
+    "questionZh": "正在说话时发生的动作（例如，她现在___英语）。哪个时态正确？",
+    "options": [
+      "Present Continuous",
+      "Simple Present",
+      "Present Perfect",
+      "Past Continuous"
+    ],
+    "optionsZh": ["现在进行时", "一般现在时", "现在完成时", "过去进行时"],
+    "correct": "Present Continuous",
+    "correctZh": "现在进行时",
+    "example": "She is learning English right now, so Present Continuous is used.",
+    "exampleZh": "她现在正在学习英语，因此使用现在进行时。"
+  },
+  {
+    "word": "see",
+    "wordZh": "看",
+    "type": "multiple-choice",
+    "question": "An action occurring now (e.g., He ___ a play right now). Which tense is correct?",
+    "questionZh": "现在正在发生的动作（例如，他现在___戏剧）。哪个时态正确？",
+    "options": [
+      "Present Continuous",
+      "Simple Past",
+      "Future Continuous",
+      "Present Perfect Continuous"
+    ],
+    "optionsZh": ["现在进行时", "一般过去时", "将来进行时", "现在完成进行时"],
+    "correct": "Present Continuous",
+    "correctZh": "现在进行时",
+    "example": "He is seeing a play right now, so Present Continuous is used.",
+    "exampleZh": "他现在正在看戏剧，因此使用现在进行时。"
+  },
+  {
+    "word": "work",
+    "wordZh": "工作",
+    "type": "multiple-choice",
+    "question": "An action that was ongoing at a specific past time (e.g., They ___ on the project yesterday when the power went out). Which tense is correct?",
+    "questionZh": "在过去特定时间正在进行的动作（例如，他们昨天___项目时停电了）。哪个时态正确？",
+    "options": [
+      "Past Continuous",
+      "Simple Past",
+      "Past Perfect",
+      "Present Continuous"
+    ],
+    "optionsZh": ["过去进行时", "一般过去时", "过去完成时", "现在进行时"],
+    "correct": "Past Continuous",
+    "correctZh": "过去进行时",
+    "example": "They were working on the project yesterday when the power went out, so Past Continuous is used.",
+    "exampleZh": "他们昨天正在工作项目时停电了，因此使用过去进行时。"
+  },
+  {
+    "word": "eat",
+    "wordZh": "吃",
+    "type": "multiple-choice",
+    "question": "An action happening at a past moment (e.g., She ___ dinner yesterday when the phone rang). Which tense is correct?",
+    "questionZh": "在过去某时刻正在进行的动作（例如，她昨天___晚餐时电话响了）。哪个时态正确？",
+    "options": [
+      "Past Continuous",
+      "Simple Past",
+      "Past Perfect Continuous",
+      "Future Continuous"
+    ],
+    "optionsZh": ["过去进行时", "一般过去时", "过去完成进行时", "将来进行时"],
+    "correct": "Past Continuous",
+    "correctZh": "过去进行时",
+    "example": "She was eating dinner yesterday when the phone rang, so Past Continuous is used.",
+    "exampleZh": "她昨天正在吃晚餐时电话响了，因此使用过去进行时。"
+  },
+  {
+    "word": "talk",
+    "wordZh": "谈话",
+    "type": "multiple-choice",
+    "question": "An action that will be ongoing at a future time (e.g., He ___ at the conference tomorrow morning). Which tense is correct?",
+    "questionZh": "在未来某时间正在进行的动作（例如，他明天早上将在会议上___）。哪个时态正确？",
+    "options": [
+      "Future Continuous",
+      "Simple Future",
+      "Future Perfect",
+      "Present Continuous"
+    ],
+    "optionsZh": ["将来进行时", "一般将来时", "将来完成时", "现在进行时"],
+    "correct": "Future Continuous",
+    "correctZh": "将来进行时",
+    "example": "He will be talking at the conference tomorrow morning, so Future Continuous is used.",
+    "exampleZh": "他明天早上将在会议上正在谈话，因此使用将来进行时。"
+  },
+  {
+    "word": "go",
+    "wordZh": "去",
+    "type": "multiple-choice",
+    "question": "An action ongoing in the future (e.g., They ___ to the park tomorrow afternoon). Which tense is correct?",
+    "questionZh": "在未来正在进行的动作（例如，他们明天下午___公园）。哪个时态正确？",
+    "options": [
+      "Future Continuous",
+      "Simple Past",
+      "Future Perfect Continuous",
+      "Present Perfect"
+    ],
+    "optionsZh": ["将来进行时", "一般过去时", "将来完成进行时", "现在完成时"],
+    "correct": "Future Continuous",
+    "correctZh": "将来进行时",
+    "example": "They will be going to the park tomorrow afternoon, so Future Continuous is used.",
+    "exampleZh": "他们明天下午将正在去公园，因此使用将来进行时。"
+  },
+  {
+    "word": "play",
+    "wordZh": "玩",
+    "type": "multiple-choice",
+    "question": "An action ongoing from the past to now with present relevance (e.g., She ___ the piano for hours). Which tense is correct?",
+    "questionZh": "从过去持续到现在且与现在相关的动作（例如，她___钢琴好几个小时）。哪个时态正确？",
+    "options": [
+      "Present Perfect Continuous",
+      "Present Perfect",
+      "Past Continuous",
+      "Future Perfect Continuous"
+    ],
+    "optionsZh": [
+      "现在完成进行时",
+      "现在完成时",
+      "过去进行时",
+      "将来完成进行时"
+    ],
+    "correct": "Present Perfect Continuous",
+    "correctZh": "现在完成进行时",
+    "example": "She has been playing the piano for hours, so Present Perfect Continuous is used.",
+    "exampleZh": "她一直在玩钢琴好几个小时，因此使用现在完成进行时。"
+  },
+  {
+    "word": "write",
+    "wordZh": "写",
+    "type": "multiple-choice",
+    "question": "An action continuing from past to present (e.g., He ___ essays for hours today). Which tense is correct?",
+    "questionZh": "从过去持续到现在的动作（例如，他今天___文章好几个小时）。哪个时态正确？",
+    "options": [
+      "Present Perfect Continuous",
+      "Simple Present",
+      "Past Perfect Continuous",
+      "Future Continuous"
+    ],
+    "optionsZh": [
+      "现在完成进行时",
+      "一般现在时",
+      "过去完成进行时",
+      "将来进行时"
+    ],
+    "correct": "Present Perfect Continuous",
+    "correctZh": "现在完成进行时",
+    "example": "He has been writing essays for hours today, so Present Perfect Continuous is used.",
+    "exampleZh": "他今天一直在写文章好几个小时，因此使用现在完成进行时。"
+  },
+  {
+    "word": "learn",
+    "wordZh": "学习",
+    "type": "multiple-choice",
+    "question": "An action ongoing before a past event (e.g., They ___ math for months before the exam ended). Which tense is correct?",
+    "questionZh": "在过去某事件前持续进行的动作（例如，他们在考试结束前___数学几个月）。哪个时态正确？",
+    "options": [
+      "Past Perfect Continuous",
+      "Past Perfect",
+      "Simple Past",
+      "Present Perfect Continuous"
+    ],
+    "optionsZh": [
+      "过去完成进行时",
+      "过去完成时",
+      "一般过去时",
+      "现在完成进行时"
+    ],
+    "correct": "Past Perfect Continuous",
+    "correctZh": "过去完成进行时",
+    "example": "They had been learning math for months before the exam ended, so Past Perfect Continuous is used.",
+    "exampleZh": "他们在考试结束前一直在学习数学几个月，因此使用过去完成进行时。"
+  },
+  {
+    "word": "see",
+    "wordZh": "看",
+    "type": "multiple-choice",
+    "question": "An action continuing before a past point (e.g., She ___ the sights for weeks before the trip ended). Which tense is correct?",
+    "questionZh": "在过去某点前持续进行的动作（例如，她在旅行结束前___景点几个星期）。哪个时态正确？",
+    "options": [
+      "Past Perfect Continuous",
+      "Simple Past",
+      "Past Continuous",
+      "Future Perfect Continuous"
+    ],
+    "optionsZh": [
+      "过去完成进行时",
+      "一般过去时",
+      "过去进行时",
+      "将来完成进行时"
+    ],
+    "correct": "Past Perfect Continuous",
+    "correctZh": "过去完成进行时",
+    "example": "She had been seeing the sights for weeks before the trip ended, so Past Perfect Continuous is used.",
+    "exampleZh": "她在旅行结束前一直在看景点几个星期，因此使用过去完成进行时。"
+  },
+  {
+    "word": "work",
+    "wordZh": "工作",
+    "type": "multiple-choice",
+    "question": "An action that will continue until a future point (e.g., He ___ for a year by next June). Which tense is correct?",
+    "questionZh": "将持续到未来某点的动作（例如，他到明年六月___了一年后）。哪个时态正确？",
+    "options": [
+      "Future Perfect Continuous",
+      "Future Perfect",
+      "Simple Future",
+      "Present Perfect Continuous"
+    ],
+    "optionsZh": [
+      "将来完成进行时",
+      "将来完成时",
+      "一般将来时",
+      "现在完成进行时"
+    ],
+    "correct": "Future Perfect Continuous",
+    "correctZh": "将来完成进行时",
+    "example": "He will have been working for a year by next June, so Future Perfect Continuous is used.",
+    "exampleZh": "他到明年六月将在项目上一直在工作一年，因此使用将来完成进行时。"
+  },
+  {
+    "word": "eat",
+    "wordZh": "吃",
+    "type": "multiple-choice",
+    "question": "An action continuing into the future (e.g., They ___ traditional food for a year by next summer). Which tense is correct?",
+    "questionZh": "持续到未来的动作（例如，到明年夏天他们___传统食物一年后）。哪个时态正确？",
+    "options": [
+      "Future Perfect Continuous",
+      "Simple Past",
+      "Future Continuous",
+      "Present Perfect Continuous"
+    ],
+    "optionsZh": [
+      "将来完成进行时",
+      "一般过去时",
+      "将来进行时",
+      "现在完成进行时"
+    ],
+    "correct": "Future Perfect Continuous",
+    "correctZh": "将来完成进行时",
+    "example": "They will have been eating traditional food for a year by next summer, so Future Perfect Continuous is used.",
+    "exampleZh": "到明年夏天他们将一直在吃传统食物一年后，因此使用将来完成进行时。"
+  }
+]
